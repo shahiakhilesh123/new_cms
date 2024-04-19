@@ -200,7 +200,7 @@
                     <label>Select Thumb Images</label>
                     <div class="select2-purple">
                       <input type="hidden" name="thumb_images" value="{{ $data['blogs']->thumb_images }}" id="id_thumb_images">
-                      <input type="text" class="form-control" id="name_thumb_images" disabled>
+                      <input type="text" class="form-control" value="{{ $data['blogs']->thumbnail->file_name }}" id="name_thumb_images" disabled>
                       <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-thumb">
                         Select Thumb Images
                       </button>
@@ -211,7 +211,7 @@
                     <label>Select Images</label>
                     <div class="select2-purple">
                       <input type="hidden" name="images" value="{{ $data['blogs']->image_ids }}" id="id_images">
-                      <input type="text" class="form-control" id="name_images" disabled>
+                      <input type="text" class="form-control" value="{{ $data['blogs']->images->file_name }}" id="name_images" disabled>
                       <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-default">
                         Select Images
                       </button>

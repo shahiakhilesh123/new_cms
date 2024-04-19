@@ -79,7 +79,7 @@ class BlogController extends Controller
     }
     public function edit($id)
     {
-        $blogs = Blog::where('id', $id)->first();
+        $blogs = Blog::where('id', $id)->with('images')->with('thumbnail')->first();
         $file = File::orderBy('id', 'DESC')->get()->all();
         $categories = Category::get()->all();
         $state = State::get()->all();
