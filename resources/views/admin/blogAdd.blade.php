@@ -233,7 +233,7 @@
                     </div>
                     <input type="hidden" id="image_name">
                     <input type="hidden" id="image_id">
-                    <div class="modal-body" style="height:50%;">
+                    <div class="modal-body" style="height: 400px; overflow: scroll;">
                     
                     <div class="row image_row">
                     @foreach($data['file'] as $file)
@@ -266,7 +266,7 @@
                     </div>
                     <input type="hidden" id="image_thumb_name">
                     <input type="hidden" id="image_thumb_id">
-                    <div class="modal-body" style="height:50%;">
+                    <div class="modal-body" style="height: 400px; overflow: scroll;">
                     <div class="row image_row">
                     @foreach($data['file'] as $file)
                         <div class="col-md-3 popup" >
