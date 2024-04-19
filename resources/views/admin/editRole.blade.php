@@ -14,7 +14,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{ url('roles/edit') }}/{{ $roles->id }}" method="post">
+              <form action="{{ asset('roles/edit') }}/{{ $roles->id }}" method="post">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
