@@ -123,5 +123,11 @@ class BlogController extends Controller
         ]);
         return redirect('posts');
     }
+    public function del($id, Request $request) {
+        ?>
+        
+        <?php
+        //return redirect('posts');
+    }
    
 }

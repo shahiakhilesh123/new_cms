@@ -214,6 +214,7 @@
                         <td >
                           <!-- <a href="{{ asset('blogs') }}/{{$blog->id}}/{{ str_replace(" ","-",$blog->name) }}" target="_blank"><i class="fas fa-copy"></i></a> -->
                           <a href="{{ asset('posts/edit') }}/{{$blog->id}}"><i class="fas fa-edit"></i></a>
+                          <span onclick="delete({{$blog->id}})"><i class="fas fa-trash"></i></span>
                         </td>
                       </tr>
                       @endforeach
@@ -238,4 +239,9 @@
     </section>
     <!-- /.content -->
   </div>
+  <script type="text/javascript">
+    function delete(id) {
+        alert();
+    }
+  </script>
   @endsection

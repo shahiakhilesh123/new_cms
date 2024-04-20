@@ -46,6 +46,7 @@ Route::prefix('/posts')->group(function () {
     Route::post('/add', [App\Http\Controllers\BlogController::class, 'blogAdd'])->name('blogAdd');
     Route::get('/edit/{id}', [App\Http\Controllers\BlogController::class, 'edit'])->name('editBlog');
     Route::post('/edit/{id}', [App\Http\Controllers\BlogController::class, 'editSave'])->name('blogEdit');
+    Route::get('/delete/{id}', [App\Http\Controllers\BlogController::class, 'del'])->name('deleteBlog');
 });
 Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('Setting');
 Route::post('/setting', [App\Http\Controllers\SettingController::class,'saveSetting'])->name('saveSetting');
