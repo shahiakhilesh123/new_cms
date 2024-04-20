@@ -366,7 +366,7 @@
     var form_data = new FormData($(this)[0]);
     form_data.append('file', file, file.name);
     $.ajax({
-            url: '{{ url("/files/upload") }}',
+            url: '{{ asset("/files/upload") }}',
             type: 'POST',   
             contentType: false,
             processData: false,   
