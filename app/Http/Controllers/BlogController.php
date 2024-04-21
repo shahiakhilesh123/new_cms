@@ -34,7 +34,7 @@ class BlogController extends Controller
     }
     public function addBlog()
     {
-        $file = File::orderBy('id', 'DESC')->get()->all();
+        $file = File::orderBy('id', 'DESC')->paginate(12);
         $categories = Category::get()->all();
         $state = State::get()->all();
         $district = District::get()->all();
