@@ -34,7 +34,7 @@ class UsersController extends Controller
             'role' => $request->role,
             'name' =>  $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->email),
+            'password' => Hash::make($request->password),
         ]);
         return redirect('users');
     }
@@ -57,7 +57,7 @@ class UsersController extends Controller
             'role' => $request->role,
             'name' =>  $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->email),
+            'password' => Hash::make($request->password),
         ]);
         return redirect('users');   
     }
