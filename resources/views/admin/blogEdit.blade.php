@@ -246,6 +246,9 @@
                         </div>
                     @endforeach
                     </div>
+                    <div class="card-footer clearfix">
+                    {{ $data['file']->links() }}
+                    </div>
                       <!-- <p>One fine body&hellip;</p> -->
                     </div>
                     <div class="modal-footer justify-content-between">
@@ -277,6 +280,9 @@
                           {{ $file->file_name }}
                         </div>
                     @endforeach
+                    </div>
+                    <div class="card-footer clearfix">
+                    {{ $data['file']->links() }}
                     </div>
                       <!-- <p>One fine body&hellip;</p> -->
                     </div>
