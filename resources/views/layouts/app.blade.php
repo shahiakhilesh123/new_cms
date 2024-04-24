@@ -970,18 +970,27 @@
                                     <div class="widget-title">
                                         <h2>Recent post</h2>
                                     </div>
+                                    <?php
+                                    $latest_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(3)->get();
+                                    ?>
                                     <div class="cm_recent_posts_widget">
+                                        @foreach($latest_blog as $blog)
+                                        <?php
+                                        $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                        $truncated = substr($blog->name, 0, 50) . '...';
+                                        $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
+                                        ?>
                                         <div class="box">
                                             <div class="row">
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                     <div class="post_thumb">
                                                         <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/taking-photos-are-best-lifestyle-to-live/">
+                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/photography-girl-beauty-long-hair-black-hair-photo-shoot-1435765-pxhere.com_-720x540.jpg"
+                                                                    src="{{ asset('file').'/'.$ff }}"
                                                                     class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="Taking photos are best lifestyle to live"
+                                                                    alt="{{ $blog->name }}"
                                                                     decoding="async" loading="lazy" />
                                                             </figure>
                                                         </a>
@@ -990,92 +999,22 @@
                                                 <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                     <div class="post_title">
                                                         <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/taking-photos-are-best-lifestyle-to-live/">Taking
-                                                                photos are best lifestyle to live</a></h2>
+                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
                                                             <li class="posted_date">
                                                                 <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/taking-photos-are-best-lifestyle-to-live/"><time
+                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                         class="entry-date published"
-                                                                        datetime="2018-11-21T07:47:01+05:45">21/11/2018</time></a>
+                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
-                                                    <div class="post_thumb">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/you-should-enjoy-with-your-friends/">
-                                                            <figure class="imghover">
-                                                                <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/ttrefregfbvf-720x540.jpg"
-                                                                    class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="You should enjoy with your friends"
-                                                                    decoding="async" loading="lazy" />
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
-                                                    <div class="post_title">
-                                                        <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/you-should-enjoy-with-your-friends/">You
-                                                                should enjoy with your friends</a></h2>
-                                                    </div>
-                                                    <div class="cm-post-meta">
-                                                        <ul class="post_meta">
-                                                            <li class="posted_date">
-                                                                <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/you-should-enjoy-with-your-friends/"><time
-                                                                        class="entry-date published updated"
-                                                                        datetime="2018-11-21T07:39:18+05:45">21/11/2018</time></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
-                                                    <div class="post_thumb">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/blue-is-what-most-women-liked-about/">
-                                                            <figure class="imghover">
-                                                                <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/athlete-2441636_1920-720x540.jpg"
-                                                                    class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="Blue is what most women liked about"
-                                                                    decoding="async" loading="lazy" />
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
-                                                    <div class="post_title">
-                                                        <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/blue-is-what-most-women-liked-about/">Blue
-                                                                is what most women liked about</a></h2>
-                                                    </div>
-                                                    <div class="cm-post-meta">
-                                                        <ul class="post_meta">
-                                                            <li class="posted_date">
-                                                                <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/blue-is-what-most-women-liked-about/"><time
-                                                                        class="entry-date published"
-                                                                        datetime="2018-11-21T07:36:11+05:45">21/11/2018</time></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -1112,9 +1051,9 @@
                             <div class="blocks">
                                 <div id="cream-magazine-post-widget-4" class="widget widget_cream-magazine-post-widget">
                                     <div class="widget-title">
-                                        <h2>Most commented</h2>
+                                        <!-- <h2>Most commented</h2> -->
                                     </div>
-                                    <div class="cm_recent_posts_widget">
+                                    <!-- <div class="cm_recent_posts_widget">
                                         <div class="box">
                                             <div class="row">
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
@@ -1220,7 +1159,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

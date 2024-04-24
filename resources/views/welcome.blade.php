@@ -7,35 +7,20 @@
                     <div class="news_ticker_wrap clearfix">
                         <div class="ticker_head">
                             <span class="ticker_icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
-                            <div class="ticker_title">Breaking News</div>
+                            <div class="ticker_title">लेटेस्ट न्यूज</div>
                         </div>
                         <div class="ticker_items">
                             <div class="owl-carousel ticker_carousel">
+                                <?php
+                                $latest_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(5)->get();  
+                                ?>
+                                @foreach($latest_blog as $blog)
+                                <?php  $truncated = substr($blog->name, 0, 50) . '...'; ?>
                                 <div class="item">
                                     <p><a
-                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/taking-photos-are-best-lifestyle-to-live/">Taking
-                                            photos are best lifestyle to live</a></p>
+                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></p>
                                 </div>
-                                <div class="item">
-                                    <p><a
-                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/you-should-enjoy-with-your-friends/">You
-                                            should enjoy with your friends</a></p>
-                                </div>
-                                <div class="item">
-                                    <p><a
-                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/blue-is-what-most-women-liked-about/">Blue
-                                            is what most women liked about</a></p>
-                                </div>
-                                <div class="item">
-                                    <p><a
-                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/few-months-of-work-made-their-body-perfect/">Few
-                                            months of work made their body perfect</a></p>
-                                </div>
-                                <div class="item">
-                                    <p><a
-                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/women-should-make-their-figure-more/">Women
-                                            should make their figure more</a></p>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
