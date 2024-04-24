@@ -2,179 +2,195 @@
 
 @section('content')
 <style>
-        .story{
-            color: black;
-            text-decoration: none;
-        }
-        .story:hover {
-            text-decoration: underline; 
-            cursor: pointer;
-        }
+    .breadcrumb {
+        background: rgba(0, 0, 0, .03);
+        margin-top: 30px;
+        padding: 7px 20px;
+        position: relative;
+    }
 </style>
-<main class="nmf-mainclass">
-        <section class="nmf-masterdtlsection nmftheme-white">
-            <!-- </section> -->
-            <div class="nmf-dtl-nested">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12" style="margin-top: 21px; font-size: 22px;">
-                            <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a style="text-decoration: none;" class="" href="/">Home</a></li>
-                            <li class="breadcrumb-item"><a style="text-decoration: none;" class="" href="/{{ str_replace(' ', '-', $data['category']->name) }}">{{ $data['category']->name }}</a></li>
-                            <!-- <li class="breadcrumb-item">District List</li> -->
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="nestednmf-fullpost">
-                                <div class="nestednmf-perpost">
-                                    <h2 class=" font-25 font-600 ">{{ $data['blog']->name }}</h2>
-                                    <p class="perpost=article">
-                                        {{ $data['blog']->sort_description }}...
-                                        <?php
-                                        $chunks = str_split($data['blog']->sort_description, 70); 
-                                        echo $chunks[0];
-                                        ?>
-                                    </p>
+<div class="cm-container" style="transform: none;">
+                <div class="inner-page-wrapper" style="transform: none;">
+                    <div id="primary" class="content-area" style="transform: none;">
+                        <main id="main" class="site-main" style="transform: none;">
+                            <div class="cm_post_page_lay_wrap" style="transform: none;">
+                                <div class="breadcrumb  default-breadcrumb" style="display: block;">
+                                    <nav role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs"
+                                        itemprop="breadcrumb">
+                                        <ul class="trail-items" itemscope=""
+                                            itemtype="http://schema.org/BreadcrumbList">
+                                            <meta name="numberOfItems" content="3">
+                                            <meta name="itemListOrder" content="Ascending">
+                                            <li itemprop="itemListElement" itemscope=""
+                                                itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a
+                                                    href="/"
+                                                    rel="home" itemprop="item"><span itemprop="name">Home</span></a>
+                                                <meta itemprop="position" content="1">
+                                            </li>
+                                            <li itemprop="itemListElement" itemscope=""
+                                                itemtype="http://schema.org/ListItem" class="trail-item"><a
+                                                    href="/{{ str_replace(' ', '-', $data['category']->name) }}"
+                                                    itemprop="item"><span itemprop="name">{{ $data['category']->name }}</span></a>
+                                                <meta itemprop="position" content="2">
+                                            </li>
+                                            <!-- <li itemprop="itemListElement" itemscope=""
+                                                itemtype="http://schema.org/ListItem" class="trail-item trail-end"><a
+                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence"
+                                                    itemprop="item"><span itemprop="name">Public was forced to go
+                                                        against the violence</span></a>
+                                                <meta itemprop="position" content="3">
+                                            </li> -->
+                                        </ul>
+                                    </nav>
                                 </div>
-                                <figure class="nestednmf-figure">
-                                    @if( $data['blog']->link != '')
-                                    <iframe style="width: 100%;" height="320" src="{{ $data['blog']->link}}"></iframe>
-                                    @else
-                                    <?php $ff = isset($data['blog']->images->file_name) ? $data['blog']->images->file_name : ''; ?>
-                                    <img src="{{ asset('file').'/'.$ff }}" alt="nestednmf-post">
-                                    @endif
-                                    <!-- <figcaption>पप्पू यादव और लालू यादव (फाइल फोटो)</figcaption> -->
-                                </figure>
-                                <p>
-                                {{ $data['blog']->sort_description }}...
-                                </p>
-                            </div>
-                            <div class="nmf-relatednews-master">
-                                <div class="nmf-relatednews">
-                                    <h2 class="font-16 font-600"> सम्बंधित ख़बरें</h2>
-                                    <div class="nmf-featurespost">
-                                        <div class="owl-carousel">
-                                            @foreach($data['relates'] as $relate)
-                                            <?php preg_match('#^([^.!?\s]*[\.!?\s]+){0,11}#',$relate->sort_description,$matches); 
-                                            $ff = isset($relate->images->file_name) ? $relate->images->file_name : $relate->thumbnail->file_name;
-                                            ?>
-                                            <div class="item">
-                                                <div class="nmf-featurespost-item">
-                                                    <a href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $relate->eng_name); ?>">
-                                                        <div class="media">
-                                                            <img class="d-flex mr-3" src="{{ asset('file').'/'.$ff }}" style="height:84px;" alt="post-image">
-                                                            <div class="media-body">
-                                                                <h5 class="mt-0 font-600 font-14">
-                                                                    {{$matches[0]}} ... 
-                                                                </h5>
-                                                                
+                                <div class="single-container" style="transform: none;">
+                                    <div class="row" style="transform: none;">
+                                        <div class="cm-col-lg-8 cm-col-12 sticky_portion"
+                                            style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+                                            <div class="theiaStickySidebar"
+                                                style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                                                <div class="content-entry">
+                                                    <article id="post-232"
+                                                        class="post-detail post-232 post type-post status-publish format-standard has-post-thumbnail hentry category-politics tag-public-voices">
+                                                        <div class="the_title">
+                                                            <h1>{{ $data['blog']->name }}</h1>
+                                                        </div>
+                                                        <div class="cm-post-meta">
+                                                            <ul class="post_meta">
+                                                                <li class="post_author">
+                                                                    <a
+                                                                        href="#">Cester
+                                                                        Kinner</a>
+                                                                </li>
+                                                                <li class="posted_date">
+                                                                    <a
+                                                                        href="#"><time
+                                                                            class="entry-date published"
+                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></a>
+                                                                </li>
+                                                                <!-- <li class="comments">
+                                                                    <a
+                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence/#comments">0</a>
+                                                                </li> -->
+                                                                <li class="entry_cats">
+                                                                    <a href="/{{ str_replace(' ', '-', $data['category']->name) }}"
+                                                                        rel="category tag">{{ $data['category']->name }}</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="post_thumb">
+                                                            <figure>
+                                                            @if( $data['blog']->link != '')
+                                                            <iframe class="attachment-full size-full wp-post-image" width="1280" height="853" src="{{ $data['blog']->link}}"></iframe>
+                                                            @else
+                                                            <?php $ff = isset($data['blog']->images->file_name) ? $data['blog']->images->file_name : ''; ?>
+                                                                <img width="1280" height="853"
+                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                    class="attachment-full size-full wp-post-image"
+                                                                    alt="{{ $data['blog']->name }}"
+                                                                    decoding="async"
+                                                                    srcset="{{ asset('file').'/'.$ff }} 1024w"
+                                                                    sizes="(max-width: 1280px) 100vw, 1280px">
+                                                            @endif
+                                                            </figure>
+                                                        </div>
+                                                        <div class="the_content">
+                                                            <div class="row">
+                                                                <?php echo $data['blog']->description; ?>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                        <!-- <div class="post_tags">
+                                                            <a href="https://demo.themebeez.com/demos-2/cream-magazine-free/tag/public-voices/"
+                                                                rel="tag">public voices</a>
+                                                        </div> -->
+                                                    </article>
                                                 </div>
+                                                <section class="cm_related_post_container">
+                                                    <div class="section_inner">
+                                                        <div class="section-title">
+                                                            <h2>Related articles</h2>
+                                                        </div>
+                                                        <div class="row">
+                                                        @foreach($data['latests'] as $latest)
+                                                        <?php $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : ''); ?>
+                                                            <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
+                                                                <div class="card">
+                                                                    <div class="post_thumb">
+                                                                        <a
+                                                                            href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
+                                                                            <figure class="imghover">
+                                                                                <img width="800" height="450"
+                                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                                    class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
+                                                                                    alt="{{ $latest->name }}"
+                                                                                    decoding="async" loading="lazy">
+                                                                            </figure>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="card_content">
+                                                                        <div class="entry_cats">
+                                                                            <ul class="post-categories">
+                                                                                <li><a href="#"
+                                                                                        rel="category tag">{{ $data['category']->name }}</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="post_title">
+                                                                            <h2><a
+                                                                                    href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">{{ $latest->name }} </a></h2>
+                                                                        </div>
+                                                                        <div class="cm-post-meta">
+                                                                            <ul class="post_meta">
+                                                                                <li class="post_author">
+                                                                                    <a
+                                                                                        href="#">Cester
+                                                                                        Kinner</a>
+                                                                                </li>
+                                                                                <li class="posted_date">
+                                                                                    <a
+                                                                                        href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
+                                                                                            class="entry-date published"
+                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                        </div>
+                                                    </div>
+                                                </section>
                                             </div>
-                                            @endforeach
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>
-                               <?php echo $data['blog']->description; ?>
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="nestednmf-ctrgry">
-                                <div class="nestednmf-lsctctergy">
-                                    <h2 class="font-600 font-16"><span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve"><g><g><path style="fill:#D91F26;" d="M9.867,4h35.258c3.242,0,5.876,2.628,5.876,5.876v35.258c-0.011,2.373-1.452,4.508-3.644,5.406c-2.186,0.921-4.711,0.433-6.404-1.234L5.695,14.048c-1.67-1.687-2.158-4.218-1.234-6.404C5.359,5.446,7.494,4.012,9.867,4"></path></g></g></svg></span>लेटेस्ट</h2>
-                                    <div class="nmf-lsctctergy">
-                                        @foreach($data['latests'] as $latest)
-                                        <?php preg_match('#^([^.!?\s]*[\.!?\s]+){0,11}#',$latest->sort_description,$matches); 
-                                       // if($latest->sort_description == '')
-                                        $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : '');
-                                        ?>
-                                        <div class="nmf-lsctctergy-item">
-                                            <a href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
-                                                <div class="media">
-                                                    <img class="d-flex mr-3" src="{{ asset('file').'/'.$ff }}" style="height:84px; width:94px;" alt="post-image">
-                                                    <div class="media-body">
-                                                        <h5 class="mt-0 font-600 font-14">
-                                                            {{ $matches[0] }}
-                                                        </h5>
+                                        <div class="cm-col-lg-4 cm-col-12 sticky_portion"
+                                            style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
 
+                                            <div class="theiaStickySidebar"
+                                                style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 841.656px;">
+                                                <aside id="secondary" class="sidebar-widget-area">
+                                                    <div id="categories-2" class="widget widget_categories">
+                                                        <div class="widget-title">
+                                                            <h2>Category</h2>
+                                                        </div>
+                                                        <ul>
+                                                        <?php $category =  App\Models\Category::get()->all(); ?>
+                                                        @foreach($category as $showCat)
+                                                        <li class="cat-item cat-item-16"><a
+                                                                href="#">{{ $showCat->name }}</a>
+                                                            (10)
+                                                        </li>
+                                                        @endforeach
+                                                        </ul>
                                                     </div>
-                                                </div>
-                                            </a>
+                                                </aside>
+                                            </div>
                                         </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="nmf-sidebarads">
-                                        <!-- <img class="img-responsive" src="{{ asset('frontend/images/nmf-sidebarads.png') }}" alt="post-image"> -->
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="nestednmf-ctrgry">
-                                <div class="nestednmf-lsctctergy">
-                                    <h2 class="font-600 font-16"><span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve"><g><g><path style="fill:#D91F26;" d="M9.867,4h35.258c3.242,0,5.876,2.628,5.876,5.876v35.258c-0.011,2.373-1.452,4.508-3.644,5.406c-2.186,0.921-4.711,0.433-6.404-1.234L5.695,14.048c-1.67-1.687-2.158-4.218-1.234-6.404C5.359,5.446,7.494,4.012,9.867,4"></path></g></g></svg></span>लेटेस्ट</h2>
-                                    <div class="nmf-lsctctergy">
-                                        @foreach($data['videos'] as $video)
-                                        <?php preg_match('#^([^.!?\s]*[\.!?\s]+){0,11}#',$video->sort_description,$matches); 
-                                       // if($latest->sort_description == '')
-                                        $ff = isset($video->images->file_name) ? $video->images->file_name : (isset($video->thumbnail->file_name) ? $video->thumbnail->file_name : '');
-                                        ?>
-                                        <div class="nmf-lsctctergy-item">
-                                            <a href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $video->eng_name); ?>">
-                                                <div class="media">
-                                                    <img class="d-flex mr-3" src="{{ asset('file').'/'.$ff }}" style="height:84px; width:94px;" alt="post-image">
-                                                    <div class="media-body">
-                                                        <h5 class="mt-0 font-600 font-14">
-                                                            {{ $matches[0] }}
-                                                        </h5>
-
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="nmf-sidebarads">
-                                        <!-- <img class="img-responsive" src="{{ asset('frontend/images/nmf-sidebarads.png') }}" alt="post-image"> -->
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        </main>
                     </div>
                 </div>
             </div>
-        </section>     
-        </main>
-
-        <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                autoplay: true, // Add autoplay option
-                autoplayTimeout: 5000, // Adjust autoplay speed (milliseconds)
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 2
-                    }
-                }
-            });
-        });
-    </script>
-
 @endsection

@@ -1169,9 +1169,9 @@
                             <div class="cm-col-lg-7 cm-col-md-6 cm-col-12">
                                 <div class="copyrights">
                                     <p>
-                                        <span class="copyright-text">Copyrights &copy; 2018. All rights reserved.</span>
+                                        <!-- <span class="copyright-text">Copyrights &copy; 2018. All rights reserved.</span>
                                         Cream Magazine by <a href="https://themebeez.com" rel="designer noopener"
-                                            target="_blank">Themebeez</a>
+                                            target="_blank">Themebeez</a> -->
                                     </p>
                                 </div>
                             </div>
