@@ -1263,64 +1263,67 @@
                                 srcset="{{ asset('frontend/images/hori-ads.jpg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
-                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->limit(6)->get();  
-                    $cat = App\Models\Category::where('id',$setting->fourth_row_secound_cat)->first();
+                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->limit(6)->get();  
+                    $cat = App\Models\Category::where('id',$setting->fifth_row_first_cat)->first();
                     $i = 0;
                     ?>
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>Technology</h2>
+                                <h2>{{ $cat->name }}</h2>
                             </div>
-                            <div class="row">
+                            
                                 @forEach($ninth_row_blog as $blog)
                                 <?php 
                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
+                                @if($i == 0 || $i == 2)
+                                <div class="row">
+                                @endif
+                                @if($i < 2)
                                 <div class="cm-col-lg-6 cm-col-md-12 cm-col-12">
                                     <article class="big-card">
                                         <div class="post_thumb">
                                             <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/">
+                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
                                                 <figure class="imghover">
                                                     <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/h-trhrthtr-800x450.jpg"
+                                                        src="{{ asset('file').'/'.$ff }}"
                                                         class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="Technologies are helping for business plan"
+                                                        alt="{{ $blog->name }}"
                                                         decoding="async" />
                                                 </figure>
                                             </a>
                                             <div class="post-holder">
                                                 <div class="entry_cats">
                                                     <ul class="post-categories">
-                                                        <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/technology/"
-                                                                rel="category tag">Technology</a></li>
+                                                        <li><a href="#"
+                                                                rel="category tag">{{ $cat->name }}</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="post_title">
                                                     <h2><a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/">Technologies
-                                                            are helping for business plan</a></h2>
+                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
                                                 </div>
                                                 <div class="cm-post-meta">
                                                     <ul class="post_meta">
                                                         <li class="post_author">
                                                             <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
+                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">Cester
                                                                 Kinner</a>
                                                         </li>
                                                         <li class="posted_date">
                                                             <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/"><time
+                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                     class="entry-date published updated"
-                                                                    datetime="2018-11-12T12:35:14+05:45">12/11/2018</time></a>
+                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                         </li>
-                                                        <li class="comments">
+                                                        <!-- <li class="comments">
                                                             <a
                                                                 href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/#comments">1</a>
-                                                        </li>
+                                                        </li> -->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1328,69 +1331,17 @@
                                     </article>
 
                                 </div>
-                                <div class="cm-col-lg-6 cm-col-md-12 cm-col-12">
-                                    <article class="big-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/drone-is-being-favorite-among-the-youths/">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/fdvdfvdfvdf-800x450.jpeg"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="Drone is being favorite among the youths"
-                                                        decoding="async" />
-                                                </figure>
-                                            </a>
-                                            <div class="post-holder">
-                                                <div class="entry_cats">
-                                                    <ul class="post-categories">
-                                                        <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/technology/"
-                                                                rel="category tag">Technology</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="post_title">
-                                                    <h2><a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/drone-is-being-favorite-among-the-youths/">Drone
-                                                            is being favorite among the youths</a></h2>
-                                                </div>
-                                                <div class="cm-post-meta">
-                                                    <ul class="post_meta">
-                                                        <li class="post_author">
-                                                            <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                Kinner</a>
-                                                        </li>
-                                                        <li class="posted_date">
-                                                            <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/drone-is-being-favorite-among-the-youths/"><time
-                                                                    class="entry-date published updated"
-                                                                    datetime="2018-11-12T12:33:24+05:45">12/11/2018</time></a>
-                                                        </li>
-                                                        <li class="comments">
-                                                            <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/drone-is-being-favorite-among-the-youths/#comments">0</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-
-                                </div>
-                                <?php $i++; ?>
-                                @endforeach
-                            </div>
-                            <div class="row">
+                                @else 
                                 <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
                                     <div class="small-card">
                                         <div class="post_thumb">
                                             <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/">
+                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
                                                 <figure class="imghover">
                                                     <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/sdcsdc-800x450.jpeg"
+                                                        src="{{ asset('file').'/'.$ff }}"
                                                         class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="Virtual reality changing the life of people"
+                                                        alt="{{ $blog->name }}"
                                                         decoding="async" />
                                                 </figure>
                                             </a>
@@ -1398,163 +1349,37 @@
                                         <div class="post-holder">
                                             <div class="post_title">
                                                 <h2><a
-                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/">Virtual
-                                                        reality changing the life of people</a></h2>
+                                                        href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
                                                     <li class="post_author">
                                                         <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
+                                                            href="#">Cester
                                                             Kinner</a>
                                                     </li>
                                                     <li class="posted_date">
                                                         <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/"><time
+                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                 class="entry-date published updated"
-                                                                datetime="2018-11-12T12:32:06+05:45">12/11/2018</time></a>
+                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                     </li>
-                                                    <li class="comments">
+                                                    <!-- <li class="comments">
                                                         <a
                                                             href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/#comments">0</a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
-                                    <div class="small-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/new-learning-methodology-for-the-children/">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/hyt-jytjtyj-800x450.jpg"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="New learning methodology for the children"
-                                                        decoding="async" />
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="post-holder">
-                                            <div class="post_title">
-                                                <h2><a
-                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/new-learning-methodology-for-the-children/">New
-                                                        learning methodology for the children</a></h2>
-                                            </div>
-                                            <div class="cm-post-meta">
-                                                <ul class="post_meta">
-                                                    <li class="post_author">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                            Kinner</a>
-                                                    </li>
-                                                    <li class="posted_date">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/new-learning-methodology-for-the-children/"><time
-                                                                class="entry-date published updated"
-                                                                datetime="2018-11-12T12:30:59+05:45">12/11/2018</time></a>
-                                                    </li>
-                                                    <li class="comments">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/new-learning-methodology-for-the-children/#comments">0</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                @endif
+                                @if($i == 2 || $i == 5)
                                 </div>
-                                <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
-                                    <div class="small-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/nano-technology-are-being-used-in-intel/">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf-800x450.jpeg"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="Nano technology are being used in Intel" decoding="async"
-                                                        srcset="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf-800x450.jpeg 800w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf-300x169.jpeg 300w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf-768x432.jpeg 768w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf-1024x576.jpeg 1024w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/dfvdfvdf.jpeg 1280w"
-                                                        sizes="(max-width: 800px) 100vw, 800px" />
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="post-holder">
-                                            <div class="post_title">
-                                                <h2><a
-                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/nano-technology-are-being-used-in-intel/">Nano
-                                                        technology are being used in Intel</a></h2>
-                                            </div>
-                                            <div class="cm-post-meta">
-                                                <ul class="post_meta">
-                                                    <li class="post_author">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                            Kinner</a>
-                                                    </li>
-                                                    <li class="posted_date">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/nano-technology-are-being-used-in-intel/"><time
-                                                                class="entry-date published updated"
-                                                                datetime="2018-11-12T12:29:38+05:45">12/11/2018</time></a>
-                                                    </li>
-                                                    <li class="comments">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/nano-technology-are-being-used-in-intel/#comments">0</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
-                                    <div class="small-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/space-x-lab-is-launching-automatic-rocket-soon/">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/ghftbfbfg-800x450.jpeg"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="Space X lab is launching automatic rocket soon"
-                                                        decoding="async" />
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="post-holder">
-                                            <div class="post_title">
-                                                <h2><a
-                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/space-x-lab-is-launching-automatic-rocket-soon/">Space
-                                                        X lab is launching automatic rocket soon</a></h2>
-                                            </div>
-                                            <div class="cm-post-meta">
-                                                <ul class="post_meta">
-                                                    <li class="post_author">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                            Kinner</a>
-                                                    </li>
-                                                    <li class="posted_date">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/space-x-lab-is-launching-automatic-rocket-soon/"><time
-                                                                class="entry-date published updated"
-                                                                datetime="2018-11-12T12:28:27+05:45">12/11/2018</time></a>
-                                                    </li>
-                                                    <li class="comments">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/space-x-lab-is-launching-automatic-rocket-soon/#comments">0</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                                @endif
+                                <?php $i++; ?>
+                                @endforeach
                         </div>
                     </section>
                 </div>
