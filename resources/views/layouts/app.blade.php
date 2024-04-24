@@ -999,7 +999,7 @@
                                                 <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                     <div class="post_title">
                                                         <h2><a
-                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $blog->name; ?></a></h2>
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
