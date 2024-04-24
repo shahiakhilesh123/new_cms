@@ -1373,7 +1373,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                @if($i == 2 || $i == 5)
+                                @if($i == 1 || $i == 5)
                                 </div>
                                 @endif
                                 <?php $i++; ?>
