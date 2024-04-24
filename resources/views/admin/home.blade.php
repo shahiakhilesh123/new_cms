@@ -139,9 +139,9 @@
                     @enderror
                   </div> -->
                   <div class="form-group">
-                  <label for="exampleInputPassword1">Second Row First Column Category</label>
+                  <label for="exampleInputPassword1">First Section First Row Category</label>
                     <select class="form-control" name="secound_row_first_col_category">
-                        <option value="0">Second Row First Column Category</option>
+                        <option value="0">First Section First Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->secound_row_first_file) && $setting->secound_row_first_file == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
@@ -180,9 +180,9 @@
                     @enderror
                   </div> -->
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Second Row Second column Category</label>
+                    <label for="exampleInputPassword1">First Section Second Row Category</label>
                     <select class="form-control" name="secound_row_secound_col_category">
-                        <option value="0">Select Second Row Second column Category</option>
+                        <option value="0">First Section Second Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->secound_row_secound_col_category) && $setting->secound_row_secound_col_category == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
@@ -199,14 +199,14 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Second Row Third Column Image</label>
+                    <label for="exampleInputPassword1">First Section Third Row Category</label>
                     <div class="custom-file">
                     <select class="form-control select" name="secound_row_third_file" style="width: 100%;">
-                      <option value="0">Second Row First Column Image</option>
-                      <?php $files = App\Models\File::get()->all(); ?>
-                      @foreach($files as $file)
-                          <option value="{{ $file->id }}" <?php if(isset($setting->secound_row_third_file) && $setting->secound_row_third_file == $file->id) { echo "selected"; } ?>>{{ $file->file_name }}</option>
-                      @endforeach
+                      <option value="0">First Section Third Row Category</option>
+                      <?php $categories = App\Models\Category::get()->all(); ?>
+                        @foreach($categories as $category)
+                          <option value="{{ $category->id }}" <?php if(isset($setting->secound_row_third_file) && $setting->secound_row_third_file == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
+                        @endforeach
                     </select>
                     </div>
                     @error('secound_row_third_file')
@@ -220,9 +220,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Third Row Category</label>
+                    <label for="exampleInputPassword1">Middle Section First Row</label>
                     <select class="form-control" name="third_row_category">
-                        <option value="0">Select Third Row Category</option>
+                        <option value="0">Select Middle Section First Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->third_row_category) && $setting->third_row_category == $category->id){ echo "selected"; } ?>>{{ $category->name }}</option>
@@ -239,14 +239,14 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Fourth Row First Column Image</label>
+                    <label for="exampleInputPassword1">Middle Section Second Row</label>
                     <div class="custom-file">
                     <select class="form-control select" name="fourth_row_first_image" style="width: 100%;">
-                      <option value="0">Fourth Row First Column Image</option>
-                      <?php $files = App\Models\File::get()->all(); ?>
-                      @foreach($files as $file)
-                          <option value="{{ $file->id }}" <?php if(isset($setting->fourth_row_first_image) && $setting->fourth_row_first_image == $file->id) { echo "selected"; } ?>>{{ $file->file_name }}</option>
-                      @endforeach
+                      <option value="0">Select Middle Section Second Row Category</option>
+                      <?php $categories = App\Models\Category::get()->all(); ?>
+                        @foreach($categories as $category)
+                          <option value="{{ $category->id }}" <?php if(isset($setting->fourth_row_first_image) && $setting->fourth_row_first_image == $category->id){ echo "selected"; } ?>>{{ $category->name }}</option>
+                        @endforeach
                     </select>
                     </div>
                     @error('fourth_row_first_image')
@@ -260,9 +260,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="name">Fourth Row First Column Category</label>
+                    <label for="name">Middle Section Third Row</label>
                     <select class="form-control select" name="fourth_row_first_cat" style="width: 100%;">
-                      <option value="0">Fourth Row First Column Category</option>
+                      <option value="0">Middle Section Third Row Category</option>
                       <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->fourth_row_first_cat) && $setting->fourth_row_first_cat == $category->id){ echo "selected"; } ?>>{{ $category->name }}</option>
@@ -279,9 +279,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Fourth Row Category</label>
+                    <label for="exampleInputPassword1">Last Section first Row</label>
                     <select class="form-control" name="fourth_row_category">
-                        <option value="0">Select Fourth Row Category</option>
+                        <option value="0">Select Last Section first Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->fourth_row_secound_cat) && $setting->fourth_row_secound_cat == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
@@ -298,9 +298,9 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Fifth Row First Col Category</label>
+                    <label for="exampleInputPassword1">Last Section Second Row</label>
                     <select class="form-control" name="fifth_row_first_col_category">
-                        <option value="0">Select Fifth Row First Col Category</option>
+                        <option value="0">Select Last Section Second Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->fifth_row_first_cat) && $setting->fifth_row_first_cat == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
@@ -317,9 +317,9 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Fifth Row First Second Category</label>
+                    <label for="exampleInputPassword1">Last Section Third Row</label>
                     <select class="form-control" name="fifth_row_second_col_category">
-                        <option value="0">Select Fifth Row Second Col Category</option>
+                        <option value="0">Select Last Section Third Row Category</option>
                         <?php $categories = App\Models\Category::get()->all(); ?>
                         @foreach($categories as $category)
                           <option value="{{ $category->id }}" <?php if(isset($setting->fifth_row_second_cat) && $setting->fifth_row_second_cat == $category->id) { echo "selected"; } ?> >{{ $category->name }}</option>
