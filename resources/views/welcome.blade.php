@@ -15,7 +15,7 @@
                                 $latest_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(5)->get();  
                                 ?>
                                 @foreach($latest_blog as $blog)
-                                <?php  $truncated = substr($blog->name, 0, 50) . '...'; ?>
+                                <?php  $truncated = $blog->name; ?>
                                 <div class="item">
                                     <p><a
                                             href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></p>
@@ -416,7 +416,7 @@
                             $i = 0;
                             foreach($second_row_blog as $blog) { 
                                 $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                $truncated = substr($blog->name, 0, 50) . '...';
+                                $truncated = $blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                 if($i == 0 || $i == 2){
                             ?>
@@ -525,7 +525,7 @@
                     </section>
                     <?php
                     $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
-                    $truncated = substr($blog->name, 0, 50) . '...';
+                    $truncated = $blog->name;
                     $cat = App\Models\Category::where('id',$setting->secound_row_secound_col_category)->first();
                     ?>
                     <section class="cm-post-widget-section cm-post-widget-three">
@@ -537,7 +537,7 @@
                             @foreach($third_row_blog as $blog)
                             <?php
                             $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images )->first();
-                            $truncated = substr($blog->name, 0, 50) . '...';
+                            $truncated = $blog->name;
                             $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                             ?>
                                 <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -597,7 +597,7 @@
                                     @foreach($fourth_row_blog as $blog)
                                     <?php 
                                     $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                    $truncated = substr($blog->name, 0, 50) . '...';
+                                    $truncated = $blog->name;
                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                     ?>
                                     <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -677,7 +677,7 @@
                                                 @foreach($fifth_row_blog as $blog)
                                                 <?php 
                                                 $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                                $truncated = substr($blog->name, 0, 50) . '...';
+                                                $truncated = $blog->name;
                                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                 ?>
                                                 @if ($i == 0 || $i == 2 ) 
@@ -805,7 +805,7 @@
                                                     @foreach($sixth_row_blog as $blog)
                                                     <?php 
                                                     $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                                    $truncated = substr($blog->name, 0, 50) . '...';
+                                                    $truncated = $blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                     ?>
                                                     <div class="item">
@@ -871,7 +871,7 @@
                                                     @foreach($seven_row_blog as $blog)
                                                     <?php
                                                     $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                                    $truncated = substr($blog->name, 0, 50) . '...';
+                                                    $truncated = $blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                                     ?>
                                                     @if($i == 0 || $i == 1)
@@ -1116,7 +1116,7 @@
                                 @forEach($eight_row_blog as $blog)
                                 <?php 
                                 $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                $truncated = substr($blog->name, 0, 50) . '...';
+                                $truncated = $blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                 <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -1185,7 +1185,7 @@
                                 @forEach($ninth_row_blog as $blog)
                                 <?php 
                                 $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                $truncated = substr($blog->name, 0, 50) . '...';
+                                $truncated = $blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                     <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -1260,7 +1260,7 @@
                             @forEach($tenth_row_blog as $blog)
                                 <?php 
                                 $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                $truncated = substr($blog->name, 0, 50) . '...';
+                                $truncated = $blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                 @if($i == 0 || $i == 2)
