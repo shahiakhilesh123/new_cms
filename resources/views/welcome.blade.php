@@ -410,12 +410,12 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             <?php 
                             $i = 0;
                             foreach($second_row_blog as $blog) { 
-                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                 if($i == 0 || $i == 2){
@@ -438,7 +438,7 @@
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
                                                             <li><a href="#"
-                                                                    rel="category tag">{{ $cat->name }}</a></li>
+                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">
@@ -531,12 +531,12 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             <div class="row">
                             @foreach($third_row_blog as $blog)
                             <?php
-                            $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                            $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images )->first();
                             $truncated = substr($blog->name, 0, 50) . '...';
                             $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                             ?>
@@ -555,7 +555,7 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="#" rel="category tag">{{ $cat->name }}</a></li>
+                                                    <li><a href="#" rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
@@ -590,13 +590,13 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
                                     @foreach($fourth_row_blog as $blog)
                                     <?php 
-                                    $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                    $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                     $truncated = substr($blog->name, 0, 50) . '...';
                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                     ?>
@@ -672,11 +672,11 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_one">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ $cat->name }}</h2>
+                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                                                 </div>
                                                 @foreach($fifth_row_blog as $blog)
                                                 <?php 
-                                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                                $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                 $truncated = substr($blog->name, 0, 50) . '...';
                                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                 ?>
@@ -704,7 +704,7 @@
                                                                         <!-- <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/football/"
                                                                                 rel="category tag">Football</a></li> -->
                                                                         <li><a href="#"
-                                                                                rel="category tag">{{ $cat->name }}</a></li>
+                                                                                rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
@@ -799,12 +799,12 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_six">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ $cat->name }}</h2>
+                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                                                 </div>
                                                 <div class="owl-carousel middle_widget_six_carousel">
                                                     @foreach($sixth_row_blog as $blog)
                                                     <?php 
-                                                    $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                                    $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                     $truncated = substr($blog->name, 0, 50) . '...';
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                     ?>
@@ -815,7 +815,7 @@
                                                                 <div class="entry_cats">
                                                                     <ul class="post-categories">
                                                                         <li><a href="#"
-                                                                                rel="category tag">{{ $cat->name }}</a></li>
+                                                                                rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
@@ -865,12 +865,12 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_four">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ $cat->name }}</h2>
+                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                                                 </div>
                                                 <div class="row">
                                                     @foreach($seven_row_blog as $blog)
                                                     <?php
-                                                    $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                                    $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                     $truncated = substr($blog->name, 0, 50) . '...';
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                                     ?>
@@ -898,7 +898,7 @@
                                                                     <div class="entry_cats">
                                                                         <ul class="post-categories">
                                                                             <li><a href="#"
-                                                                                    rel="category tag">{{ $cat->name }}</a>
+                                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -1110,12 +1110,12 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             <div class="row">
                                 @forEach($eight_row_blog as $blog)
                                 <?php 
-                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
@@ -1137,7 +1137,7 @@
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
                                                     <li><a href="#"
-                                                            rel="category tag">{{ $cat->name }}</a></li>
+                                                            rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
@@ -1178,13 +1178,13 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
                                 @forEach($ninth_row_blog as $blog)
                                 <?php 
-                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
@@ -1255,11 +1255,11 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ $cat->name }}</h2>
+                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
                             </div>
                             @forEach($tenth_row_blog as $blog)
                                 <?php 
-                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
@@ -1284,7 +1284,7 @@
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
                                                             <li><a href="#"
-                                                                    rel="category tag">{{ $cat->name }}</a></li>
+                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">

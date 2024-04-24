@@ -976,7 +976,7 @@
                                     <div class="cm_recent_posts_widget">
                                         @foreach($latest_blog as $blog)
                                         <?php
-                                        $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                        $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                         $truncated = substr($blog->name, 0, 50) . '...';
                                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                         ?>
