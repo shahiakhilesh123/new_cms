@@ -1272,8 +1272,7 @@
                             <div class="section-title">
                                 <h2>{{ $cat->name }}</h2>
                             </div>
-                            
-                                @forEach($ninth_row_blog as $blog)
+                            @forEach($tenth_row_blog as $blog)
                                 <?php 
                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 $truncated = substr($blog->name, 0, 50) . '...';
@@ -1282,27 +1281,71 @@
                                 @if($i == 0 || $i == 2)
                                 <div class="row">
                                 @endif
-                                @if($i < 2)
-                                <div class="cm-col-lg-6 cm-col-md-12 cm-col-12">
-                                    <article class="big-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="{{ asset('file').'/'.$ff }}"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="{{ $blog->name }}"
-                                                        decoding="async" />
-                                                </figure>
-                                            </a>
-                                            <div class="post-holder">
-                                                <div class="entry_cats">
-                                                    <ul class="post-categories">
-                                                        <li><a href="#"
-                                                                rel="category tag">{{ $cat->name }}</a></li>
-                                                    </ul>
+                                    @if($i < 2)
+                                    <div class="cm-col-lg-6 cm-col-md-12 cm-col-12">
+                                        <article class="big-card">
+                                            <div class="post_thumb">
+                                                <a
+                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                    <figure class="imghover">
+                                                        <img width="800" height="450"
+                                                            src="{{ asset('file').'/'.$ff }}"
+                                                            class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
+                                                            alt="{{ $blog->name }}"
+                                                            decoding="async" />
+                                                    </figure>
+                                                </a>
+                                                <div class="post-holder">
+                                                    <div class="entry_cats">
+                                                        <ul class="post-categories">
+                                                            <li><a href="#"
+                                                                    rel="category tag">{{ $cat->name }}</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="post_title">
+                                                        <h2><a
+                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                    </div>
+                                                    <div class="cm-post-meta">
+                                                        <ul class="post_meta">
+                                                            <li class="post_author">
+                                                                <a
+                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">Cester
+                                                                    Kinner</a>
+                                                            </li>
+                                                            <li class="posted_date">
+                                                                <a
+                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                        class="entry-date published updated"
+                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                            </li>
+                                                            <!-- <li class="comments">
+                                                                <a
+                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/#comments">1</a>
+                                                            </li> -->
+                                                        </ul>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    @endif
+                                    @if($i>=2)
+                                    <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
+                                        <div class="small-card">
+                                            <div class="post_thumb">
+                                                <a
+                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                    <figure class="imghover">
+                                                        <img width="800" height="450"
+                                                            src="{{ asset('file').'/'.$ff }}"
+                                                            class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
+                                                            alt="{{ $blog->name }}"
+                                                            decoding="async" />
+                                                    </figure>
+                                                </a>
+                                            </div>
+                                            <div class="post-holder">
                                                 <div class="post_title">
                                                     <h2><a
                                                             href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
@@ -1311,7 +1354,7 @@
                                                     <ul class="post_meta">
                                                         <li class="post_author">
                                                             <a
-                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">Cester
+                                                                href="#">Cester
                                                                 Kinner</a>
                                                         </li>
                                                         <li class="posted_date">
@@ -1322,64 +1365,19 @@
                                                         </li>
                                                         <!-- <li class="comments">
                                                             <a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/technologies-are-helping-for-business-plan/#comments">1</a>
+                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/#comments">0</a>
                                                         </li> -->
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                    </article>
-
-                                </div>
-                                @else 
-                                <div class="cm-col-lg-3 cm-col-md-6 cm-col-12">
-                                    <div class="small-card">
-                                        <div class="post_thumb">
-                                            <a
-                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
-                                                <figure class="imghover">
-                                                    <img width="800" height="450"
-                                                        src="{{ asset('file').'/'.$ff }}"
-                                                        class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
-                                                        alt="{{ $blog->name }}"
-                                                        decoding="async" />
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="post-holder">
-                                            <div class="post_title">
-                                                <h2><a
-                                                        href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
-                                            </div>
-                                            <div class="cm-post-meta">
-                                                <ul class="post_meta">
-                                                    <li class="post_author">
-                                                        <a
-                                                            href="#">Cester
-                                                            Kinner</a>
-                                                    </li>
-                                                    <li class="posted_date">
-                                                        <a
-                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
-                                                                class="entry-date published updated"
-                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
-                                                    </li>
-                                                    <!-- <li class="comments">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/virtual-reality-changing-the-life-of-people/#comments">0</a>
-                                                    </li> -->
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
-
-                                </div>
                                 @endif
                                 @if($i == 2 || $i == 5)
                                 </div>
                                 @endif
                                 <?php $i++; ?>
-                                @endforeach
+                            @endforeach
                         </div>
                     </section>
                 </div>
