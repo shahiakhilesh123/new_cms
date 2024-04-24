@@ -419,7 +419,7 @@
                                 srcset=""
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                                 <?php
-                                $second_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_first_file)->limit(6)->get();  
+                                $second_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_first_file)->orderBy('id', 'DESC')->limit(6)->get();  
                                 $cat = App\Models\Category::where('id',$setting->secound_row_first_file)->first();
                                  ?>
                     <section class="cm-post-widget-section cm-post-widget-two">
@@ -539,7 +539,7 @@
                         </div>
                     </section>
                     <?php
-                    $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->limit(6)->get();  
+                    $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
                     $truncated = substr($blog->name, 0, 50) . '...';
                     $cat = App\Models\Category::where('id',$setting->secound_row_secound_col_category)->first();
                     ?>
@@ -599,7 +599,7 @@
                         </div>
                     </section>
                     <?php
-                    $fourth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->limit(6)->get();  
+                    $fourth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(6)->get();  
                     $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
                     ?>
                     <section class="cm-post-widget-section cm_post_widget_six">
@@ -680,7 +680,7 @@
                                 <div id="primary" class="content-area">
                                     <main id="main" class="site-main">
                                         <?php
-                                          $fifth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->limit(6)->get();  
+                                          $fifth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(6)->get();  
                                           $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
                                           $i = 0; 
                                         ?>
@@ -808,7 +808,7 @@
                                             </div>
                                         </section>
                                         <?php
-                                          $sixth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_image)->limit(6)->get();  
+                                          $sixth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_image)->orderBy('id', 'DESC')->limit(6)->get();  
                                           $cat = App\Models\Category::where('id',$setting->fourth_row_first_image)->first();
                                         ?>
                                         <section class="cm-post-widget-section cm_middle_post_widget_six">
@@ -873,7 +873,7 @@
                                                     srcset="{{ asset('frontend/images/hori-ads.jpg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
-                                          $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->limit(5)->get();  
+                                          $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(5)->get();  
                                           $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
                                           $i = 0;
                                         ?>
@@ -1118,7 +1118,7 @@
             <div class="bottom-news-area news-area">
                 <div class="cm-container">
                     <?php
-                     $eight_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->limit(6)->get();  
+                     $eight_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                      $cat = App\Models\Category::where('id',$setting->fourth_row_secound_cat)->first();
                      $i = 0;
                     ?>
@@ -1186,7 +1186,7 @@
                         </div>
                     </section>
                     <?php
-                     $ninth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->limit(6)->get();  
+                     $ninth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                      $cat = App\Models\Category::where('id',$setting->fourth_row_secound_cat)->first();
                      $i = 0;
                     ?>
@@ -1263,7 +1263,7 @@
                                 srcset="{{ asset('frontend/images/hori-ads.jpg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
-                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->limit(6)->get();  
+                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                     $cat = App\Models\Category::where('id',$setting->fifth_row_first_cat)->first();
                     $i = 0;
                     ?>
