@@ -107,7 +107,7 @@
                                                                 <h2><a
                                                                         href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
                                                             </div>
-                                                            <div class="cm-post-meta">
+                                                            <!-- <div class="cm-post-meta">
                                                                 <ul class="post_meta">
                                                                     <li class="post_author">
                                                                         <a
@@ -121,7 +121,7 @@
                                                                                 datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                     </li>
                                                                 </ul>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>
