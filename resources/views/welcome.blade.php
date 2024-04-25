@@ -406,8 +406,8 @@
                                 <div id="primary" class="content-area">
                                     <main id="main" class="site-main">
                                         <?php
-                                          $fifth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(6)->get();  
-                                          $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
+                                          $fifth_row_blog = App\Models\Blog::where('categories_ids', $setting->third_row_category)->orderBy('id', 'DESC')->limit(6)->get();  
+                                          $cat = App\Models\Category::where('id',$setting->third_row_category)->first();
                                           $i = 0; 
                                         ?>
                                         <section class="cm-post-widget-section cm_middle_post_widget_one">
@@ -599,8 +599,8 @@
                                                     srcset="{{ asset('frontend/images/hori-ads.jpg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
-                                          $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(5)->get();  
-                                          $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
+                                          $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
+                                          $cat = App\Models\Category::where('id',$setting->fourth_row_first_cat)->first();
                                           $i = 0;
                                         ?>
                                         <section class="cm-post-widget-section cm_middle_post_widget_four">
@@ -912,8 +912,8 @@
                         </div>
                     </section>
                     <?php
-                     $ninth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->orderBy('id', 'DESC')->limit(6)->get();  
-                     $cat = App\Models\Category::where('id',$setting->fourth_row_secound_cat)->first();
+                     $ninth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->orderBy('id', 'DESC')->limit(6)->get();  
+                     $cat = App\Models\Category::where('id',$setting->fifth_row_first_cat)->first();
                      $i = 0;
                     ?>
                     <section class="cm-post-widget-section cm_post_widget_six">
@@ -989,8 +989,8 @@
                                 srcset="{{ asset('frontend/images/hori-ads.jpg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
-                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->orderBy('id', 'DESC')->limit(6)->get();  
-                    $cat = App\Models\Category::where('id',$setting->fifth_row_first_cat)->first();
+                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
+                    $cat = App\Models\Category::where('id',$setting->fifth_row_second_cat)->first();
                     $i = 0;
                     ?>
                     <section class="cm-post-widget-section cm-post-widget-two">
