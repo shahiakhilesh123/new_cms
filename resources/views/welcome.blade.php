@@ -50,7 +50,7 @@
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
                                                                 <li><a href="#"
-                                                                        rel="category tag">{{ $cat->name }}</a></li>
+                                                                        rel="category tag">{{isset($cat->name) ? $cat->name : ''}}</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="post_title">
@@ -100,7 +100,7 @@
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">
                                                                     <li><a href="#"
-                                                                            rel="category tag">{{ $cat->name }}</a></li>
+                                                                            rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="post_title">
@@ -151,7 +151,7 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                             </div>
                             <?php 
                             $i = 0;
@@ -179,7 +179,7 @@
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
                                                             <li><a href="#"
-                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                                    rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">
@@ -272,7 +272,7 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                             </div>
                             <div class="row">
                             @foreach($third_row_blog as $blog)
@@ -296,7 +296,7 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="#" rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                    <li><a href="#" rel="category tag">{{ isset($cat->name) ? $cat->name : ''}}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
@@ -331,7 +331,7 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : ''}}</h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
@@ -413,7 +413,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_one">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                                    <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                                                 </div>
                                                 @foreach($fifth_row_blog as $blog)
                                                 <?php 
@@ -445,7 +445,7 @@
                                                                         <!-- <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/football/"
                                                                                 rel="category tag">Football</a></li> -->
                                                                         <li><a href="#"
-                                                                                rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                                                rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
@@ -540,7 +540,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_six">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                                    <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                                                 </div>
                                                 <div class="owl-carousel middle_widget_six_carousel">
                                                     @foreach($sixth_row_blog as $blog)
@@ -556,7 +556,7 @@
                                                                 <div class="entry_cats">
                                                                     <ul class="post-categories">
                                                                         <li><a href="#"
-                                                                                rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                                                rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
@@ -606,7 +606,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_four">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                                    <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                                                 </div>
                                                 <div class="row">
                                                     @foreach($seven_row_blog as $blog)
@@ -639,7 +639,7 @@
                                                                     <div class="entry_cats">
                                                                         <ul class="post-categories">
                                                                             <li><a href="#"
-                                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a>
+                                                                                    rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -855,7 +855,7 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                             </div>
                             <div class="row">
                                 @forEach($eight_row_blog as $blog)
@@ -882,7 +882,7 @@
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
                                                     <li><a href="#"
-                                                            rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                            rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
@@ -923,7 +923,7 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
@@ -1000,7 +1000,7 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2>{{ isset($cat->name)? $cat->name : '' }}</h2>
+                                <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
                             </div>
                             @forEach($tenth_row_blog as $blog)
                                 <?php 
@@ -1029,7 +1029,7 @@
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
                                                             <li><a href="#"
-                                                                    rel="category tag">{{ isset($cat->name)? $cat->name : '' }}</a></li>
+                                                                    rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">
