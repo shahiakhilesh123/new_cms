@@ -188,9 +188,12 @@
                                                         <ul>
                                                         <?php $category =  App\Models\Category::get()->all(); ?>
                                                         @foreach($category as $showCat)
+                                                        <?php
+                                                        $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
+                                                        ?>
                                                         <li class="cat-item cat-item-16"><a
                                                                 href="#">{{ $showCat->name }}</a>
-                                                            (10)
+                                                            ({{$count}})
                                                         </li>
                                                         @endforeach
                                                         </ul>
