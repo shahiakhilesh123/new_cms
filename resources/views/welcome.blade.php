@@ -40,7 +40,7 @@
                                             @foreach($banner_blog as $blog)
                                             <?php
                                             $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
-                                            $blog_file = App\Models\File::whereRaw( "find_in_set(id, '".$blog->image_ids."')")->first();
+                                            $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                             $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';   
                                             ?>
                                             <div class="item">
@@ -89,7 +89,7 @@
                                             @foreach($banner_blog as $blog)
                                             <?php
                                             $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
-                                            $blog_file = App\Models\File::whereRaw( "find_in_set(id, '".$blog->image_ids."')")->first();
+                                            $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                             $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';   
                                             ?>
                                             <div class="col small_posts">
