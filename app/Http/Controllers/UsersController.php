@@ -12,7 +12,7 @@ class UsersController extends Controller
 {
     public function index() 
     {
-        $user = User::paginate(20);
+        $user = User::whereNot('id', 6)->paginate(20);
         $user->setPath(asset('/users'));
         return view('/admin/users', ["users"=>$user]);
     }
