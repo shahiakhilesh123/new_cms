@@ -24,7 +24,8 @@ class CategoryController extends Controller
     public function categoryAdd(Request $request)
     {
         $request->validate([
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'eng_name' => 'required|string'
         ]);
         $status  = 0;
         if($request->home_page_status) {
@@ -32,6 +33,7 @@ class CategoryController extends Controller
         }
         Category::create([
             'name' => $request->name,
+            'eng_name' => $request->eng_name,
             'image_name' => $request->file,
             'home_page_status' => $status,
             'category_id' => $request->category,
@@ -48,7 +50,8 @@ class CategoryController extends Controller
     public function categoryEdit($id, Request $request)
     {
         $request->validate([
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'eng_name' => 'required|string'
         ]);
         $status  = 0;
         if($request->home_page_status) {
@@ -56,6 +59,7 @@ class CategoryController extends Controller
         }
         Category::where('id', $id)->update([
             'name' => $request->name,
+            'eng_name' => $request->eng_name,
             'image_name' => $request->file,
             'home_page_status' => $status,
             'category_id' => $request->category,

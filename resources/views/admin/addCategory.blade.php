@@ -49,6 +49,19 @@
                     @enderror
                   </div>
                   <div class="form-group">
+                    <label for="name">Category English Name</label>
+                    <input type="text" name="eng_name" class="form-control" id="eng_name">
+                    @error('eng_name')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('eng_name') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Select Category</label>
                     <select class="form-control" name="category">
                         <option value="0">Select Category</option>

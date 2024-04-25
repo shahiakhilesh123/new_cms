@@ -42,6 +42,7 @@ return array(
     'App\\Http\\Controllers\\StateController' => $baseDir . '/app/Http/Controllers/StateController.php',
     'App\\Http\\Controllers\\StoryController' => $baseDir . '/app/Http/Controllers/StoryController.php',
     'App\\Http\\Controllers\\TestController' => $baseDir . '/app/Http/Controllers/TestController.php',
+    'App\\Http\\Controllers\\UsersController' => $baseDir . '/app/Http/Controllers/UsersController.php',
     'App\\Http\\Controllers\\WelcomeController' => $baseDir . '/app/Http/Controllers/WelcomeController.php',
     'App\\Http\\Controllers\\XmlToExcel' => $baseDir . '/app/Http/Controllers/XmlToExcel.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
