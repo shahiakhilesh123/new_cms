@@ -968,7 +968,7 @@
                             <div class="blocks">
                                 <div id="cream-magazine-post-widget-3" class="widget widget_cream-magazine-post-widget">
                                     <div class="widget-title">
-                                        <h2>Recent post</h2>
+                                        <h2>लेटेस्ट न्यूज</h2>
                                     </div>
                                     <?php
                                     $latest_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(3)->get();

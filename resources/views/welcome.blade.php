@@ -34,37 +34,41 @@
                                 <div class="cm-col-lg-7 cm-col-12 gutter-left">
                                     <div class="card">
                                         <div class="owl-carousel cm_banner-carousel-five">
+                                            <?php
+                                            $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(5)->get();   
+                                            ?>
+                                            @foreach($banner_blog as $blog)
+                                            <?php
+                                            $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
+                                            $blog_file = App\Models\File::whereRaw( "find_in_set(id, '".$blog->image_ids."')")->first();
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';   
+                                            ?>
                                             <div class="item">
                                                 <div class="post_thumb"
-                                                    style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/beach-sea-nature-ocean-girl-woman-1389875-pxhere.com_.jpg)">
+                                                    style="background-image: url({{asset('file').'/'.$ff }})">
                                                     <div class="post-holder">
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
-                                                                <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                        rel="category tag">Racing</a></li>
+                                                                <li><a href="#"
+                                                                        rel="category tag">{{ $cat->name }}</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="post_title">
                                                             <h2><a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/adham-finally-won-the-final-lap-of-car-race/">Adham
-                                                                    finally won the final lap of car race</a></h2>
+                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
                                                                 <li class="post_author">
                                                                     <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
+                                                                        href="#">Cester
                                                                         Kinner</a>
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/adham-finally-won-the-final-lap-of-car-race/"><time
+                                                                        href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                             class="entry-date published"
-                                                                            datetime="2018-11-18T11:44:29+05:45">18/11/2018</time></a>
-                                                                </li>
-                                                                <li class="comments">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/adham-finally-won-the-final-lap-of-car-race/#comments">0</a>
+                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -72,196 +76,49 @@
                                                 </div>
 
                                             </div>
-                                            <div class="item">
-                                                <div class="post_thumb"
-                                                    style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/water-sport-splash-swimming-pool-runner-leisure-180869-pxhere.com_.jpg)">
-                                                    <div class="post-holder">
-                                                        <div class="entry_cats">
-                                                            <ul class="post-categories">
-                                                                <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                        rel="category tag">Racing</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="post_title">
-                                                            <h2><a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/hundreds-of-cyclist-are-taking-participation/">Hundreds
-                                                                    of cyclist are taking participation</a></h2>
-                                                        </div>
-                                                        <div class="cm-post-meta">
-                                                            <ul class="post_meta">
-                                                                <li class="post_author">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                        Kinner</a>
-                                                                </li>
-                                                                <li class="posted_date">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/hundreds-of-cyclist-are-taking-participation/"><time
-                                                                            class="entry-date published"
-                                                                            datetime="2018-11-18T11:42:59+05:45">18/11/2018</time></a>
-                                                                </li>
-                                                                <li class="comments">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/hundreds-of-cyclist-are-taking-participation/#comments">0</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="item">
-                                                <div class="post_thumb"
-                                                    style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/water-mountain-sky-lake-balloon-hot-air-balloon-31341-pxhere.com_.jpg)">
-                                                    <div class="post-holder">
-                                                        <div class="entry_cats">
-                                                            <ul class="post-categories">
-                                                                <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                        rel="category tag">Racing</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="post_title">
-                                                            <h2><a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/desert-racing-got-more-eyes-than-on-road/">Desert
-                                                                    racing got more eyes than on road</a></h2>
-                                                        </div>
-                                                        <div class="cm-post-meta">
-                                                            <ul class="post_meta">
-                                                                <li class="post_author">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                        Kinner</a>
-                                                                </li>
-                                                                <li class="posted_date">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/desert-racing-got-more-eyes-than-on-road/"><time
-                                                                            class="entry-date published"
-                                                                            datetime="2018-11-18T11:41:59+05:45">18/11/2018</time></a>
-                                                                </li>
-                                                                <li class="comments">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/desert-racing-got-more-eyes-than-on-road/#comments">0</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="item">
-                                                <div class="post_thumb"
-                                                    style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/pexels-photo-1119796.jpeg)">
-                                                    <div class="post-holder">
-                                                        <div class="entry_cats">
-                                                            <ul class="post-categories">
-                                                                <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                        rel="category tag">Racing</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="post_title">
-                                                            <h2><a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/black-bikers-team-won-the-match-yesterday/">Black
-                                                                    bikers team won the match yesterday</a></h2>
-                                                        </div>
-                                                        <div class="cm-post-meta">
-                                                            <ul class="post_meta">
-                                                                <li class="post_author">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                        Kinner</a>
-                                                                </li>
-                                                                <li class="posted_date">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/black-bikers-team-won-the-match-yesterday/"><time
-                                                                            class="entry-date published updated"
-                                                                            datetime="2018-11-18T11:40:46+05:45">18/11/2018</time></a>
-                                                                </li>
-                                                                <li class="comments">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/black-bikers-team-won-the-match-yesterday/#comments">0</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="item">
-                                                <div class="post_thumb"
-                                                    style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/thty-hty.jpg)">
-                                                    <div class="post-holder">
-                                                        <div class="entry_cats">
-                                                            <ul class="post-categories">
-                                                                <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                        rel="category tag">Racing</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="post_title">
-                                                            <h2><a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/sport-car-was-spotted-on-the-remote-village/">Sport
-                                                                    car was spotted on the remote village</a></h2>
-                                                        </div>
-                                                        <div class="cm-post-meta">
-                                                            <ul class="post_meta">
-                                                                <li class="post_author">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                        Kinner</a>
-                                                                </li>
-                                                                <li class="posted_date">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/sport-car-was-spotted-on-the-remote-village/"><time
-                                                                            class="entry-date published updated"
-                                                                            datetime="2018-11-18T11:39:34+05:45">18/11/2018</time></a>
-                                                                </li>
-                                                                <li class="comments">
-                                                                    <a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/sport-car-was-spotted-on-the-remote-village/#comments">0</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                            @endforeach            
                                         </div>
                                     </div>
                                 </div>
+                                <?php
+                                $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(4)->offset(5)->get(); 
+                                ?>
                                 <div class="cm-col-lg-5 cm-col-12 gutter-right">
                                     <div class="right-content-holder">
                                         <div class="custom_row clearfix">
+                                            @foreach($banner_blog as $blog)
+                                            <?php
+                                            $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
+                                            $blog_file = App\Models\File::whereRaw( "find_in_set(id, '".$blog->image_ids."')")->first();
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';   
+                                            ?>
                                             <div class="col small_posts">
                                                 <div class="card">
                                                     <div class="post_thumb imghover"
-                                                        style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/uk-uikui.jpg);">
+                                                        style="background-image: url({{ asset('file').'/'.$ff }});">
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">
-                                                                    <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/racing/"
-                                                                            rel="category tag">Racing</a></li>
+                                                                    <li><a href="#"
+                                                                            rel="category tag">{{ $cat->name }}</a></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="post_title">
                                                                 <h2><a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/bike-racers-are-exploring-the-whole-world/">Bike
-                                                                        racers are exploring the whole world</a></h2>
+                                                                        href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
                                                             </div>
                                                             <div class="cm-post-meta">
                                                                 <ul class="post_meta">
                                                                     <li class="post_author">
                                                                         <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
+                                                                            href="#">Cester
                                                                             Kinner</a>
                                                                     </li>
                                                                     <li class="posted_date">
                                                                         <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/bike-racers-are-exploring-the-whole-world/"><time
+                                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                                 class="entry-date published updated"
-                                                                                datetime="2018-11-18T11:35:53+05:45">18/11/2018</time></a>
-                                                                    </li>
-                                                                    <li class="comments">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/bike-racers-are-exploring-the-whole-world/#comments">0</a>
+                                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -269,123 +126,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col small_posts">
-                                                <div class="card">
-                                                    <div class="post_thumb imghover"
-                                                        style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/cricket-724616_1280.jpg);">
-                                                        <div class="post-holder">
-                                                            <div class="entry_cats">
-                                                                <ul class="post-categories">
-                                                                    <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/cricket/"
-                                                                            rel="category tag">Cricket</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="post_title">
-                                                                <h2><a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/unfortunately-he-got-mashed-up-by-wicket/">Unfortunately,
-                                                                        he got mashed up by wicket</a></h2>
-                                                            </div>
-                                                            <div class="cm-post-meta">
-                                                                <ul class="post_meta">
-                                                                    <li class="post_author">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                            Kinner</a>
-                                                                    </li>
-                                                                    <li class="posted_date">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/unfortunately-he-got-mashed-up-by-wicket/"><time
-                                                                                class="entry-date published updated"
-                                                                                datetime="2018-11-18T11:16:45+05:45">18/11/2018</time></a>
-                                                                    </li>
-                                                                    <li class="comments">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/unfortunately-he-got-mashed-up-by-wicket/#comments">0</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col small_posts">
-                                                <div class="card">
-                                                    <div class="post_thumb imghover"
-                                                        style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/cricket-166933_1280.jpg);">
-                                                        <div class="post-holder">
-                                                            <div class="entry_cats">
-                                                                <ul class="post-categories">
-                                                                    <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/cricket/"
-                                                                            rel="category tag">Cricket</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="post_title">
-                                                                <h2><a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/he-made-sixes-on-every-ball-for-an-over/">He
-                                                                        made sixes on every ball for an over</a></h2>
-                                                            </div>
-                                                            <div class="cm-post-meta">
-                                                                <ul class="post_meta">
-                                                                    <li class="post_author">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                            Kinner</a>
-                                                                    </li>
-                                                                    <li class="posted_date">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/he-made-sixes-on-every-ball-for-an-over/"><time
-                                                                                class="entry-date published updated"
-                                                                                datetime="2018-11-18T11:15:57+05:45">18/11/2018</time></a>
-                                                                    </li>
-                                                                    <li class="comments">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/he-made-sixes-on-every-ball-for-an-over/#comments">0</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col small_posts">
-                                                <div class="card">
-                                                    <div class="post_thumb imghover"
-                                                        style="background-image: url(https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/cricket-724619_1280.jpg);">
-                                                        <div class="post-holder">
-                                                            <div class="entry_cats">
-                                                                <ul class="post-categories">
-                                                                    <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/cricket/"
-                                                                            rel="category tag">Cricket</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="post_title">
-                                                                <h2><a
-                                                                        href="https://demo.themebeez.com/demos-2/cream-magazine-free/bowler-was-outstanding-to-out-last-person/">Bowler
-                                                                        was outstanding to out last person</a></h2>
-                                                            </div>
-                                                            <div class="cm-post-meta">
-                                                                <ul class="post_meta">
-                                                                    <li class="post_author">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/author/themebeezdemo/">Cester
-                                                                            Kinner</a>
-                                                                    </li>
-                                                                    <li class="posted_date">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/bowler-was-outstanding-to-out-last-person/"><time
-                                                                                class="entry-date published updated"
-                                                                                datetime="2018-11-18T11:14:47+05:45">18/11/2018</time></a>
-                                                                    </li>
-                                                                    <li class="comments">
-                                                                        <a
-                                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/bowler-was-outstanding-to-out-last-person/#comments">0</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
