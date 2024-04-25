@@ -165,7 +165,19 @@
                                         </div>
                                         <div class="cm-col-lg-4 cm-col-12 sticky_portion"
                                             style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-
+                                            <div id="media_image-2" class="widget widget_media_image">
+                                                        <div class="widget-title">
+                                                            <h2>Recommended Host</h2>
+                                                        </div><a
+                                                            href="https://www.siteground.com/index.htm?afcode=6e8b4bff4267ce9bfec4c40627135030"><img
+                                                                width="400" height="300"
+                                                                src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png"
+                                                                class="image wp-image-709  attachment-full size-full"
+                                                                alt="" style="max-width: 100%; height: auto;"
+                                                                decoding="async" loading="lazy"
+                                                                srcset="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png 400w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300-300x225.png 300w"
+                                                                sizes="(max-width: 400px) 100vw, 400px"></a>
+                                                    </div>
                                             <div class="theiaStickySidebar"
                                                 style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 841.656px;">
                                                 <aside id="secondary" class="sidebar-widget-area">
@@ -185,6 +197,7 @@
                                                     </div>
                                                 </aside>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
