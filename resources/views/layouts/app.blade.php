@@ -852,7 +852,7 @@
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div class="page-wrapper">
         <header class="general-header cm-header-style-one">
-            <div class="top-header">
+            <!-- <div class="top-header">
                 <div class="cm-container">
                     <div class="row">
                         <div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
@@ -888,7 +888,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="cm-container">
                 <div class="logo-container">
                     <div class="row align-items-center">
