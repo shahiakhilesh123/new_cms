@@ -49,9 +49,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Menus</label>
+                    <label for="exampleInputPassword1">Select User Type</label>
                       <select class="form-control" name="role">
-                        <option value="0">Select Menu</option>
+                        <option value="0">Select User Type</option>
                         @foreach($roles as $role)
                           <option value="{{ $role->id }}">{{ $role->role_name }}</option>
                         @endforeach

@@ -18,7 +18,7 @@ class UsersController extends Controller
     }
     public function add()
     {
-        $role = Role::get()->all();
+        $role = Role::whereNot('id', 3)->get()->all();
         return view('/admin/addUser', ['roles'=>$role]);
     }
     public function save(Request $request)
@@ -41,7 +41,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::where('id', $id)->get()->first();
-        $role = Role::get()->all();
+        $role = Role::whereNot('id', 3)->get()->all();
         return view('/admin/editUser', ['roles'=>$role,'user'=>$user]);
     }
     public function editSave($id, Request $request)
