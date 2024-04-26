@@ -165,11 +165,13 @@
                                         </div>
                                         <div class="cm-col-lg-4 cm-col-12 sticky_portion"
                                             style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+                                            
+                                            <aside id="secondary" class="sidebar-widget-area">
                                             <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended Host</h2>
                                                         </div><a
-                                                            href="https://www.siteground.com/index.htm?afcode=6e8b4bff4267ce9bfec4c40627135030"><img
+                                                            href="#"><img
                                                                 width="400" height="300"
                                                                 src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png"
                                                                 class="image wp-image-709  attachment-full size-full"
