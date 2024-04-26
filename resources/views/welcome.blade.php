@@ -53,7 +53,7 @@
                                                     <div class="post-holder">
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
-                                                                <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                                <li><a href="#"
                                                                         rel="category tag">{{isset($cat->name) ? $cat->name : ''}}</a></li>
                                                             </ul>
                                                         </div>
@@ -107,7 +107,7 @@
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">
-                                                                    <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                                    <li><a href="#"
                                                                             rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                 </ul>
                                                             </div>
@@ -190,7 +190,7 @@
                                                 <div class="post-holder">
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
-                                                            <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                            <li><a href="#"
                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
@@ -312,7 +312,7 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}" rel="category tag">{{ isset($cat->name) ? $cat->name : ''}}</a></li>
+                                                    <li><a href="#" rel="category tag">{{ isset($cat->name) ? $cat->name : ''}}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
@@ -468,7 +468,7 @@
                                                                     <ul class="post-categories">
                                                                         <!-- <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/football/"
                                                                                 rel="category tag">Football</a></li> -->
-                                                                        <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                                        <li><a href="#"
                                                                                 rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
@@ -583,7 +583,7 @@
                                                             <div class="card_content">
                                                                 <div class="entry_cats">
                                                                     <ul class="post-categories">
-                                                                        <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                                        <li><a href="#"
                                                                                 rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
@@ -670,7 +670,7 @@
                                                                 <div class="post-holder">
                                                                     <div class="entry_cats">
                                                                         <ul class="post-categories">
-                                                                            <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                                            <li><a href="#"
                                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a>
                                                                             </li>
                                                                         </ul>
@@ -917,7 +917,7 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                    <li><a href="#"
                                                             rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                 </ul>
                                             </div>
@@ -1072,7 +1072,7 @@
                                                 <div class="post-holder">
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
-                                                            <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $cat->eng_name) }}"
+                                                            <li><a href="#"
                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
