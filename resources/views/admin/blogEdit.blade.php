@@ -203,8 +203,16 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="name">Author Name</label>
-                    <input type="text" name="author" value="{{ $data['blogs']->author }}" class="form-control" id="author">
+                    <label for="name">Select Author Name</label>
+                    <div class="select2-purple">
+                        <select class="form-control" name="author">
+                            <option value="0">Select Author</option>
+                            <?php $authors = App\Models\User::whereNot('id', 6)->get()->all() ?>
+                            @foreach($authors as $author)
+                              <option value="{{ $author->id }}" <?php if($data['blogs']->author == $author->id) { 'selected'; } ?>>{{ $author->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     @error('author')
                       <div class="input-group-append">
                         <div class="input-group-text">
