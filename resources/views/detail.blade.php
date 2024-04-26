@@ -29,7 +29,7 @@
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
                                                 itemtype="http://schema.org/ListItem" class="trail-item"><a
-                                                    href="/{{ str_replace(' ', '-', $data['category']->name) }}"
+                                                    href="/{{ str_replace(' ', '-', $data['category']->eng_name) }}"
                                                     itemprop="item"><span itemprop="name">{{ $data['category']->name }}</span></a>
                                                 <meta itemprop="position" content="2">
                                             </li>
@@ -130,7 +130,7 @@
                                                                     <div class="card_content">
                                                                         <div class="entry_cats">
                                                                             <ul class="post-categories">
-                                                                                <li><a href="#"
+                                                                                <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $data['category']->eng_name) }}"
                                                                                         rel="category tag">{{ $data['category']->name }}</a>
                                                                                 </li>
                                                                             </ul>
@@ -194,7 +194,7 @@
                                                         $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                                         ?>
                                                         <li class="cat-item cat-item-16"><a
-                                                                href="#">{{ $showCat->name }}</a>
+                                                                href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
                                                             ({{$count}})
                                                         </li>
                                                         @endforeach

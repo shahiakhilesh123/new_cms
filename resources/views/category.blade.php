@@ -151,7 +151,7 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="#"
+                                                                                                <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $category->eng_name) }}"
                                                                                                         rel="category tag">{{isset($category->name) ? $category->name : ''}}</a>
                                                                                                 </li>
                                                                                             </ul>
