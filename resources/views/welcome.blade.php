@@ -40,7 +40,7 @@
                                             @foreach($banner_blog as $blog)
                                             <?php
                                             $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
-                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                             } else {
                                                 $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -93,7 +93,7 @@
                                             @foreach($banner_blog as $blog)
                                             <?php
                                             $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
-                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                             } else {
                                                 $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -164,7 +164,7 @@
                             <?php 
                             $i = 0;
                             foreach($second_row_blog as $blog) { 
-                                if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                     $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 } else {
                                     $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -289,7 +289,7 @@
                             <div class="row">
                             @foreach($third_row_blog as $blog)
                             <?php
-                            if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                            if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                             } else {
                                 $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -353,7 +353,7 @@
                                 <div class="row">
                                     @foreach($fourth_row_blog as $blog)
                                     <?php 
-                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                         $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                     } else {
                                         $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -437,7 +437,7 @@
                                                 </div>
                                                 @foreach($fifth_row_blog as $blog)
                                                 <?php 
-                                                 if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                                 if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                     $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                                 } else {
                                                     $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -569,7 +569,7 @@
                                                 <div class="owl-carousel middle_widget_six_carousel">
                                                     @foreach($sixth_row_blog as $blog)
                                                     <?php 
-                                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                         $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                                     } else {
                                                         $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -639,7 +639,7 @@
                                                 <div class="row">
                                                     @foreach($seven_row_blog as $blog)
                                                     <?php
-                                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                                    if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                         $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                                     } else {
                                                         $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -892,7 +892,7 @@
                             <div class="row">
                                 @forEach($eight_row_blog as $blog)
                                 <?php 
-                                if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                     $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 } else {
                                     $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -965,7 +965,7 @@
                                 <div class="row">
                                 @forEach($ninth_row_blog as $blog)
                                 <?php 
-                                if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                     $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 } else {
                                     $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
@@ -1044,7 +1044,7 @@
                             </div>
                             @forEach($tenth_row_blog as $blog)
                                 <?php 
-                                if (isset($blog->image_ids) && $blog->image_ids != '' && !is_null($blog->image_ids)) {
+                                if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                     $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                 } else {
                                     $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
