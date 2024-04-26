@@ -22,7 +22,7 @@ class StoryController extends Controller
     {
         $cat_name = str_replace('-', ' ', $name);
         $category = Category::where('eng_name', $cat_name)->first();
-        $blog = Blog::where('categories_ids', $category->id)->with('images')->paginate(1);
+        $blog = Blog::where('categories_ids', $category->id)->with('images')->paginate(10);
         return view('category',['category'=> $category,'blogs' => $blog]);
     }
 }
