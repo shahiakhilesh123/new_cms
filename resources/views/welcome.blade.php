@@ -874,7 +874,7 @@
                                              //$count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}/{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
+                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
                                                 
                                             </li>
                                             @endforeach
