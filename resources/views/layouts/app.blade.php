@@ -921,7 +921,7 @@
                     <div id="main-nav" class="primary-navigation">
                         <ul id="menu-main-menu" class>
                             <li class="home-btn"><a href="{{ asset('/') }}"><i
-                                        class="feather icon-home" aria-hidden="true"></i></a></li>
+                                        class="fa fa-home" aria-hidden="true"></i></a></li>
                             <?php 
                             $menus = App\Models\Menu::whereHas('type', function ($query) {
                                 $query->where('type', 'Header');
