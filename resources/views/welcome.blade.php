@@ -71,7 +71,9 @@
                                                             <ul class="post_meta">
                                                                 <li class="post_author">
                                                                     <a
-                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                        href="#">
+                                                                        <i class="fa fa-user"></a>
+                                                                        {{ isset($author->name) ? $author->name : 'Admin'  }}</a>
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
