@@ -979,13 +979,14 @@
                                         $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                         $truncated = substr($blog->name, 0, 50) . '...';
                                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
+                                        $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
                                         ?>
                                         <div class="box">
                                             <div class="row">
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                     <div class="post_thumb">
                                                         <a
-                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                            href="{{ asset('/') }}{{str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '-' )}}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
                                                                     src="{{ asset('file').'/'.$ff }}"
@@ -999,13 +1000,13 @@
                                                 <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                     <div class="post_title">
                                                         <h2><a
-                                                                href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $blog->name; ?></a></h2>
+                                                                href="{{ asset('/') }}{{str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '-' )}}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $blog->name; ?></a></h2>
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
                                                             <li class="posted_date">
                                                                 <a
-                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                    href="{{ asset('/') }}{{str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '-' )}}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                         class="entry-date published"
                                                                         datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                             </li>
