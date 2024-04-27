@@ -29,7 +29,7 @@
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
                                                 itemtype="http://schema.org/ListItem" class="trail-item"><a
-                                                    href="/{{ str_replace(' ', '-', $data['category']->eng_name) }}"
+                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $data['category']->eng_name) }}"
                                                     itemprop="item"><span itemprop="name">{{ $data['category']->name }}</span></a>
                                                 <meta itemprop="position" content="2">
                                             </li>
@@ -59,8 +59,7 @@
                                                             <ul class="post_meta">
                                                                 <li class="post_author">
                                                                     <a
-                                                                        href="#">Cester
-                                                                        Kinner</a>
+                                                                        href="#">{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</a>
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
@@ -112,12 +111,18 @@
                                                         </div>
                                                         <div class="row">
                                                         @foreach($data['latests'] as $latest)
-                                                        <?php $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : ''); ?>
+                                                        <?php 
+                                                        $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : ''); 
+                                                        $author = [];
+                                                        if(isset($blog->author)) {
+                                                            $author = App\Models\User::where( "id", $blog->author)->first();
+                                                        }
+                                                        ?>
                                                             <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
                                                                 <div class="card">
                                                                     <div class="post_thumb">
                                                                         <a
-                                                                            href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
+                                                                            href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
                                                                                     src="{{ asset('file').'/'.$ff }}"
@@ -130,25 +135,24 @@
                                                                     <div class="card_content">
                                                                         <div class="entry_cats">
                                                                             <ul class="post-categories">
-                                                                                <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $data['category']->eng_name) }}"
+                                                                                <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '' ) }}"
                                                                                         rel="category tag">{{ $data['category']->name }}</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
                                                                         <div class="post_title">
                                                                             <h2><a
-                                                                                    href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">{{ $latest->name }} </a></h2>
+                                                                                    href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">{{ $latest->name }} </a></h2>
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
                                                                                 <li class="post_author">
                                                                                     <a
-                                                                                        href="#">Cester
-                                                                                        Kinner</a>
+                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
                                                                                 </li>
                                                                                 <li class="posted_date">
                                                                                     <a
-                                                                                        href="{{ asset('/story') }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
+                                                                                        href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
                                                                                             class="entry-date published"
                                                                                             datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
                                                                                 </li>
@@ -191,11 +195,10 @@
                                                         <?php $category =  App\Models\Category::get()->all(); ?>
                                                         @foreach($category as $showCat)
                                                         <?php
-                                                        $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
+                                                        //$count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                                         ?>
                                                         <li class="cat-item cat-item-16"><a
-                                                                href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
-                                                            ({{$count}})
+                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
                                                         </li>
                                                         @endforeach
                                                         </ul>

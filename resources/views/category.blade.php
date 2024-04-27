@@ -130,6 +130,10 @@
                                                                         $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                                         $truncated = $blog->name;
                                                                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : "";
+                                                                        $author = [];
+                                                                        if(isset($blog->author)) {
+                                                                            $author = App\Models\User::where( "id", $blog->author)->first();
+                                                                        }
                                                                         ?>
                                                                         <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
                                                                             <article id="post-619"
@@ -137,7 +141,7 @@
                                                                                 <div class="card">
                                                                                     <div class="post_thumb">
                                                                                         <a
-                                                                                            href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
@@ -151,25 +155,24 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $category->eng_name) }}"
+                                                                                                <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', $category->eng_name) }}"
                                                                                                         rel="category tag">{{isset($category->name) ? $category->name : ''}}</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
                                                                                         <div class="post_title">
                                                                                             <h2><a
-                                                                                                    href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
+                                                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">
                                                                                                 <li class="post_author">
                                                                                                     <a
-                                                                                                        href="#">Cester
-                                                                                                        Kinner</a>
+                                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
                                                                                                 </li>
                                                                                                 <li class="posted_date">
                                                                                                     <a
-                                                                                                        href="{{ asset('story') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
                                                                                                             class="entry-date published"
                                                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                                                 </li>
@@ -236,11 +239,11 @@
                                                             ?>
                                                             @foreach($category as $showCat)
                                                             <?php
-                                                            $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
+                                                            // $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                                             ?>
                                                             <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/cat') }}/{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
-                                                                ({{$count}})
+                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
+                                                                
                                                             </li>
                                                             @endforeach
                                                             </li>

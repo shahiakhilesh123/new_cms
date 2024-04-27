@@ -187,7 +187,7 @@
                     <tr>
                       <th style="width: 10px">#</th>
                       <th>Name</th>
-                      <th style="width: 40px">Status</th>
+                      <!-- <th style="width: 40px">Status</th> -->
                       <th></th>
                     </tr>
                   </thead>
@@ -197,13 +197,13 @@
                         <tr>
                         <td>{{ $i }}.</td>
                         <td>{{ $user->name }}</td>
-                        <td>
+                        <!-- <td>
                             @if($user->status == 1)
                                 Active
                             @else
                                 Deactive
                             @endif   
-                        </td>
+                        </td> -->
                         <td>
                         <a href="{{ asset('users/edit') }}/{{$user->id}}"><i class="fas fa-edit"></i></a>
                         </td>

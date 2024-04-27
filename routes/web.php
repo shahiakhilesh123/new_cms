@@ -46,7 +46,8 @@ Route::prefix('/posts')->group(function () {
     Route::post('/add', [App\Http\Controllers\BlogController::class, 'blogAdd'])->name('blogAdd');
     Route::get('/edit/{id}', [App\Http\Controllers\BlogController::class, 'edit'])->name('editBlog');
     Route::post('/edit/{id}', [App\Http\Controllers\BlogController::class, 'editSave'])->name('blogEdit');
-    Route::get('/delete/{id}', [App\Http\Controllers\BlogController::class, 'del'])->name('deleteBlog');
+    Route::get('/delete/{id}', [App\Http\Controllers\BlogController::class, 'del'])->name('deleteBoxBlog');
+    Route::get('/del/{id}', [App\Http\Controllers\BlogController::class, 'deleteBlog'])->name('delBlog');
 });
 Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('Setting');
 Route::post('/setting', [App\Http\Controllers\SettingController::class,'saveSetting'])->name('saveSetting');
@@ -92,8 +93,8 @@ Route::prefix('users')->group(function () {
     Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'edit'])->name('editUser');
     Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'editSave'])->name('userSave');
 });
-Route::get('/story/{name}', [App\Http\Controllers\StoryController::class, 'showStory'])->name('showStory');
-Route::get('/cat/{cat_name}',[App\Http\Controllers\StoryController::class, 'category'])->name('category');
+Route::get('/{cat_name}/{name}', [App\Http\Controllers\StoryController::class, 'showStory'])->name('showStory');
+Route::get('/{cat_name}',[App\Http\Controllers\StoryController::class, 'category'])->name('category');
 // Route::get('detail', function () {
 //     return view('detail');
 // });

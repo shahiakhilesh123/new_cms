@@ -47,17 +47,13 @@ class UsersController extends Controller
     public function editSave($id, Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'role' => 'required|string',
+            'name' => ['required', 'string'],
+            'role' => ['required']
         ]);
-        
         User::where('id', $id)->update([
             'role' => $request->role,
             'name' =>  $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'description' => $request->description
         ]);
         return redirect('users');   
     }

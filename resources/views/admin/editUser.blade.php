@@ -32,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{asset('users/add')}}">
+              <form method="post" action="{{asset('users/edit')}}/{{$user->id}}">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -49,9 +49,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Menus</label>
+                    <label for="exampleInputPassword1">Select Role</label>
                       <select class="form-control" name="role">
-                        <option value="0">Select Menu</option>
+                        <option value="0">Select Role</option>
                         @foreach($roles as $role)
                           <option value="{{ $role->id }}" <?php if($user->role == $role->id) { echo "selected"; } ?>>{{ $role->role_name }}</option>
                         @endforeach
@@ -67,43 +67,17 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Email</label>
-                    <input type="email" class="form-control" value="{{ $user->email }}" id="email" name="email">
-                    @error('link')
+                    <label for="exampleInputPassword1">Description</label>
+                      <input type="text" name="description" value="{{ $user->description }}" class="form-control" id="description" >
+                      @error('description')
                         <div class="input-group-append">
                           <div class="input-group-text">
                             <!-- <span class="fas fa-envelope"> -->
-                            {{ $errors->first('link') }}
+                            {{ $errors->first('description') }}
                             <!-- </span> -->
                           </div>
                         </div>
-                    @enderror
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                    @error('password')
-                        <div class="input-group-append">
-                          <div class="input-group-text">
-                            <!-- <span class="fas fa-envelope"> -->
-                            {{ $errors->first('password') }}
-                            <!-- </span> -->
-                          </div>
-                        </div>
-                    @enderror
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Confirm Password</label>
-                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
-                    @error('password_confirmation')
-                        <div class="input-group-append">
-                          <div class="input-group-text">
-                            <!-- <span class="fas fa-envelope"> -->
-                            {{ $errors->first('password_confirmation') }}
-                            <!-- </span> -->
-                          </div>
-                        </div>
-                    @enderror
+                      @enderror
                   </div>
                 </div>
                 <!-- /.card-body -->
