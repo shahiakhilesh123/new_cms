@@ -895,7 +895,7 @@
                         <div class="cm-col-lg-4 cm-col-12">
                             <div class="logo">
                                 <h1 class="site-logo">
-                                    <a href="#"
+                                    <a href="{{ asset('/') }}"
                                         class="custom-logo-link" rel="home" aria-current="page"><img 
                                             src="{{ asset('frontend/images/logo.png') }}"
                                             class="custom-logo" alt="Cream magazine" decoding="async"
