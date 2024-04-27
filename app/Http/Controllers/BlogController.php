@@ -45,7 +45,7 @@ class BlogController extends Controller
         $request->validate([
             'name' => 'required|string',
             'sort_desc' => 'required|string',
-            'category' => 'required',
+            'category' => 'required|numeric',
         ]);
         $ima = $request->images;
         $cat = $request->category;
@@ -91,7 +91,7 @@ class BlogController extends Controller
         $request->validate([
             'name' => 'required|string',
             'sort_desc' => 'required|string',
-            'category' => 'required',
+            'category' => 'required|numeric',
         ]);
         $ima = $request->images;
         $cat = $request->category;
@@ -123,11 +123,22 @@ class BlogController extends Controller
         ]);
         return redirect('posts');
     }
-    public function del($id, Request $request) {
+    public function del($id, Request $request) 
+    {
         ?>
-        
+        <script>
+            if (confirm('Are You Sure You want Delete Post')) {
+                window.location.href =  '<?php echo asset('/posts/del').'/'.$id; ?>'
+            } else {
+                window.location.href =  '<?php echo asset('/posts'); ?>'
+            }
+        </script>
         <?php
-        //return redirect('posts');
+    }
+    public function deleteBlog($id, Request $request)
+    {
+        blog::where('id', $id)->delete();
+        return redirect('/posts');
     }
    
 }
