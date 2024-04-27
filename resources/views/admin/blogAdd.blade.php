@@ -206,7 +206,7 @@
                     <label for="name">Select Author Name</label>
                     <div class="select2-purple">
                         <select class="form-control" name="author">
-                            <option value="0">Select Author</option>
+                            <option value="">Select Author</option>
                             <?php $authors = App\Models\User::whereNot('id', 6)->get()->all() ?>
                             @foreach($authors as $author)
                               <option value="{{ $author->id }}">{{ $author->name }}</option>
@@ -253,17 +253,17 @@
                     <label for="exampleInputPassword1">Select Category</label>
                     <div class="select2-purple">
                         <select class="form-control" name="category">
-                            <option value="0">Select Category</option>
+                            <option value="">Select Category</option>
                             @foreach($data['categories'] as $category)
                               <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
-                      @error('type')
+                      @error('category')
                         <div class="input-group-append">
                           <div class="input-group-text">
                             <!-- <span class="fas fa-envelope"> -->
-                            {{ $errors->first('type') }}
+                            {{ $errors->first('category') }}
                             <!-- </span> -->
                           </div>
                         </div>

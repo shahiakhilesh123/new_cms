@@ -46,6 +46,7 @@ class BlogController extends Controller
             'name' => 'required|string',
             'sort_desc' => 'required|string',
             'category' => 'required|numeric',
+            'author' => 'required|numeric'
         ]);
         $ima = $request->images;
         $cat = $request->category;
@@ -92,6 +93,7 @@ class BlogController extends Controller
             'name' => 'required|string',
             'sort_desc' => 'required|string',
             'category' => 'required|numeric',
+            'author' => 'required|numeric'
         ]);
         $ima = $request->images;
         $cat = $request->category;
@@ -105,7 +107,7 @@ class BlogController extends Controller
         if($request->header_sec) {
             $header_sec = 1;
         }
-        Blog::where('id', $id)->update([
+        $data = [
             'name' => $request->name,
             'eng_name' => $request->eng_name,
             'author' => $request->author,
@@ -120,7 +122,8 @@ class BlogController extends Controller
             'image_ids' => $ima,
             'categories_ids' => $cat,
             'description' => $request->description,
-        ]);
+        ];
+        Blog::where('id', $id)->update($data);
         return redirect('posts');
     }
     public function del($id, Request $request) 
