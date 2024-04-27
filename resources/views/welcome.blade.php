@@ -255,8 +255,7 @@
                                                 <ul class="post_meta">
                                                     <li class="post_author">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">Cester
-                                                            Kinner</a>
+                                                            href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
                                                     </li>
                                                     <li class="posted_date">
                                                         <a
