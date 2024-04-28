@@ -10,8 +10,8 @@ class StoryController extends Controller
 {
     public function showStory($cat_name, $name)
     {
-        $blog_name = str_replace('-', ' ', $name);
-        $blog = Blog::where('eng_name', $blog_name)->with('images')->first();
+        //echo $blog_name = str_replace('-', ' ', $name);
+        $blog = Blog::where('site_url', $name)->with('images')->first();
         $author =  User::where('id', $blog->author)->first();
         $category = Category::where('id', $blog->categories_ids)->first();
         $other_blog = Blog::where('id','!=', $blog->id)->with('thumbnail')->where('categories_ids', $blog->categories_ids)->with('images')->limit(6)->get()->all();
@@ -21,8 +21,8 @@ class StoryController extends Controller
     }
     public function category($name)
     {
-        $cat_name = str_replace('-', ' ', $name);
-        $category = Category::where('eng_name', $cat_name)->first();
+        //$cat_name = str_replace('-', ' ', $name);
+        $category = Category::where('site_url', $name)->first();
         $blog = Blog::where('categories_ids', $category->id)->with('images')->orderBy('id', 'DESC')->paginate(10);
         $blog->setPath(asset('/').$name);
         return view('category',['category'=> $category,'blogs' => $blog]);

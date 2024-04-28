@@ -101,7 +101,7 @@
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
                                                 itemtype="http://schema.org/ListItem" class="trail-item trail-end"><a
-                                                    href="#"
+                                                    href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}"
                                                     itemprop="item"><span itemprop="name">{{ isset($category->name) ? $category->name : '' }}</span></a>
                                                 <meta itemprop="position" content="3">
                                             </li>
@@ -127,8 +127,13 @@
                                                                     @if(count($blogs) > 0)
                                                                         @foreach($blogs as $blog)
                                                                         <?php
-                                                                        $blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
+                                                                        //$blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                                         $truncated = $blog->name;
+                                                                        if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
+                                                                            $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                                                        } else {
+                                                                            $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
+                                                                        }
                                                                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : "";
                                                                         $author = [];
                                                                         if(isset($blog->author)) {
@@ -141,7 +146,7 @@
                                                                                 <div class="card">
                                                                                     <div class="post_thumb">
                                                                                         <a
-                                                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                                            href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
@@ -155,14 +160,14 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', $category->eng_name) }}"
+                                                                                                <li><a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}"
                                                                                                         rel="category tag">{{isset($category->name) ? $category->name : ''}}</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
                                                                                         <div class="post_title">
                                                                                             <h2><a
-                                                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
+                                                                                                    href="{{ asset('/') }}{{isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">
@@ -172,7 +177,7 @@
                                                                                                 </li>
                                                                                                 <li class="posted_date">
                                                                                                     <a
-                                                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($category->eng_name) ? $category->eng_name : '-') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                                        href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                                             class="entry-date published"
                                                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                                                 </li>
@@ -242,7 +247,7 @@
                                                             // $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                                             ?>
                                                             <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
+                                                                    href="{{ asset('/') }}{{  isset($showCat->site_url) ? $showCat->site_url : '' }}">{{ $showCat->name }}</a>
                                                                 
                                                             </li>
                                                             @endforeach
@@ -253,7 +258,7 @@
                                                         <div class="widget-title">
                                                             <h2>Recommended Host</h2>
                                                         </div><a
-                                                            href="https://www.siteground.com/index.htm?afcode=6e8b4bff4267ce9bfec4c40627135030"><img
+                                                            href="#"><img
                                                                 width="400" height="300"
                                                                 src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png"
                                                                 class="image wp-image-709  attachment-full size-full"

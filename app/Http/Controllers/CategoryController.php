@@ -27,6 +27,8 @@ class CategoryController extends Controller
             'name' => 'required|string',
             'eng_name' => 'required|string'
         ]);
+        $url = $this->clean($request->eng_name);
+        $url = strtolower(str_replace(' ', '-',trim($url)));
         $status  = 0;
         if($request->home_page_status) {
             $status =1;
@@ -34,6 +36,7 @@ class CategoryController extends Controller
         Category::create([
             'name' => $request->name,
             'eng_name' => $request->eng_name,
+            'site_url' => $url,
             'image_name' => $request->file,
             'home_page_status' => $status,
             'category_id' => $request->category,
@@ -53,6 +56,8 @@ class CategoryController extends Controller
             'name' => 'required|string',
             'eng_name' => 'required|string'
         ]);
+        $url = $this->clean($request->eng_name);
+        $url = strtolower(str_replace(' ', '-',trim($url)));
         $status  = 0;
         if($request->home_page_status) {
             $status =1;
@@ -60,10 +65,17 @@ class CategoryController extends Controller
         Category::where('id', $id)->update([
             'name' => $request->name,
             'eng_name' => $request->eng_name,
+            'site_url' => $url,
             'image_name' => $request->file,
             'home_page_status' => $status,
             'category_id' => $request->category,
         ]);
         return redirect('/categories');
     }
+    public function clean($string) {
+        $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+        $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+        $string = trim($string);
+        return preg_replace('/-+/', ' ', $string); // Replaces multiple hyphens with single one.
+     }
 }

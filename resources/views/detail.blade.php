@@ -29,7 +29,7 @@
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
                                                 itemtype="http://schema.org/ListItem" class="trail-item"><a
-                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $data['category']->eng_name) }}"
+                                                    href="{{ asset('/') }}{{  isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
                                                     itemprop="item"><span itemprop="name">{{ $data['category']->name }}</span></a>
                                                 <meta itemprop="position" content="2">
                                             </li>
@@ -72,7 +72,7 @@
                                                                         href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence/#comments">0</a>
                                                                 </li> -->
                                                                 <li class="entry_cats">
-                                                                    <a href="/{{ str_replace(' ', '-', $data['category']->name) }}"
+                                                                    <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
                                                                         rel="category tag">{{ $data['category']->name }}</a>
                                                                 </li>
                                                             </ul>
@@ -122,7 +122,7 @@
                                                                 <div class="card">
                                                                     <div class="post_thumb">
                                                                         <a
-                                                                            href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
+                                                                            href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
                                                                                     src="{{ asset('file').'/'.$ff }}"
@@ -135,14 +135,14 @@
                                                                     <div class="card_content">
                                                                         <div class="entry_cats">
                                                                             <ul class="post-categories">
-                                                                                <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '' ) }}"
+                                                                                <li><a href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : ''  }}"
                                                                                         rel="category tag">{{ $data['category']->name }}</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
                                                                         <div class="post_title">
                                                                             <h2><a
-                                                                                    href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">{{ $latest->name }} </a></h2>
+                                                                                    href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo  $latest->site_url; ?>">{{ $latest->name }} </a></h2>
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
@@ -152,7 +152,7 @@
                                                                                 </li>
                                                                                 <li class="posted_date">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{ str_replace(' ', '-', isset($data['category']->eng_name) ? $data['category']->eng_name : '-' ) }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
+                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
                                                                                             class="entry-date published"
                                                                                             datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
                                                                                 </li>
@@ -198,7 +198,7 @@
                                                         //$count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                                         ?>
                                                         <li class="cat-item cat-item-16"><a
-                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
+                                                                href="{{ asset('/') }}{{  isset($showCat->site_url) ? $showCat->site_url : '' }}">{{ $showCat->name }}</a>
                                                         </li>
                                                         @endforeach
                                                         </ul>

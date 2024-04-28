@@ -20,7 +20,7 @@
                                 ?>
                                 <div class="item">
                                     <p><a
-                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></p>
+                                            href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo $blog->site_url; ?>"><?php echo $truncated; ?></a></p>
                                 </div>
                                 @endforeach
                             </div>
@@ -59,13 +59,13 @@
                                                     <div class="post-holder">
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
-                                                                <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                                <li><a href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                         rel="category tag">{{isset($cat->name) ? $cat->name : ''}}</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="post_title">
                                                             <h2><a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
+                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
@@ -75,7 +75,7 @@
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                        href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php isset($blog->site_url) ? $blog->site_url :''; ?>"><time
                                                                             class="entry-date published"
                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                 </li>
@@ -112,13 +112,13 @@
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">
-                                                                    <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                                    <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                             rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="post_title">
                                                                 <h2><a
-                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">{{ $blog->name }}</a></h2>
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
                                                             </div>
                                                             <!-- <div class="cm-post-meta">
                                                                 <ul class="post_meta">
@@ -129,7 +129,7 @@
                                                                     </li>
                                                                     <li class="posted_date">
                                                                         <a
-                                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                 class="entry-date published updated"
                                                                                 datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                     </li>
@@ -188,7 +188,7 @@
                                         <article class="big-card">
                                             <div class="post_thumb">
                                                 <a
-                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
                                                             src="{{ asset('file').'/'.$ff }}"
@@ -199,13 +199,13 @@
                                                 <div class="post-holder">
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
-                                                            <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                            <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">
                                                         <h2><a
-                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated ?></a></h2>
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated ?></a></h2>
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
@@ -215,7 +215,7 @@
                                                             </li>
                                                             <li class="posted_date">
                                                                 <a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                         class="entry-date published"
                                                                         datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></a></time></a>
                                                             </li>
@@ -236,7 +236,7 @@
                                     <div class="small-card">
                                         <div class="post_thumb">
                                             <a
-                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="800" height="450"
                                                         src="{{ asset('file').'/'.$ff }}"
@@ -249,7 +249,7 @@
                                         <div class="post-holder">
                                             <div class="post_title">
                                                 <h2><a
-                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated ?></a></a></h2>
+                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated ?></a></a></h2>
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
@@ -259,7 +259,7 @@
                                                     </li>
                                                     <li class="posted_date">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                 class="entry-date published updated"
                                                                 datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></time></a>
                                                     </li>
@@ -311,7 +311,7 @@
                                 <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
                                     <div class="card">
                                         <div class="post_thumb">
-                                            <a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                            <a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="720" height="540"
                                                         src="{{ asset('file').'/'.$ff }}"
@@ -323,11 +323,11 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}" rel="category tag">{{ isset($cat->name) ? $cat->name : ''}}</a></li>
+                                                    <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}" rel="category tag">{{ isset($cat->name) ? $cat->name : ''}}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
-                                                <h2><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated ?></a></h2>
+                                                <h2><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated ?></a></h2>
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
@@ -337,7 +337,7 @@
                                                     </li>
                                                     <li class="posted_date">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                 class="entry-date published updated"
                                                                 datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                     </li>
@@ -381,7 +381,7 @@
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                     <div class="post_thumb">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
                                                                     src="{{ asset('file').'/'.$ff }}"
@@ -396,7 +396,7 @@
                                                     <div class="right_box">
                                                         <div class="post_title">
                                                             <h2><a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
@@ -406,7 +406,7 @@
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                             class="entry-date published updated"
                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                 </li>
@@ -470,7 +470,7 @@
                                                         <article class="card">
                                                             <div class="post_thumb">
                                                                 <a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                     <figure class="imghover">
                                                                         <img width="720" height="540"
                                                                             src="{{ asset('file').'/'.$ff }}"
@@ -485,13 +485,13 @@
                                                                     <ul class="post-categories">
                                                                         <!-- <li><a href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/football/"
                                                                                 rel="category tag">Football</a></li> -->
-                                                                        <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                                        <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                                 rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
                                                                     <h2><a
-                                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                                 </div>
                                                                 <div class="cm-post-meta">
                                                                     <ul class="post_meta">
@@ -501,7 +501,7 @@
                                                                         </li>
                                                                         <li class="posted_date">
                                                                             <a
-                                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                     class="entry-date published updated"
                                                                                     datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                         </li>
@@ -524,7 +524,7 @@
                                                                     <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                                         <div class="post_thumb">
                                                                             <a
-                                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                 <figure class="imghover">
                                                                                     <img width="720" height="540"
                                                                                         src="{{ asset('file').'/'.$ff }}"
@@ -538,7 +538,7 @@
                                                                     <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                                         <div class="post_title">
                                                                             <h2><a
-                                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a>
+                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a>
                                                                             </h2>
                                                                         </div>
                                                                         <div class="cm-post-meta">
@@ -549,7 +549,7 @@
                                                                                 </li>
                                                                                 <li class="posted_date">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                             class="entry-date published updated"
                                                                                             datetime="2018-11-12T11:00:55+05:45">{{ $blog->created_at }}</time></a>
                                                                                 </li>
@@ -602,13 +602,13 @@
                                                             <div class="card_content">
                                                                 <div class="entry_cats">
                                                                     <ul class="post-categories">
-                                                                        <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                                        <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                                 rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                                     </ul>
                                                                 </div>
                                                                 <div class="post_title">
                                                                     <h2><a
-                                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                                 </div>
                                                                 <div class="cm-post-meta">
                                                                     <ul class="post_meta">
@@ -618,7 +618,7 @@
                                                                         </li>
                                                                         <li class="posted_date">
                                                                             <a
-                                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                     class="entry-date published"
                                                                                     datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                         </li>
@@ -677,7 +677,7 @@
                                                             <article class="card">
                                                                 <div class="post_thumb">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                         <figure class="imghover">
                                                                             <img width="720" height="540"
                                                                                 src="{{ asset('file').'/'.$ff }}"
@@ -692,14 +692,14 @@
                                                                 <div class="post-holder">
                                                                     <div class="entry_cats">
                                                                         <ul class="post-categories">
-                                                                            <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                                            <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
                                                                     <div class="post_title">
                                                                         <h2><a
-                                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                                     </div>
                                                                     <div class="post-excerpt">
                                                                         <p>&nbsp;</p>
@@ -712,7 +712,7 @@
                                                                             </li>
                                                                             <li class="posted_date">
                                                                                 <a
-                                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                         class="entry-date published updated"
                                                                                         datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                             </li>
@@ -739,7 +739,7 @@
                                                                                 class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                                                 <div class="post_thumb">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                         <figure class="imghover">
                                                                                             <img width="720"
                                                                                                 height="540"
@@ -756,7 +756,7 @@
                                                                                 <div class="right_box">
                                                                                     <div class="post_title">
                                                                                         <h2><a
-                                                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                                                     </div>
                                                                                     <div class="cm-post-meta">
                                                                                         <ul class="post_meta">
@@ -766,7 +766,7 @@
                                                                                             </li>
                                                                                             <li class="posted_date">
                                                                                                 <a
-                                                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                                         class="entry-date published updated"
                                                                                                         datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                                             </li>
@@ -873,7 +873,7 @@
                                              //$count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->eng_name) }}">{{ $showCat->name }}</a>
+                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', $showCat->site_url) }}">{{ $showCat->name }}</a>
                                                 
                                             </li>
                                             @endforeach
@@ -928,7 +928,7 @@
                                     <div class="card">
                                         <div class="post_thumb">
                                             <a
-                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="720" height="540"
                                                         src="{{ asset('file').'/'.$ff }}"
@@ -941,13 +941,13 @@
                                         <div class="card_content">
                                             <div class="entry_cats">
                                                 <ul class="post-categories">
-                                                    <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                    <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                             rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                 </ul>
                                             </div>
                                             <div class="post_title">
                                                 <h2><a
-                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
@@ -957,7 +957,7 @@
                                                     </li>
                                                     <li class="posted_date">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                 class="entry-date published"
                                                                 datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                     </li>
@@ -1006,7 +1006,7 @@
                                                 <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
                                                     <div class="post_thumb">
                                                         <a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
                                                                     src="{{ asset('file').'/'.$ff }}"
@@ -1021,7 +1021,7 @@
                                                     <div class="right_box">
                                                         <div class="post_title">
                                                             <h2><a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
@@ -1031,7 +1031,7 @@
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                             class="entry-date published updated"
                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                                 </li>
@@ -1090,7 +1090,7 @@
                                         <article class="big-card">
                                             <div class="post_thumb">
                                                 <a
-                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
                                                             src="{{ asset('file').'/'.$ff }}"
@@ -1102,13 +1102,13 @@
                                                 <div class="post-holder">
                                                     <div class="entry_cats">
                                                         <ul class="post-categories">
-                                                            <li><a href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}"
+                                                            <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
                                                                     rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="post_title">
                                                         <h2><a
-                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
@@ -1118,7 +1118,7 @@
                                                             </li>
                                                             <li class="posted_date">
                                                                 <a
-                                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                         class="entry-date published updated"
                                                                         datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                             </li>
@@ -1138,7 +1138,7 @@
                                         <div class="small-card">
                                             <div class="post_thumb">
                                                 <a
-                                                    href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>">
+                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
                                                             src="{{ asset('file').'/'.$ff }}"
@@ -1151,7 +1151,7 @@
                                             <div class="post-holder">
                                                 <div class="post_title">
                                                     <h2><a
-                                                            href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><?php echo $truncated; ?></a></h2>
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
                                                 </div>
                                                 <div class="cm-post-meta">
                                                     <ul class="post_meta">
@@ -1161,7 +1161,7 @@
                                                         </li>
                                                         <li class="posted_date">
                                                             <a
-                                                                href="{{ asset('/') }}{{  str_replace(' ', '-', isset($cat->eng_name) ? $cat->eng_name : '') }}/<?php echo str_replace(' ', '-', $blog->eng_name); ?>"><time
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                     class="entry-date published updated"
                                                                     datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
                                                         </li>

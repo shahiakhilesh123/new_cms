@@ -53,6 +53,8 @@ class BlogController extends Controller
         $state = $request->state;
         $district = $request->district;
         $home_page_status = 0;
+        $url = $this->clean($request->eng_name);
+        $url = strtolower(str_replace(' ', '-',trim($url)));
         if($request->home_page_status) {
             $home_page_status = 1;
         }
@@ -63,6 +65,7 @@ class BlogController extends Controller
         Blog::create([
             'name' => $request->name,
             'eng_name' => $request->eng_name,
+            'site_url' => $url,
             'link' => $request->link,
             'author' => $request->author,
             'home_page_status' => $home_page_status,
@@ -100,6 +103,8 @@ class BlogController extends Controller
         $state = $request->state;
         $district = $request->district;
         $home_page_status = 0;
+        $url = $this->clean($request->eng_name);
+        $url = strtolower(str_replace(' ', '-',trim($url)));
         if($request->home_page_status) {
             $home_page_status = 1;
         }
@@ -110,6 +115,7 @@ class BlogController extends Controller
         $data = [
             'name' => $request->name,
             'eng_name' => $request->eng_name,
+            'site_url' => $url,
             'author' => $request->author,
             'link' => $request->link,
             'home_page_status' => $home_page_status,
@@ -143,5 +149,10 @@ class BlogController extends Controller
         blog::where('id', $id)->delete();
         return redirect('/posts');
     }
+    function clean($string) {
+        $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+        $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+        return preg_replace('/-+/', ' ', $string); // Replaces multiple hyphens with single one.
+     }
    
 }
