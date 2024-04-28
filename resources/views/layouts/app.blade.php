@@ -1181,13 +1181,13 @@
                                     <ul id="menu-footer-menu" class="menu">
                                         <li id="menu-item-417"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417">
-                                            <a href="#">Privacy</a></li>
+                                            <!-- <a href="#">Privacy</a>--></li> 
                                         <li id="menu-item-418"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-418">
-                                            <a href="#">Policy</a></li>
+                                            <!-- <a href="#">Policy</a>--></li> 
                                         <li id="menu-item-419"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-419">
-                                            <a href="#">Terms &#038; Conditions</a></li>
+                                            <!-- <a href="#">Terms &#038; Conditions</a>--></li>
                                     </ul>
                                 </div>
                             </div>
