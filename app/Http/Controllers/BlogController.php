@@ -85,7 +85,7 @@ class BlogController extends Controller
     {
         $blogs = Blog::where('id', $id)->with('images')->with('thumbnail')->first();
         $file = File::orderBy('id', 'DESC')->paginate(12);
-        $file->setPath(asset('/posts/edit/').$id);
+        $file->setPath(asset('/posts/edit').'/'.$id);
         $categories = Category::get()->all();
         $state = State::get()->all();
         $district = District::get()->all();
