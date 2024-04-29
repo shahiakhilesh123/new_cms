@@ -843,6 +843,9 @@
             position: absolute;
             clip: rect(1px, 1px, 1px, 1px);
         }
+        .primarynav_search_icon {
+            display:none !important;
+        }
     </style>
     <link rel="icon"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png"
@@ -927,8 +930,8 @@
                     </div>
                 </div>
                 <nav class="main-navigation">
-                    <div id="main-nav" class="primary-navigation">
-                        <ul id="menu-main-menu" class>
+                    <div id="" class="primary-navigation">
+                        <ul  class>
                             <li class="home-btn"><a href="{{ asset('/') }}"><i
                                         class="fa fa-home" aria-hidden="true"></i></a></li>
                             <?php 
@@ -1224,6 +1227,7 @@
         integrity="sha512-FIKRFRxgD20moAo96hkZQy/5QojZDAbyx0mQ17jEGHCJc/vi0G2HXLtofwD7Q3NmivvP9at5EVgbRqOaOQb+Rg=="
         data-cf-beacon='{"rayId":"877e2b567a269fa5","r":1,"version":"2024.3.0","token":"e07ffd4cc02748408b326adb64b6cc16"}'
         crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
