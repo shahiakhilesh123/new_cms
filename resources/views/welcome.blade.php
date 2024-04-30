@@ -92,7 +92,7 @@
                                 <?php
                                 $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(4)->offset(5)->get(); 
                                 ?>
-                                <div class="cm-col-lg-5 cm-col-12 gutter-right">
+                                <div class="cm-col-lg-5 cm-col-12 gutter-right" style="margin-top: -20px;">
                                     <div class="right-content-holder">
                                         <div class="custom_row clearfix">
                                             @foreach($banner_blog as $blog)
@@ -108,7 +108,7 @@
                                             <div class="col small_posts">
                                                 <div class="card">
                                                     <div class="post_thumb imghover"
-                                                        style="background-image: url({{ asset('file').'/'.$ff }}); background-size:contain;">
+                                                        style="background-image: url({{ asset('file').'/'.$ff }}); background-size:contain; height: 225px;">
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">

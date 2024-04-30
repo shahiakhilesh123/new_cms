@@ -846,6 +846,18 @@
         .primarynav_search_icon {
             display:none !important;
         }
+        @media (max-width: 991px) {
+            .cm_banner-five .gutter-right {
+                margin-top: 10px !important;
+                padding-left: 15px;
+            }
+        }
+        .cm_banner-five .gutter-right .post_thumb {
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 225px;
+        }
     </style>
     <link rel="icon"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png"
