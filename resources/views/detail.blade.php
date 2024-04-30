@@ -82,7 +82,14 @@
                                                             @if( $data['blog']->link != '')
                                                             <iframe class="attachment-full size-full wp-post-image" width="1280" height="500" src="{{ $data['blog']->link}}"></iframe>
                                                             @else
-                                                            <?php $ff = isset($data['blog']->images->file_name) ? $data['blog']->images->file_name : ''; ?>
+                                                            <?php
+                                                            if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
+                                                                $blog_file = $data['blog']->images->file_name;
+                                                            } else {
+                                                                $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
+                                                                $blog_file = $file->file_name;
+                                                            } 
+                                                            $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                 <img width="1280" height="853"
                                                                     src="{{ asset('file').'/'.$ff }}"
                                                                     class="attachment-full size-full wp-post-image"
