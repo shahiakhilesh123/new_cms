@@ -348,15 +348,15 @@
                 <div class="form-group">
                     <label>Select Thumb Images</label>
                     <div class="select2-purple">
-                      <input type="hidden" name="thumb_images" value="{{ isset($data['blogs']->thumb_images) ? $data['blogs']->thumb_images : 0 }}" id="id_thumb_images">
-                      <input type="text" class="form-control" value="{{ isset($data['blogs']->thumbnail->file_name) ? $data['blogs']->thumbnail->file_name : ''  }}" id="name_thumb_images" disabled>
+                      <input type="hidden" name="thumb_images" id="id_thumb_images" value="{{ isset($data['blogs']->thumb_images) ? $data['blogs']->thumb_images : 0 }}" id="id_thumb_images">
+                      <input type="text" class="form-control" id="name_thumb_images" value="{{ isset($data['blogs']->thumbnail->file_name) ? $data['blogs']->thumbnail->file_name : ''  }}" id="name_thumb_images" disabled>
                       <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-thumb">
                         Select Thumb Images
                       </button>
-                      <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-upload">Upload Image</button>
+                      <button type="button" class="form-control btn btn-default upload_image_button" data-toggle="modal" data-box="thumb" data-target="#modal-upload">Upload Image</button>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Select Images</label>
                     <div class="select2-purple">
                       <input type="hidden" name="images" value="{{ isset($data['blogs']->image_ids) ? $data['blogs']->image_ids : 0 }}" id="id_images">
@@ -366,7 +366,7 @@
                       </button>
                       <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-upload">Upload Image</button>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
@@ -457,6 +457,7 @@
                     <div class="modal-body" style="height:50%;">
                     <form method="post" id="image_upload_form">
                       @csrf
+                      <input type="hidden" name="box" id="image_box">
                         <div class="card-body">
                           <div class="form-group">
                             <label for="exampleInputPassword1">Upload File</label>
@@ -481,7 +482,7 @@
                     </div>
                     <div class="modal-footer justify-content-between">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary" >Save Image</button>
+                      <button type="submit" class="btn btn-primary" id="close" >Save Image</button>
                       </form>
                     </div>
                   </div>
@@ -497,6 +498,9 @@
     </section>
 </div>
 <script>
+  $('.upload_image_button').click(function () {
+    $('#image_box').val($(this).data('box'));
+  });
   $('.image_sec').click(function () {
     $('.popup').removeAttr('style');
     $(this).parent().attr('style','border: 5px solid blue;');
@@ -530,15 +534,16 @@
             success: function(data) {
               let html = '';
                 if (data.success) {
-                  location.reload();
-                  // Object.keys(data.data).forEach(function(key) {
-                  //   html +=  '<div class="col-md-3 popup" >\
-                  //           <img style="width: 100%;" class="image_sec" data-name="'+data.data[key].file_name+'" data-id="'+data.data[key].id+'" src="{{ asset('file') }}/'+data.data[key].file_name+'"/>\
-                  //           '+data.data[key].file_name+'\
-                  //         </div>';
-                  // });
-                  // $('.image_row').html('');
-                  // $('.image_row').html(html);
+                  if(data.box == 'thumb') {
+                    $('#id_thumb_images').val(data.file_id);
+                    $('#name_thumb_images').val(data.file_name);
+                  } else {
+                    $('#id_images').val(data.file_id);
+                    $('#name_images').val(data.file_name);
+                  }
+                  $('#close').attr('data-dismiss',"modal");
+                  $('#close').click();
+                  $('#close').removeAttr('data-dismiss');
                 } else {
                   alert('error');
                 }

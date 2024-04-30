@@ -80,7 +80,7 @@
                                                         <div class="post_thumb">
                                                             <figure>
                                                             @if( $data['blog']->link != '')
-                                                            <iframe class="attachment-full size-full wp-post-image" width="1280" height="853" src="{{ $data['blog']->link}}"></iframe>
+                                                            <iframe class="attachment-full size-full wp-post-image" width="1280" height="500" src="{{ $data['blog']->link}}"></iframe>
                                                             @else
                                                             <?php $ff = isset($data['blog']->images->file_name) ? $data['blog']->images->file_name : ''; ?>
                                                                 <img width="1280" height="853"

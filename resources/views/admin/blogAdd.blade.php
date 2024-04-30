@@ -352,7 +352,7 @@
                       <button type="button" class="form-control btn btn-default upload_image_button" data-box="thumb" data-toggle="modal" data-target="#modal-upload">Upload Image</button>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Select Images</label>
                     <div class="select2-purple">
                       <input type="hidden" name="images" id="id_images">
@@ -362,7 +362,7 @@
                       </button>
                       <button type="button" class="form-control btn btn-default upload_image_button" data-box="image" data-toggle="modal" data-target="#modal-upload">Upload Image</button>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
