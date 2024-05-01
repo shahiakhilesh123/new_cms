@@ -1018,7 +1018,7 @@
                                                             href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-'}}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
-                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                     class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                     alt="{{ $blog->name }}"
                                                                     decoding="async" loading="lazy" />
