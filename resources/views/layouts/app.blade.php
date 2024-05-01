@@ -864,7 +864,7 @@
             height: 403px;
         }
     </style>
-    <link rel="icon"
+    <!-- <link rel="icon"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png"
         sizes="32x32" />
     <link rel="icon"
@@ -873,7 +873,7 @@
     <link rel="apple-touch-icon"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png" />
     <meta name="msapplication-TileImage"
-        content="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png" />
+        content="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png" /> -->
 </head>
 
 <body data-rsssl="1"
@@ -926,9 +926,9 @@
                                 <h1 class="site-logo">
                                     <a href="{{ asset('/') }}"
                                         class="custom-logo-link" rel="home" aria-current="page"><img 
-                                            src="{{ asset('frontend/images/logo.png') }}"
+                                            src="{{ asset('public/frontend/images/logo.png') }}"
                                             class="custom-logo" alt="Cream magazine" decoding="async"
-                                            srcset="{{ asset('frontend/images/logo.png') }}"
+                                            srcset="{{ asset('public/frontend/images/logo.png') }}"
                                             sizes="(max-width: 343px) 100vw, 343px" /></a>
                                 </h1>
                             </div>
@@ -937,7 +937,7 @@
                             <div class="advertisement-area">
                                 <div id="media_image-4" class="widget widget_media_image"><a
                                         href="#"><img width="728" height="90"
-                                            src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                            src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                             class="image wp-image-756  attachment-full size-full" alt
                                             style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high"
                                             srcset=""
