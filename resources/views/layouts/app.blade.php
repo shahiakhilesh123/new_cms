@@ -856,7 +856,6 @@
             background-position: 50%;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 225px;
         }
     </style>
     <link rel="icon"
