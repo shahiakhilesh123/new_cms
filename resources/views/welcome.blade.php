@@ -152,7 +152,7 @@
                 <div class="cm-container">
                     <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
                             href="#"><img width="1170" height="90"
-                                src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
                                 srcset=""
@@ -424,10 +424,10 @@
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
                             href="#"><img width="1170" height="135"
-                                src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                srcset="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                 </div>
             </div>
@@ -639,10 +639,10 @@
                                             class="widget cm-post-widget-section widget_media_image"><a
                                                 href="#"><img width="728"
                                                     height="90"
-                                                    src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                                    src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                                     class="image wp-image-756  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                                    srcset="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
                                           $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
@@ -798,10 +798,10 @@
                                             class="widget cm-post-widget-section widget_media_image"><a
                                                 href="#"><img width="768"
                                                     height="90"
-                                                    src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                                    src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                                     class="image wp-image-710  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('frontend/images/hori-ads.jpg') }} 300w"
+                                                    srcset="{{ asset('public/frontend/images/hori-ads.jpg') }} 300w"
                                                     sizes="(max-width: 768px) 100vw, 768px" /></a></div>
                                     </main>
                                 </div>
@@ -1053,10 +1053,10 @@
                     </section>
                     <div id="media_image-9" class="widget cm-post-widget-section widget_media_image"><a
                             href="#"><img width="1170" height="90"
-                                src="{{ asset('frontend/images/hori-ads.jpg') }}"
+                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('frontend/images/hori-ads.jpg') }} 1024w"
+                                srcset="{{ asset('public/frontend/images/hori-ads.jpg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
                     $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
