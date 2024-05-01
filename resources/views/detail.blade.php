@@ -91,7 +91,7 @@
                                                             } 
                                                             $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                 <img width="1280" height="853"
-                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                     class="attachment-full size-full wp-post-image"
                                                                     alt="{{ $data['blog']->name }}"
                                                                     decoding="async"
@@ -132,7 +132,7 @@
                                                                             href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
-                                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                                     class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                                                     alt="{{ $latest->name }}"
                                                                                     decoding="async" loading="lazy">

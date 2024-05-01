@@ -150,7 +150,7 @@
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
-                                                                                                    src="{{ asset('file').'/'.$ff }}"
+                                                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                                                     class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                                                                     alt="{{ $blog->name }}"
                                                                                                     decoding="async">
