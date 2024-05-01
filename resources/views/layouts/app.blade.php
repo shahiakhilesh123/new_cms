@@ -1062,9 +1062,14 @@
                                                     <i class="fa fa-instagram"></i><span>Follow</span>
                                                 </a>
                                             </li>
-                                            <li class="yt">
-                                                <a href="{{ isset($setting->youtube) ? $setting->youtube : '' }}" target="_blank">
-                                                    <i class="fa fa-youtube-play"></i><span>Follow</span>
+                                            <li class="tw">
+                                                <a href="twitter.com/NMFNewsOfficial" target="_blank">
+                                                    <i class="fa fa-twitter"></i><span>Follow</span>
+                                                </a>
+                                            </li>
+                                            <li class="linken">
+                                                <a href="in.linkedin.com/company/khetanmediacreationpvtltd" target="_blank">
+                                                    <i class="fa fa-linkedin"></i><span>Connect</span>
                                                 </a>
                                             </li>
                                         </ul>
