@@ -95,7 +95,7 @@
                                                                     class="attachment-full size-full wp-post-image"
                                                                     alt="{{ $data['blog']->name }}"
                                                                     decoding="async"
-                                                                    srcset="{{ asset('file').'/'.$ff }} 1024w"
+                                                                    srcset="{{ asset('public/file').'/'.$ff }} 1024w"
                                                                     sizes="(max-width: 1280px) 100vw, 1280px">
                                                             @endif
                                                             </figure>
