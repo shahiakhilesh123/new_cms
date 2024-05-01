@@ -857,6 +857,12 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .cm_banner-five .gutter-left .post_thumb {
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 403px;
+        }
     </style>
     <link rel="icon"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/satellite-dish.png"
