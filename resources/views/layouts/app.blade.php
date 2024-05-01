@@ -1053,22 +1053,22 @@
                                     <div class="widget-contents">
                                         <ul>
                                             <li class="fb">
-                                                <a href="{{ isset($setting->facebook) ? $setting->facebook : '' }}" target="_blank">
+                                                <a href="https://{{ isset($setting->facebook) ? $setting->facebook : '' }}" target="_blank">
                                                     <i class="fa fa-facebook-f"></i><span>Like</span>
                                                 </a>
                                             </li>
                                             <li class="insta">
-                                                <a href="{{ isset($setting->instagram) ? $setting->instagram : '' }}" target="_blank">
+                                                <a href="https://{{ isset($setting->instagram) ? $setting->instagram : '' }}" target="_blank">
                                                     <i class="fa fa-instagram"></i><span>Follow</span>
                                                 </a>
                                             </li>
                                             <li class="tw">
-                                                <a href="twitter.com/NMFNewsOfficial" target="_blank">
+                                                <a href="https://twitter.com/NMFNewsOfficial" target="_blank">
                                                     <i class="fa fa-twitter"></i><span>Follow</span>
                                                 </a>
                                             </li>
                                             <li class="linken">
-                                                <a href="in.linkedin.com/company/khetanmediacreationpvtltd" target="_blank">
+                                                <a href="https://in.linkedin.com/company/khetanmediacreationpvtltd" target="_blank">
                                                     <i class="fa fa-linkedin"></i><span>Connect</span>
                                                 </a>
                                             </li>
