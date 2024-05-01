@@ -204,7 +204,7 @@
                       <td>{{ $file->file_name }}</td>
                       <td>{{ $file->file_size }}</td>
                       <td>{{ $file->file_type }}</td>
-                      <td><img src="{{ asset('file').'/'.$file->file_name }}" style="width:22%; height: 50px;"/></td>
+                      <td><img src="{{ asset('public/file').'/'.$file->file_name }}" style="width:22%; height: 50px;"/></td>
                       <!-- <td>
                         <a href="{{ asset('editmenu') }}/{{$file->id}}"><i class="fas fa-edit"></i></a>
                       </td> -->
