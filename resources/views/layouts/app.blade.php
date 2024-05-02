@@ -630,21 +630,11 @@
     <link rel="stylesheet" id="cream-magazine-fonts-css"
         href="https://fonts.googleapis.com/css2?family=Inter&#038;family=Poppins:ital,wght@0,600;1,600&#038;display=swap"
         type="text/css" media="all" />
-    <link rel="stylesheet" id="fontAwesome-4-css"
-        href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/themes/cream-magazine/assets/dist/fonts/fontAwesome/fontAwesome.min.css?ver=2.1.7"
-        type="text/css" media="all" />
-    <link rel="stylesheet" id="feather-icons-css"
-        href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/themes/cream-magazine/assets/dist/fonts/feather/feather.min.css?ver=2.1.7"
-        type="text/css" media="all" />
-    <link rel="stylesheet" id="cream-magazine-main-css"
-        href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/themes/cream-magazine/assets/dist/css/main.css?ver=2.1.7"
-        type="text/css" media="all" />
-    <script type="text/javascript"
-        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
-        id="jquery-core-js"></script>
-    <script type="text/javascript"
-        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-        id="jquery-migrate-js"></script>
+    <link rel="stylesheet" id="fontAwesome-4-css" href="{{ asset('public/fonts/fontAwesome/fontAwesome.min.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" id="feather-icons-css" href="{{ asset('public/fonts/feather/feather.min.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" id="cream-magazine-main-css" href="{{ asset('public/css/main.css')}}" type="text/css" media="all" />
+    <script type="text/javascript" src="{{ asset('public/js/jquery/jquery.min.js') }}" id="jquery-core-js"></script>
+    <script type="text/javascript" src="{{ asset('public/js/jquery/jquery-migrate.min.js') }}" id="jquery-migrate-js"></script>
     <!-- <link rel="https://api.w.org/" href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/" /> -->
     <!-- <link rel="alternate" type="application/json"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/wp/v2/pages/362" />
