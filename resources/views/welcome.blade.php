@@ -853,12 +853,12 @@
                                         <div class="widget-title">
                                             <h2>Recommended Host</h2>
                                         </div><a
-                                            href="#"><img
+                                            href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
-                                                src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png"
+                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png 400w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300-300x225.png 300w"
+                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                     <div id="categories-2" class="widget widget_categories">
@@ -883,12 +883,12 @@
                                         <div class="widget-title">
                                             <h2>Recommended Host</h2>
                                         </div><a
-                                            href="https://www.siteground.com/index.htm?afcode=6e8b4bff4267ce9bfec4c40627135030"><img
+                                            href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
-                                                src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png"
+                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300.png 400w, https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/12/advt-400-300-300x225.png 300w"
+                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                 </aside>
@@ -1052,11 +1052,11 @@
                         </div>
                     </section>
                     <div id="media_image-9" class="widget cm-post-widget-section widget_media_image"><a
-                            href="#"><img width="1170" height="90"
-                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                            href="{{ asset('/news') }}"><img width="1170" height="90"
+                                src="{{ asset('public/banner/news.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/frontend/images/hori-ads.jpg') }} 1024w"
+                                srcset="{{ asset('public/banner/news.jpeg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
                     $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
