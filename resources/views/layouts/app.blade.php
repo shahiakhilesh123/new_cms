@@ -645,8 +645,8 @@
     <script type="text/javascript"
         src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
-    <link rel="https://api.w.org/" href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/" />
-    <link rel="alternate" type="application/json"
+    <!-- <link rel="https://api.w.org/" href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/" /> -->
+    <!-- <link rel="alternate" type="application/json"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/wp/v2/pages/362" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/xmlrpc.php?rsd" />
@@ -656,7 +656,7 @@
     <link rel="alternate" type="application/json+oembed"
         href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.themebeez.com%2Fdemos-2%2Fcream-magazine-free%2F" />
     <link rel="alternate" type="text/xml+oembed"
-        href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.themebeez.com%2Fdemos-2%2Fcream-magazine-free%2F&#038;format=xml" />
+        href="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.themebeez.com%2Fdemos-2%2Fcream-magazine-free%2F&#038;format=xml" /> -->
     <style>
         a:hover {
             text-decoration: none !important;
