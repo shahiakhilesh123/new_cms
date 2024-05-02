@@ -637,12 +637,12 @@
                                         </section>
                                         <div id="media_image-7"
                                             class="widget cm-post-widget-section widget_media_image"><a
-                                                href="#"><img width="728"
+                                                href="{{ asset('/being-ghummakad') }}"><img width="728"
                                                     height="90"
-                                                    src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                                                    src="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                                     class="image wp-image-756  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                                                    srcset="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
                                           $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
@@ -796,12 +796,12 @@
                                         </section>
                                         <div id="media_image-8"
                                             class="widget cm-post-widget-section widget_media_image"><a
-                                                href="#"><img width="768"
+                                                href="{{ asset('/dharma-gyan') }}"><img width="768"
                                                     height="90"
-                                                    src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                                                    src="{{ asset('public/banner/dharm.jpeg') }}"
                                                     class="image wp-image-710  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('public/frontend/images/hori-ads.jpg') }} 300w"
+                                                    srcset="{{ asset('public/banner/dharm.jpeg') }} 300w"
                                                     sizes="(max-width: 768px) 100vw, 768px" /></a></div>
                                     </main>
                                 </div>
