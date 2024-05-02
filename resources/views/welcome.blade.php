@@ -151,8 +151,8 @@
             <div class="top-news-area news-area">
                 <div class="cm-container">
                     <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
-                            href="#"><img width="1170" height="90"
-                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                            href="{{ asset('/being-ghummakad') }}"><img width="1170" height="90"
+                                src="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
                                 srcset=""
@@ -423,11 +423,11 @@
                         </div>
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                            href="#"><img width="1170" height="135"
-                                src="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                            href="{{ asset('/dharma-gyan') }}"><img width="1170" height="135"
+                                src="{{ asset('public/banner/dharm.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/frontend/images/hori-ads.jpg') }}"
+                                srcset="{{ asset('public/banner/dharm.jpeg') }}"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                 </div>
             </div>
