@@ -1077,6 +1077,11 @@
                                                     <i class="fa fa-linkedin"></i><span>Connect</span>
                                                 </a>
                                             </li>
+                                            <li class="yt">
+                                                <a href="https://{{ isset($setting->youtube) ? $setting->youtube : '' }}" target="_blank">
+                                                    <i class="fa fa-youtube-play"></i><span>Follow</span>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
