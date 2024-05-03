@@ -151,7 +151,7 @@
             <div class="top-news-area news-area">
                 <div class="cm-container">
                     <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
-                            href="{{ asset('/being-ghummakad') }}"><img width="1170" height="90"
+                            href="https://www.youtube.com/@BeingGhumakkad"><img width="1170" height="90"
                                 src="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
@@ -637,7 +637,7 @@
                                         </section>
                                         <div id="media_image-7"
                                             class="widget cm-post-widget-section widget_media_image"><a
-                                                href="{{ asset('/being-ghummakad') }}"><img width="728"
+                                                href="https://www.youtube.com/@BeingGhumakkad"><img width="728"
                                                     height="90"
                                                     src="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                                     class="image wp-image-756  attachment-full size-full" alt
@@ -796,7 +796,7 @@
                                         </section>
                                         <div id="media_image-8"
                                             class="widget cm-post-widget-section widget_media_image"><a
-                                                href="{{ asset('/dharma-gyan') }}"><img width="768"
+                                                href="https://www.youtube.com/@DharmGyan"><img width="768"
                                                     height="90"
                                                     src="{{ asset('public/banner/dharm.jpeg') }}"
                                                     class="image wp-image-710  attachment-full size-full" alt
@@ -883,12 +883,12 @@
                                         <div class="widget-title">
                                             <h2>Recommended Host</h2>
                                         </div><a
-                                            href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
+                                            href="https://www.youtube.com/@SportsHour"><img
                                                 width="400" height="300"
-                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
+                                                src="{{ asset('public/banner/sports.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }}"
+                                                srcset="{{ asset('public/banner/sports.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                 </aside>
@@ -1052,11 +1052,11 @@
                         </div>
                     </section>
                     <div id="media_image-9" class="widget cm-post-widget-section widget_media_image"><a
-                            href="{{ asset('/news') }}"><img width="1170" height="90"
-                                src="{{ asset('public/banner/news.jpeg') }}"
+                            href="https://www.youtube.com/@SportsHour"><img width="1170" height="90"
+                                src="{{ asset('public/banner/sports_banner.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/banner/news.jpeg') }} 1024w"
+                                srcset="{{ asset('public/banner/sports_banner.jpeg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
                     $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
