@@ -182,13 +182,13 @@
                                                         <div class="widget-title">
                                                             <h2>Recommended Host</h2>
                                                         </div><a
-                                                            href="{{ asset('/election-2024') }}"><img
+                                                            href="https://www.youtube.com/@DharmGyan"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
+                                                                src="{{ asset('public/banner/d_gyan.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }} 300w"
+                                                                srcset="{{ asset('public/banner/d_gyan.jpeg') }} 300w"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                             <div class="theiaStickySidebar"
