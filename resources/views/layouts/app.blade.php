@@ -290,7 +290,7 @@
                                                 <div class="cm-col-lg-12 cm-col-md-12 cm-col-12">
                                                     <div class="">
                                                         <img src="{{ asset('public/banner/') }}/logo.png"/>
-                                                        <p>Khetan Media Creations is stepping towards its dream destination everyday. We invite you to have a glimpse of our beautiful world of creative creations that has been crafted after long hardworking days by our tremendous team.</p>
+                                                        <p style="margin: 10px 10px 20px;">Khetan Media Creations is stepping towards its dream destination everyday. We invite you to have a glimpse of our beautiful world of creative creations that has been crafted after long hardworking days by our tremendous team.</p>
                                                     </div>
                                                 </div>
                                             </div>
