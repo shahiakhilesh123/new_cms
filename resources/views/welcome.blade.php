@@ -423,11 +423,11 @@
                         </div>
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                            href="https://www.youtube.com/@DharmGyan"><img width="1170" height="135"
-                                src="{{ asset('public/banner/dharm.jpeg') }}"
+                            href="https://www.youtube.com/@newsxpresslive"><img width="1170" height="135"
+                                src="{{ asset('public/banner/news.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/banner/dharm.jpeg') }}"
+                                srcset="{{ asset('public/banner/news.jpeg') }}"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                 </div>
             </div>
