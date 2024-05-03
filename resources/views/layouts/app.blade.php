@@ -282,14 +282,21 @@
                             <div class="blocks">
                                 <div id="cream-magazine-post-widget-4" class="widget widget_cream-magazine-post-widget">
                                     <div class="widget-title">
-                                        <!-- <h2>Most commented</h2> -->
+                                        <h2>&nbsp;</h2>
                                     </div>
-                                    <!-- <div class="cm_recent_posts_widget">
+                                    <div class="cm_recent_posts_widget">
                                         <div class="box">
                                             <div class="row">
-                                                <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
-                                                    <div class="post_thumb">
-                                                        <a
+                                                <div class="cm-col-lg-12 cm-col-md-12 cm-col-12">
+                                                    <div class="">
+                                                        <img src="{{ asset('public/banner/') }}/logo.png"/>
+                                                        <p>Khetan Media Creations is stepping towards its dream destination everyday. We invite you to have a glimpse of our beautiful world of creative creations that has been crafted after long hardworking days by our tremendous team.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                        <!-- <a
                                                             href="https://demo.themebeez.com/demos-2/cream-magazine-free/government-is-launching-new-aero-model/">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
