@@ -212,7 +212,7 @@
                                                     <div class="pagination float-left" style="text-align: end;">
                                                             <!-- <div class="left"> -->
                                                                 @if($page <= 4 && count($blogs) == $count)
-                                                                <a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+                                                                <a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">Read more&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
                                                                 @endif
                                                                 <!-- <div> -->
                                                     </div>
