@@ -127,7 +127,7 @@
                         <div class="cm-col-lg-8 cm-col-12">
                             <div class="advertisement-area">
                                 <div id="media_image-4" class="widget widget_media_image"><a
-                                        href="https://www.youtube.com/@newsxpresslive"><img width="728" height="90"
+                                        href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="728" height="90"
                                             src="{{ asset('public/banner/news.jpeg') }}"
                                             class="image wp-image-756  attachment-full size-full" alt
                                             style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high"

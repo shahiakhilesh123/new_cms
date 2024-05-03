@@ -423,7 +423,7 @@
                         </div>
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                            href="https://www.youtube.com/@newsxpresslive"><img width="1170" height="135"
+                            href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
                                 src="{{ asset('public/banner/news.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
@@ -881,7 +881,7 @@
                                     </div>
                                     <div id="media_image-3" class="widget widget_media_image">
                                         <div class="widget-title">
-                                            <h2>Recommended Host</h2>
+                                            <h2>Recommended</h2>
                                         </div><a
                                             href="https://www.youtube.com/@SportsHour"><img
                                                 width="400" height="300"
