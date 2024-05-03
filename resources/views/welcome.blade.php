@@ -423,7 +423,7 @@
                         </div>
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                            href="{{ asset('/dharma-gyan') }}"><img width="1170" height="135"
+                            href="https://www.youtube.com/@DharmGyan"><img width="1170" height="135"
                                 src="{{ asset('public/banner/dharm.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
