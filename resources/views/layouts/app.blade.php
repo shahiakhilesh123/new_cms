@@ -438,7 +438,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript"
-        src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/themes/cream-magazine/assets/dist/js/bundle.min.js?ver=2.1.7"
+        src="{{ asset('public/new_frontend/js/bundle.min.js') }}"
         id="cream-magazine-bundle-js"></script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793"
