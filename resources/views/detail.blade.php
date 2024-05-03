@@ -182,7 +182,7 @@
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
                                                         </div><a
-                                                            href="https://www.youtube.com/@DharmGyan"><img
+                                                            href="https://www.youtube.com/@DharmGyan" target="__blank"><img
                                                                 width="400" height="300"
                                                                 src="{{ asset('public/banner/d_gyan.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"

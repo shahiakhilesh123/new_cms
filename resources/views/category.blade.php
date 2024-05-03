@@ -229,7 +229,7 @@
                                                     <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
-                                                        </div><a
+                                                        </div><a target="__blank"
                                                             href="https://www.youtube.com/@BeingGhumakkad"><img
                                                                 width="400" height="300"
                                                                 src="{{ asset('public/banner/gummkad.jpeg') }}"
@@ -261,7 +261,7 @@
                                                     <div id="media_image-3" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
-                                                        </div><a
+                                                        </div><a target="__blank"
                                                             href="https://www.youtube.com/@SportsHour"><img
                                                                 width="400" height="300"
                                                                 src="{{ asset('public/banner/sports.jpeg') }}"

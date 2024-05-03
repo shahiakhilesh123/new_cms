@@ -151,7 +151,7 @@
             <div class="top-news-area news-area">
                 <div class="cm-container">
                     <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
-                            href="https://www.youtube.com/@BeingGhumakkad"><img width="1170" height="90"
+                            href="https://www.youtube.com/@BeingGhumakkad" target="__blank" ><img width="1170" height="90"
                                 src="{{ asset('public/banner/beingghmakad.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
@@ -423,7 +423,7 @@
                         </div>
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                            href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
+                    target="__blank" href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
                                 src="{{ asset('public/banner/news.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
@@ -636,7 +636,7 @@
                                             </div>
                                         </section>
                                         <div id="media_image-7"
-                                            class="widget cm-post-widget-section widget_media_image"><a
+                                            class="widget cm-post-widget-section widget_media_image"><a target="__blank"
                                                 href="https://www.youtube.com/@BeingGhumakkad"><img width="728"
                                                     height="90"
                                                     src="{{ asset('public/banner/beingghmakad.jpeg') }}"
@@ -795,7 +795,7 @@
                                             </div>
                                         </section>
                                         <div id="media_image-8"
-                                            class="widget cm-post-widget-section widget_media_image"><a
+                                            class="widget cm-post-widget-section widget_media_image"><a target="__blank"
                                                 href="https://www.youtube.com/@DharmGyan"><img width="768"
                                                     height="90"
                                                     src="{{ asset('public/banner/dharm.jpeg') }}"
@@ -852,7 +852,7 @@
                                     <div id="media_image-2" class="widget widget_media_image">
                                         <div class="widget-title">
                                             <h2>Recommended</h2>
-                                        </div><a
+                                        </div><a target="__blank"
                                             href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
                                                 src="{{ asset('public/banner/lokshbha.jpeg') }}"
@@ -882,7 +882,7 @@
                                     <div id="media_image-3" class="widget widget_media_image">
                                         <div class="widget-title">
                                             <h2>Recommended</h2>
-                                        </div><a
+                                        </div><a target="__blank"
                                             href="https://www.youtube.com/@SportsHour"><img
                                                 width="400" height="300"
                                                 src="{{ asset('public/banner/sports.jpeg') }}"
@@ -1052,7 +1052,7 @@
                         </div>
                     </section>
                     <div id="media_image-9" class="widget cm-post-widget-section widget_media_image"><a
-                            href="https://www.youtube.com/@SportsHour"><img width="1170" height="90"
+                            href="https://www.youtube.com/@SportsHour" target="__blank" ><img width="1170" height="90"
                                 src="{{ asset('public/banner/sports_banner.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
