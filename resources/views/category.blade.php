@@ -79,7 +79,12 @@
         text-align: center;
         width: 45px;
     }
-
+    .section-title {
+        margin-bottom: 25px;
+        overflow: visible;
+        position: relative;
+        text-align: left;
+    }
 </style>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
@@ -118,7 +123,7 @@
                                                 <div class="content-entry">
                                                     <section class="list_page_iner">
                                                         <div class="section-title">
-                                                            <h1>Category: <span>{{ isset($category->name) ? $category->name : '' }}</span></h1>
+                                                            <h1><span>{{ isset($category->name) ? $category->name : '' }}</span></h1>
                                                         </div>
                                                         <div class="list_entry">
                                                             <section class="post-display-grid">
