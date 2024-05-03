@@ -69,15 +69,15 @@
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="post_author">
+                                                                <li>
                                                                     <a
-                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
-                                                                <li class="posted_date">
+                                                                <li>
                                                                     <a
-                                                                        href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php isset($blog->site_url) ? $blog->site_url :''; ?>"><time
+                                                                        href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php isset($blog->site_url) ? $blog->site_url :''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published"
-                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -209,15 +209,15 @@
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
-                                                            <li class="post_author">
+                                                            <li class="">
                                                                 <a
-                                                                    href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                             </li>
-                                                            <li class="posted_date">
+                                                            <li class="">
                                                                 <a
-                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                         class="entry-date published"
-                                                                        datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></a></time></a>
+                                                                        datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></time></i></a>
                                                             </li>
                                                             <!-- <li class="comments">
                                                                 <a
@@ -253,15 +253,15 @@
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
-                                                    <li class="post_author">
+                                                    <li class="">
                                                         <a
-                                                            href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
-                                                    <li class="posted_date">
+                                                    <li class="">
                                                         <a
-                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                 class="entry-date published updated"
-                                                                datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></time></a>
+                                                                datetime="<?php echo $blog->created_at ?>"><?php echo $blog->created_at ?></time></i></a>
                                                     </li>
                                                     <!-- <li class="comments">
                                                         <a
@@ -331,15 +331,15 @@
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
-                                                    <li class="post_author">
+                                                    <li class="">
                                                         <a
-                                                            href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
-                                                    <li class="posted_date">
+                                                    <li class="">
                                                         <a
-                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                 class="entry-date published updated"
-                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -400,15 +400,15 @@
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="post_author">
+                                                                <li class="">
                                                                     <a
-                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
-                                                                <li class="posted_date">
+                                                                <li class="">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published updated"
-                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -495,15 +495,15 @@
                                                                 </div>
                                                                 <div class="cm-post-meta">
                                                                     <ul class="post_meta">
-                                                                        <li class="post_author">
+                                                                        <li class="">
                                                                             <a
-                                                                                href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                         </li>
-                                                                        <li class="posted_date">
+                                                                        <li class="">
                                                                             <a
-                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                     class="entry-date published updated"
-                                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                         </li>
                                                                         <!-- <li class="comments">
                                                                             <a
@@ -543,15 +543,15 @@
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
-                                                                                <li class="post_author">
+                                                                                <li class="">
                                                                                     <a
-                                                                                        href="">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                        href=""><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                 </li>
-                                                                                <li class="posted_date">
+                                                                                <li class="">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                             class="entry-date published updated"
-                                                                                            datetime="2018-11-12T11:00:55+05:45">{{ $blog->created_at }}</time></a>
+                                                                                            datetime="2018-11-12T11:00:55+05:45">{{ $blog->created_at }}</time></i></a>
                                                                                 </li>
                                                                                 <!-- <li class="comments">
                                                                                     <a
@@ -612,15 +612,15 @@
                                                                 </div>
                                                                 <div class="cm-post-meta">
                                                                     <ul class="post_meta">
-                                                                        <li class="post_author">
+                                                                        <li class="">
                                                                             <a
-                                                                                href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                         </li>
-                                                                        <li class="posted_date">
+                                                                        <li class="">
                                                                             <a
-                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                     class="entry-date published"
-                                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                         </li>
                                                                         <!-- <li class="comments">
                                                                             <a
@@ -706,15 +706,15 @@
                                                                     </div>
                                                                     <div class="cm-post-meta">
                                                                         <ul class="post_meta">
-                                                                            <li class="post_author">
+                                                                            <li class="">
                                                                                 <a
-                                                                                    href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                             </li>
-                                                                            <li class="posted_date">
+                                                                            <li class="">
                                                                                 <a
-                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                         class="entry-date published updated"
-                                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                             </li>
                                                                             <!-- <li class="comments">
                                                                                 <a
@@ -760,15 +760,15 @@
                                                                                     </div>
                                                                                     <div class="cm-post-meta">
                                                                                         <ul class="post_meta">
-                                                                                            <li class="post_author">
+                                                                                            <li class="">
                                                                                                 <a
-                                                                                                    href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                             </li>
-                                                                                            <li class="posted_date">
+                                                                                            <li class="">
                                                                                                 <a
-                                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                                         class="entry-date published updated"
-                                                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                                             </li>
                                                                                             <!-- <li class="comments">
                                                                                                 <a
@@ -951,15 +951,15 @@
                                             </div>
                                             <div class="cm-post-meta">
                                                 <ul class="post_meta">
-                                                    <li class="post_author">
+                                                    <li class="">
                                                         <a
-                                                            href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
-                                                    <li class="posted_date">
+                                                    <li class="">
                                                         <a
-                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                            href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                 class="entry-date published"
-                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                     </li>
                                                     <!-- <li class="comments">
                                                         <a
@@ -1025,15 +1025,15 @@
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="post_author">
+                                                                <li class="">
                                                                     <a
-                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
-                                                                <li class="posted_date">
+                                                                <li class="">
                                                                     <a
-                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published updated"
-                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                 </li>
                                                                 <!-- <li class="comments">
                                                                     <a
@@ -1112,15 +1112,15 @@
                                                     </div>
                                                     <div class="cm-post-meta">
                                                         <ul class="post_meta">
-                                                            <li class="post_author">
+                                                            <li class="">
                                                                 <a
-                                                                    href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                             </li>
-                                                            <li class="posted_date">
+                                                            <li class="">
                                                                 <a
-                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                    href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                         class="entry-date published updated"
-                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                        datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                             </li>
                                                             <!-- <li class="comments">
                                                                 <a
@@ -1155,15 +1155,15 @@
                                                 </div>
                                                 <div class="cm-post-meta">
                                                     <ul class="post_meta">
-                                                        <li class="post_author">
+                                                        <li class="">
                                                             <a
-                                                                href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                         </li>
-                                                        <li class="posted_date">
+                                                        <li class="">
                                                             <a
-                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                     class="entry-date published updated"
-                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                    datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                         </li>
                                                         <!-- <li class="comments">
                                                             <a
