@@ -57,23 +57,23 @@
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="post_author">
+                                                                <li class="">
                                                                     <a
-                                                                        href="#">{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</a>
+                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</i></a>
                                                                 </li>
-                                                                <li class="posted_date">
+                                                                <li class="">
                                                                     <a
-                                                                        href="#"><time
+                                                                        href="#"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published"
-                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></a>
+                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></i></a>
                                                                 </li>
                                                                 <!-- <li class="comments">
                                                                     <a
                                                                         href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence/#comments">0</a>
                                                                 </li> -->
-                                                                <li class="entry_cats">
+                                                                <li class="">
                                                                     <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
-                                                                        rel="category tag">{{ $data['category']->name }}</a>
+                                                                        rel="category tag"><i class="fa fa-archive" aria-hidden="true">&nbsp;&nbsp;{{ $data['category']->name }}</i></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -153,15 +153,15 @@
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
-                                                                                <li class="post_author">
+                                                                                <li class="">
                                                                                     <a
-                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                 </li>
-                                                                                <li class="posted_date">
+                                                                                <li class="">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
+                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                             class="entry-date published"
-                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
+                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></i></a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>

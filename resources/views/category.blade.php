@@ -176,15 +176,15 @@
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">
-                                                                                                <li class="post_author">
+                                                                                                <li class="">
                                                                                                     <a
-                                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                                 </li>
-                                                                                                <li class="posted_date">
+                                                                                                <li class="">
                                                                                                     <a
-                                                                                                        href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
+                                                                                                        href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                                             class="entry-date published"
-                                                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
+                                                                                                            datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                                                 </li>
                                                                                                 <!-- <li class="comments">
                                                                                                     <a
