@@ -85,6 +85,11 @@
         position: relative;
         text-align: left;
     }
+    .pagination {
+        display: flow;
+        justify-content: center;
+        margin-top: 20px;
+    }
 </style>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
@@ -204,18 +209,11 @@
                                                             </section>
                                                         </div>
                                                     </section>
-                                                    <div class="pagination">
-                                                    {{ $blogs->links( "pagination::bootstrap-4") }}
-                                                        <!-- <nav class="navigation pagination" aria-label="Posts">
-                                                            <h2 class="screen-reader-text">Posts navigation</h2>
-                                                            <div class="nav-links"><span aria-current="page"
-                                                                    class="page-numbers current">1</span>
-                                                                <a class="page-numbers"
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/lifestyle/page/2/">2</a>
-                                                                <a class="next page-numbers"
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/category/lifestyle/page/2/">Next</a>
-                                                            </div>
-                                                        </nav> -->
+                                                    <div class="pagination float-left" style="text-align: end;">
+                                                            <!-- <div class="left"> -->
+
+                                                                <a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">Next&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+                                                            <!-- <div> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -229,7 +227,7 @@
                                                     
                                                     <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
-                                                            <h2>Recommended Host</h2>
+                                                            <h2>Recommended</h2>
                                                         </div><a
                                                             href="https://www.youtube.com/@BeingGhumakkad"><img
                                                                 width="400" height="300"
@@ -261,7 +259,7 @@
                                                     </div>
                                                     <div id="media_image-3" class="widget widget_media_image">
                                                         <div class="widget-title">
-                                                            <h2>Recommended Host</h2>
+                                                            <h2>Recommended</h2>
                                                         </div><a
                                                             href="https://www.youtube.com/@SportsHour"><img
                                                                 width="400" height="300"

@@ -851,7 +851,7 @@
                                     </div> -->
                                     <div id="media_image-2" class="widget widget_media_image">
                                         <div class="widget-title">
-                                            <h2>Recommended Host</h2>
+                                            <h2>Recommended</h2>
                                         </div><a
                                             href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
