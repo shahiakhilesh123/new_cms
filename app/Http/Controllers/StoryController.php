@@ -24,7 +24,7 @@ class StoryController extends Controller
         $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
         //$cat_name = str_replace('-', ' ', $name);
         $category = Category::where('site_url', $name)->first();
-        $blog = Blog::where('categories_ids', $category->id)->with('images')->orderBy('id', 'DESC')->paginate(1);
+        $blog = Blog::where('categories_ids', $category->id)->with('images')->orderBy('id', 'DESC')->paginate(10);
         $blog->setPath(asset('/').$name);
         return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page]);
     }
