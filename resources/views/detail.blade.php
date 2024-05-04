@@ -9,6 +9,21 @@
         position: relative;
     }
 </style>
+<?php
+if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
+    $blog_file = $data['blog']->images->file_name;
+} else {
+    $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
+    $blog_file = $file->file_name;
+} 
+$ff = isset($blog_file) ? $blog_file : ''; ?>
+<meta property="fb:app_id" content="3916260501994016"/>
+<meta property="og:site_name" content="newsnmf"/>
+<meta property="og:title" content="{{ $data['blog']->name }}" />
+<meta property="og:description" content="{{ $data['blog']->sort_description }}" />
+<meta property="og:type" content="xxx:photo">
+<meta property="og:url" content="{{ asset('/').$data['category']->site_url.'/'.$data['blog']->site_url }}"/>
+<meta property="og:image" content="{{ asset('public/file').'/'.$ff }}"/>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
                     <div id="primary" class="content-area" style="transform: none;">
@@ -82,14 +97,7 @@
                                                             @if( $data['blog']->link != '')
                                                             <iframe class="attachment-full size-full wp-post-image" width="1280" height="500" src="{{ $data['blog']->link}}"></iframe>
                                                             @else
-                                                            <?php
-                                                            if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
-                                                                $blog_file = $data['blog']->images->file_name;
-                                                            } else {
-                                                                $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
-                                                                $blog_file = $file->file_name;
-                                                            } 
-                                                            $ff = isset($blog_file) ? $blog_file : ''; ?>
+                                                            
                                                                 <img width="1280" height="853"
                                                                     src="{{ asset('public/file').'/'.$ff }}"
                                                                     class="attachment-full size-full wp-post-image"
@@ -101,6 +109,9 @@
                                                             </figure>
                                                         </div>
                                                         <div class="the_content">
+                                                            <!-- <div class="row">
+                                                            <button class="ui facebook button">Share</button>
+                                                            </div> -->
                                                             <div class="row">
                                                                 <?php echo $data['blog']->description; ?>
                                                             </div>
