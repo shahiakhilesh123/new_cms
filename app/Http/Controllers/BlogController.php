@@ -27,7 +27,7 @@ class BlogController extends Controller
         if (isset($request->category)) {
             $category = $request->category;
             $title = $request->title;
-            $blogs->setPath(asset('/posts').'?category='.$request->category.'title'.$title);
+            $blogs->setPath(asset('/posts').'?category='.$request->category.'&title='.$title.'&author='.$request->author);
         } else {
             $title = '';
             $category = 0;
