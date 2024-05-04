@@ -137,6 +137,7 @@
                                                                     @if(count($blogs) > 0)
                                                                         @foreach($blogs as $blog)
                                                                         <?php
+                                                                        $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
                                                                         //$blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                                         $truncated = $blog->name;
                                                                         if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
@@ -170,8 +171,8 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}"
-                                                                                                        rel="category tag">{{isset($category->name) ? $category->name : ''}}</a>
+                                                                                                <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
+                                                                                                        rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
