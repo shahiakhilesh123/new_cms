@@ -40,6 +40,10 @@ class StoryController extends Controller
     {
         return view('contact');
     }
+    public function about()
+    {
+        return view('about');
+    }
     public function search()
     {
         $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;

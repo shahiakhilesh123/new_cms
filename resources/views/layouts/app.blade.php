@@ -302,13 +302,16 @@
                                     <ul id="menu-footer-menu" class="menu">
                                         <li id="menu-item-417"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417">
+                                            <a href="{{ asset('/about') }}">About Us</a></li> 
+                                        <li id="menu-item-417"
+                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417">
                                             <a href="{{ asset('/privacy') }}">Privacy Policy</a></li> 
                                         <li id="menu-item-418"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-418">
-                                            <a href="{{ asset('/disclaimer') }}">Disclaimer Policy</a></li> 
+                                            <a href="{{ asset('/disclaimer') }}">Disclaimer</a></li> 
                                         <li id="menu-item-419"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-419">
-                                            <a href="{{ asset('/contact') }}">Contact Us</a></li>
+                                            <a href="{{ asset('/contact') }}">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
