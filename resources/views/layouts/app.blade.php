@@ -43,27 +43,27 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('public/new_frontend/style.min.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('/new_frontend/style.min.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" id="cream-magazine-fonts-css"
         href="https://fonts.googleapis.com/css2?family=Inter&#038;family=Poppins:ital,wght@0,600;1,600&#038;display=swap"
         type="text/css" media="all" />
     <link rel="stylesheet" id="fontAwesome-4-css"
-        href="{{ asset('public/new_frontend/fonts/fontAwesome/fontAwesome.min.css') }}"
+        href="{{ asset('/new_frontend/fonts/fontAwesome/fontAwesome.min.css') }}"
         type="text/css" media="all" />
     <link rel="stylesheet" id="feather-icons-css"
-        href="{{ asset('public/new_frontend/fonts/feather/feather.min.css') }}"
+        href="{{ asset('/new_frontend/fonts/feather/feather.min.css') }}"
         type="text/css" media="all" />
     <link rel="stylesheet" id="cream-magazine-main-css"
-        href="{{ asset('public/new_frontend/css/main.css') }}"
+        href="{{ asset('/new_frontend/css/main.css') }}"
         type="text/css" media="all" />
     <script type="text/javascript"
-        src="{{ asset('public/new_frontend/js/jquery/jquery.min.js') }}"
+        src="{{ asset('/new_frontend/js/jquery/jquery.min.js') }}"
         id="jquery-core-js"></script>
     <script type="text/javascript"
-        src="{{ asset('public/new_frontend/js/jquery/jquery-migrate.min.js')}}"
+        src="{{ asset('/new_frontend/js/jquery/jquery-migrate.min.js')}}"
         id="jquery-migrate-js"></script>
         <link rel="stylesheet"
-        href="{{ asset('public/new_frontend/css/style.css') }}"
+        href="{{ asset('/new_frontend/css/style.css') }}"
         type="text/css" media="all" />
 </head>
 
@@ -117,9 +117,9 @@
                                 <h1 class="site-logo">
                                     <a href="{{ asset('/') }}"
                                         class="custom-logo-link" rel="home" aria-current="page"><img 
-                                            src="{{ asset('public/frontend/images/logo.png') }}"
+                                            src="{{ asset('/frontend/images/logo.png') }}"
                                             class="custom-logo" alt="Cream magazine" decoding="async"
-                                            srcset="{{ asset('public/frontend/images/logo.png') }}"
+                                            srcset="{{ asset('/frontend/images/logo.png') }}"
                                             sizes="(max-width: 343px) 100vw, 343px" /></a>
                                 </h1>
                             </div>
@@ -128,7 +128,7 @@
                             <div class="advertisement-area">
                                 <div id="media_image-4" class="widget widget_media_image"><a
                                 target="__blank"  href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="728" height="90"
-                                            src="{{ asset('public/banner/news.jpeg') }}"
+                                            src="{{ asset('/banner/news.jpeg') }}"
                                             class="image wp-image-756  attachment-full size-full" alt
                                             style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high"
                                             srcset=""
@@ -209,7 +209,7 @@
                                                             href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-'}}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
-                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                     class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                     alt="{{ $blog->name }}"
                                                                     decoding="async" loading="lazy" />
@@ -289,7 +289,7 @@
                                             <div class="row">
                                                 <div class="cm-col-lg-12 cm-col-md-12 cm-col-12">
                                                     <div class="">
-                                                        <img src="{{ asset('public/banner/') }}/logo.png"/>
+                                                        <img src="{{ asset('/banner/') }}/logo.png"/>
                                                         <p style="margin: 10px 10px 20px;">Khetan Media Creations is stepping towards its dream destination everyday. We invite you to have a glimpse of our beautiful world of creative creations that has been crafted after long hardworking days by our tremendous team.</p>
                                                     </div>
                                                 </div>
@@ -445,7 +445,7 @@
         /* ]]> */
     </script>
     <script type="text/javascript"
-        src="{{ asset('public/new_frontend/js/bundle.min.js') }}"
+        src="{{ asset('/new_frontend/js/bundle.min.js') }}"
         id="cream-magazine-bundle-js"></script>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793"
