@@ -28,4 +28,26 @@ class StoryController extends Controller
         $blog->setPath(asset('/').$name);
         return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
+    public function privacy()
+    {
+        return view('privacy');
+    }
+    public function disclaimer()
+    {
+        return view('disclaimer');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function search()
+    {
+        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
+        $search = isset($_REQUEST['search']) ? $_REQUEST['search'] : '';
+        $count = 10;
+        //$category = Category::where('site_url', $name)->first();
+        $blog = Blog::where('name', 'like', '%' . $search . '%')->with('images')->orderBy('id', 'DESC')->paginate($count);
+        $blog->setPath(asset('/search').'?search='.$search);
+        return view('search',['blogs' => $blog, 'search' => $search, 'page' => $page, 'count' => $count]);
+    }
 }

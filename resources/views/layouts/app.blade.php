@@ -4,6 +4,7 @@
     <?php $setting = App\Models\Setting::where('id', 1)->first(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('/frontend/images/logo.png') }}" rel="shortcut icon" type="image/x-icon">
     <meta name="description" content="{{ isset($setting->meta_description) ? $setting->meta_description : '' }}">
     <meta name="keywords" content="{{ isset($setting->keyword) ? $setting->keyword : '' }}">
     <title>{{ isset($setting->site_name) ? $setting->site_name : '' }}</title>
@@ -90,43 +91,6 @@
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div class="page-wrapper">
         <header class="general-header cm-header-style-one">
-            <!-- <div class="top-header">
-                <div class="cm-container">
-                    <div class="row">
-                        <div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
-                            <div class="top-header-left">
-                                <ul id="menu-top-menu" class="menu">
-                                    <li id="menu-item-732"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-732"><a
-                                            href="#">&nbsp;</a></li>
-                                    <li id="menu-item-734"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-734"><a
-                                            href="#">&nbsp;</a></li>
-                                    <li id="menu-item-733"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-733"><a
-                                            href="#">&nbsp;</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="cm-col-lg-4 cm-col-md-5 cm-col-12">
-                            <div class="top-header-social-links">
-                                <ul class="social-icons">
-                                    <li>
-                                        <a href="{{ isset($setting->facebook) ? $setting->facebook : '' }}" target="_blank"><i class="fa fa-facebook-f"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ isset($setting->instagram) ? $setting->instagram : '' }}" target="_blank">Instagram</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ isset($setting->youtube) ? $setting->youtube : '' }}" target="_blank"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="cm-container">
                 <div class="logo-container">
                     <div class="row align-items-center">
@@ -189,8 +153,12 @@
                                     </ul>
                                     <?php } ?>
                             </li>
-                            @endforeach                        
+                            @endforeach                
                         </ul>
+                    </div>
+                    <div class="header-search-container" style="display: none;">
+                    <div class="search-form-entry">
+                    <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
                     </div>
                 </nav>
             </div>
@@ -314,108 +282,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                                        <!-- <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/government-is-launching-new-aero-model/">
-                                                            <figure class="imghover">
-                                                                <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/uhjhjk-720x540.jpeg"
-                                                                    class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="Government is launching new aero model"
-                                                                    decoding="async" loading="lazy" />
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
-                                                    <div class="post_title">
-                                                        <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/government-is-launching-new-aero-model/">Government
-                                                                is launching new aero model</a></h2>
-                                                    </div>
-                                                    <div class="cm-post-meta">
-                                                        <ul class="post_meta">
-                                                            <li class="posted_date">
-                                                                <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/government-is-launching-new-aero-model/"><time
-                                                                        class="entry-date published updated"
-                                                                        datetime="2018-11-11T12:08:45+05:45">11/11/2018</time></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
-                                                    <div class="post_thumb">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/die-mitte-got-new-law-enforced-by-politicians/">
-                                                            <figure class="imghover">
-                                                                <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/merkel-3464284_1280-720x540.jpg"
-                                                                    class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="Die mitte got new law enforced by politicians"
-                                                                    decoding="async" loading="lazy" />
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
-                                                    <div class="post_title">
-                                                        <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/die-mitte-got-new-law-enforced-by-politicians/">Die
-                                                                mitte got new law enforced by politicians</a></h2>
-                                                    </div>
-                                                    <div class="cm-post-meta">
-                                                        <ul class="post_meta">
-                                                            <li class="posted_date">
-                                                                <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/die-mitte-got-new-law-enforced-by-politicians/"><time
-                                                                        class="entry-date published updated"
-                                                                        datetime="2018-11-12T09:57:50+05:45">12/11/2018</time></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="box">
-                                            <div class="row">
-                                                <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
-                                                    <div class="post_thumb">
-                                                        <a
-                                                            href="https://demo.themebeez.com/demos-2/cream-magazine-free/preparation-for-cycle-race-almost-completed/">
-                                                            <figure class="imghover">
-                                                                <img width="720" height="540"
-                                                                    src="https://demo.themebeez.com/demos-2/cream-magazine-free/wp-content/uploads/sites/7/2018/11/cycling-3466004_1920-720x540.jpg"
-                                                                    class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
-                                                                    alt="Preparation for cycle race almost completed"
-                                                                    decoding="async" loading="lazy" />
-                                                            </figure>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
-                                                    <div class="post_title">
-                                                        <h2><a
-                                                                href="https://demo.themebeez.com/demos-2/cream-magazine-free/preparation-for-cycle-race-almost-completed/">Preparation
-                                                                for cycle race almost completed</a></h2>
-                                                    </div>
-                                                    <div class="cm-post-meta">
-                                                        <ul class="post_meta">
-                                                            <li class="posted_date">
-                                                                <a
-                                                                    href="https://demo.themebeez.com/demos-2/cream-magazine-free/preparation-for-cycle-race-almost-completed/"><time
-                                                                        class="entry-date published updated"
-                                                                        datetime="2018-11-12T10:48:53+05:45">12/11/2018</time></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -425,8 +291,8 @@
                             <div class="cm-col-lg-7 cm-col-md-6 cm-col-12">
                                 <div class="copyrights">
                                     <p>
-                                        <!-- <span class="copyright-text">Copyrights &copy; 2018. All rights reserved.</span>
-                                        Cream Magazine by <a href="https://themebeez.com" rel="designer noopener"
+                                        <span class="copyright-text">© COPYRIGHT KMC PVT. LTD. ALL RIGHTS RESERVED.</span>
+                                        <!--Cream Magazine by <a href="https://themebeez.com" rel="designer noopener"
                                             target="_blank">Themebeez</a> -->
                                     </p>
                                 </div>
@@ -436,13 +302,13 @@
                                     <ul id="menu-footer-menu" class="menu">
                                         <li id="menu-item-417"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-417">
-                                            <!-- <a href="#">Privacy</a>--></li> 
+                                            <a href="{{ asset('/privacy') }}">Privacy Policy</a></li> 
                                         <li id="menu-item-418"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-418">
-                                            <!-- <a href="#">Policy</a>--></li> 
+                                            <a href="{{ asset('/disclaimer') }}">Disclaimer Policy</a></li> 
                                         <li id="menu-item-419"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-419">
-                                            <!-- <a href="#">Terms &#038; Conditions</a>--></li>
+                                            <a href="{{ asset('/contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>

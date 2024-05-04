@@ -94,6 +94,10 @@ Route::prefix('users')->group(function () {
     Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'edit'])->name('editUser');
     Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'editSave'])->name('userSave');
 });
+Route::get('/search', [App\Http\Controllers\StoryController::class, 'search'])->name('search');
+Route::get('/privacy', [App\Http\Controllers\StoryController::class, 'privacy'])->name('privacy');
+Route::get('/disclaimer', [App\Http\Controllers\StoryController::class, 'disclaimer'])->name('disclaimer');
+Route::get('/contact', [App\Http\Controllers\StoryController::class, 'contact'])->name('contact');
 Route::get('/{cat_name}/{name}', [App\Http\Controllers\StoryController::class, 'showStory'])->name('showStory');
 Route::get('/{cat_name}',[App\Http\Controllers\StoryController::class, 'category'])->name('category');
 // Route::get('detail', function () {

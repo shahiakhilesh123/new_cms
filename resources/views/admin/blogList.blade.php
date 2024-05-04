@@ -174,6 +174,13 @@
                 <form>
                   <div class="input-group input-group-sm" style="width: 500px;">  
                     <input class="form-control float-right" name="title" type="text" value="{{ $data['title'] }}" placeholder="Enter Title">                
+                    <select name="author" class="form-control float-right">
+                            <option value="">Select Author</option>
+                            <?php $authors = App\Models\User::whereNot('id', 6)->get()->all() ?>
+                            @foreach($authors as $author)
+                              <option value="{{ $author->id }}">{{ $author->name }}</option>
+                            @endforeach
+                    </select>
                     <select name="category" class="form-control float-right">
                       <option value="">Select Category</option>
                       <?php $categories = App\Models\Category::get()->all() ?>
@@ -200,17 +207,20 @@
                     <tr>
                       <th>ID</th>
                       <th>Post Name</th>
-                      <th>Post Link</th>
+                      <th>Author name</th>
+                      <th>Publish Date</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     @if(count($data['blogs']) > 0)
                       @foreach($data['blogs'] as $blog)
+                      <?php $author = App\Models\User::where('id',$blog->author)->first(); ?>
                       <tr>
                         <td >{{ $blog->id }}</td>
                         <td style="white-space: pre-wrap; word-wrap: break-word; width: 290px;">{{ $blog->name }}</td>
-                        <td >{{ $blog->link }}</td>                      
+                        <td >{{ isset($author->name) ? $author->name : '' }}</td>
+                        <td >{{ $blog->created_at }}</td>                      
                         <td >
                           <!-- <a href="{{ asset('blogs') }}/{{$blog->id}}/{{ str_replace(" ","-",$blog->name) }}" target="_blank"><i class="fas fa-copy"></i></a> -->
                           <a href="{{ asset('posts/edit') }}/{{$blog->id}}"><i class="fas fa-edit"></i></a>

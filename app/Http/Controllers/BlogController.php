@@ -20,6 +20,9 @@ class BlogController extends Controller
         if (isset($request->category)) {
             $blogs->where('categories_ids', $request->category);
         }
+        if (isset($request->author)) {
+            $blogs->where('author', $request->author);
+        }
         $blogs = $blogs->paginate(20);
         if (isset($request->category)) {
             $category = $request->category;
