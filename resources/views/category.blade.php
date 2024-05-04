@@ -160,7 +160,7 @@
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
-                                                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                                                     class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                                                                     alt="{{ $blog->name }}"
                                                                                                     decoding="async">
@@ -232,11 +232,11 @@
                                                         </div><a target="__blank"
                                                             href="https://www.youtube.com/@BeingGhumakkad"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('public/banner/gummkad.jpeg') }}"
+                                                                src="{{ asset('/banner/gummkad.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('public/banner/gummkad.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/gummkad.jpeg') }} 300w"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
@@ -264,11 +264,11 @@
                                                         </div><a target="__blank"
                                                             href="https://www.youtube.com/@SportsHour"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('public/banner/sports.jpeg') }}"
+                                                                src="{{ asset('/banner/sports.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('public/banner/sports.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/sports.jpeg') }} 300w"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                 </aside>

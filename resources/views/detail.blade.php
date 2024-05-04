@@ -23,7 +23,7 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
 <meta property="og:description" content="{{ $data['blog']->sort_description }}" />
 <meta property="og:type" content="xxx:photo">
 <meta property="og:url" content="{{ asset('/').$data['category']->site_url.'/'.$data['blog']->site_url }}"/>
-<meta property="og:image" content="{{ asset('public/file').'/'.$ff }}"/>
+<meta property="og:image" content="{{ asset('/file').'/'.$ff }}"/>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
                     <div id="primary" class="content-area" style="transform: none;">
@@ -99,11 +99,11 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                             @else
                                                             
                                                                 <img width="1280" height="853"
-                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                     class="attachment-full size-full wp-post-image"
                                                                     alt="{{ $data['blog']->name }}"
                                                                     decoding="async"
-                                                                    srcset="{{ asset('public/file').'/'.$ff }} 1024w"
+                                                                    srcset="{{ asset('/file').'/'.$ff }} 1024w"
                                                                     sizes="(max-width: 1280px) 100vw, 1280px">
                                                             @endif
                                                             </figure>
@@ -143,7 +143,7 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                             href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
-                                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                                     class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                                                     alt="{{ $latest->name }}"
                                                                                     decoding="async" loading="lazy">
@@ -195,11 +195,11 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                         </div><a
                                                             href="https://www.youtube.com/@DharmGyan" target="__blank"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('public/banner/d_gyan.jpeg') }}"
+                                                                src="{{ asset('/banner/d_gyan.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('public/banner/d_gyan.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/d_gyan.jpeg') }} 300w"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                             <div class="theiaStickySidebar"

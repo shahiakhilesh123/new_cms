@@ -55,7 +55,7 @@
                                             ?>
                                             <div class="item">
                                                 <div class="post_thumb"
-                                                    style="background-image: url({{asset('public/file').'/'.$ff }}); background-size:contain;">
+                                                    style="background-image: url({{asset('/file').'/'.$ff }}); background-size:contain;">
                                                     <div class="post-holder">
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
@@ -108,7 +108,7 @@
                                             <div class="col small_posts">
                                                 <div class="card">
                                                     <div class="post_thumb imghover"
-                                                        style="background-image: url({{ asset('public/file').'/'.$ff }}); background-size:contain;">
+                                                        style="background-image: url({{ asset('/file').'/'.$ff }}); background-size:contain;">
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">
@@ -152,7 +152,7 @@
                 <div class="cm-container">
                     <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
                             href="https://www.youtube.com/@BeingGhumakkad" target="__blank" ><img width="1170" height="90"
-                                src="{{ asset('public/banner/beingghmakad.jpeg') }}"
+                                src="{{ asset('/banner/beingghmakad.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
                                 srcset=""
@@ -191,7 +191,7 @@
                                                     href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
-                                                            src="{{ asset('public/file').'/'.$ff }}"
+                                                            src="{{ asset('/file').'/'.$ff }}"
                                                             alt="Obama&#8217;s speech made everyone scared"
                                                             decoding="async" />
                                                     </figure>
@@ -239,7 +239,7 @@
                                                 href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="800" height="450"
-                                                        src="{{ asset('public/file').'/'.$ff }}"
+                                                        src="{{ asset('/file').'/'.$ff }}"
                                                         class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                         alt="Obama&#8217;s speech made everyone scared"
                                                         decoding="async" />
@@ -314,7 +314,7 @@
                                             <a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="720" height="540"
-                                                        src="{{ asset('public/file').'/'.$ff }}"
+                                                        src="{{ asset('/file').'/'.$ff }}"
                                                         class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                         alt="Conference for the world business" decoding="async" />
                                                 </figure>
@@ -384,7 +384,7 @@
                                                             href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
-                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                     class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                     alt="{{ $blog->name }}"
                                                                     decoding="async" />
@@ -424,10 +424,10 @@
                     </section>
                     <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
                     target="__blank" href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
-                                src="{{ asset('public/banner/news.jpeg') }}"
+                                src="{{ asset('/banner/news.jpeg') }}"
                                 class="image wp-image-731  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/banner/news.jpeg') }}"
+                                srcset="{{ asset('/banner/news.jpeg') }}"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                 </div>
             </div>
@@ -473,7 +473,7 @@
                                                                     href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                     <figure class="imghover">
                                                                         <img width="720" height="540"
-                                                                            src="{{ asset('public/file').'/'.$ff }}"
+                                                                            src="{{ asset('/file').'/'.$ff }}"
                                                                             class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                             alt="{{ $blog->name }}"
                                                                             decoding="async" />
@@ -527,7 +527,7 @@
                                                                                 href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                 <figure class="imghover">
                                                                                     <img width="720" height="540"
-                                                                                        src="{{ asset('public/file').'/'.$ff }}"
+                                                                                        src="{{ asset('/file').'/'.$ff }}"
                                                                                         class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                                         alt="{{ $blog->name }}"
                                                                                         decoding="async" />
@@ -598,7 +598,7 @@
                                                     ?>
                                                     <div class="item">
                                                         <div class="card post_thumb"
-                                                            style="background-image: url( {{ asset('public/file').'/'.$ff }} )">
+                                                            style="background-image: url( {{ asset('/file').'/'.$ff }} )">
                                                             <div class="card_content">
                                                                 <div class="entry_cats">
                                                                     <ul class="post-categories">
@@ -639,10 +639,10 @@
                                             class="widget cm-post-widget-section widget_media_image"><a target="__blank"
                                                 href="https://www.youtube.com/@BeingGhumakkad"><img width="728"
                                                     height="90"
-                                                    src="{{ asset('public/banner/beingghmakad.jpeg') }}"
+                                                    src="{{ asset('/banner/beingghmakad.jpeg') }}"
                                                     class="image wp-image-756  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('public/banner/beingghmakad.jpeg') }}"
+                                                    srcset="{{ asset('/banner/beingghmakad.jpeg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
                                           $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
@@ -680,11 +680,11 @@
                                                                         href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                         <figure class="imghover">
                                                                             <img width="720" height="540"
-                                                                                src="{{ asset('public/file').'/'.$ff }}"
+                                                                                src="{{ asset('/file').'/'.$ff }}"
                                                                                 class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                                 alt="{{ $blog->name }}"
                                                                                 decoding="async"
-                                                                                srcset="{{ asset('public/file').'/'.$ff }} 1200w"
+                                                                                srcset="{{ asset('/file').'/'.$ff }} 1200w"
                                                                                 sizes="(max-width: 720px) 100vw, 720px" />
                                                                         </figure>
                                                                     </a>
@@ -743,7 +743,7 @@
                                                                                         <figure class="imghover">
                                                                                             <img width="720"
                                                                                                 height="540"
-                                                                                                src="{{ asset('public/file').'/'.$ff }}"
+                                                                                                src="{{ asset('/file').'/'.$ff }}"
                                                                                                 class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                                                 alt="{{ $blog->name }}"
                                                                                                 decoding="async" />
@@ -798,10 +798,10 @@
                                             class="widget cm-post-widget-section widget_media_image"><a target="__blank"
                                                 href="https://www.youtube.com/@DharmGyan"><img width="768"
                                                     height="90"
-                                                    src="{{ asset('public/banner/dharm.jpeg') }}"
+                                                    src="{{ asset('/banner/dharm.jpeg') }}"
                                                     class="image wp-image-710  attachment-full size-full" alt
                                                     style="max-width: 100%; height: auto;" decoding="async"
-                                                    srcset="{{ asset('public/banner/dharm.jpeg') }} 300w"
+                                                    srcset="{{ asset('/banner/dharm.jpeg') }} 300w"
                                                     sizes="(max-width: 768px) 100vw, 768px" /></a></div>
                                     </main>
                                 </div>
@@ -855,10 +855,10 @@
                                         </div><a target="__blank"
                                             href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
-                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
+                                                src="{{ asset('/banner/lokshbha.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }}"
+                                                srcset="{{ asset('/banner/lokshbha.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                     <div id="categories-2" class="widget widget_categories">
@@ -885,10 +885,10 @@
                                         </div><a target="__blank"
                                             href="https://www.youtube.com/@SportsHour"><img
                                                 width="400" height="300"
-                                                src="{{ asset('public/banner/sports.jpeg') }}"
+                                                src="{{ asset('/banner/sports.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="{{ asset('public/banner/sports.jpeg') }}"
+                                                srcset="{{ asset('/banner/sports.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                 </aside>
@@ -931,7 +931,7 @@
                                                 href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                 <figure class="imghover">
                                                     <img width="720" height="540"
-                                                        src="{{ asset('public/file').'/'.$ff }}"
+                                                        src="{{ asset('/file').'/'.$ff }}"
                                                         class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                         alt="{{ $blog->name }}"
                                                         decoding="async" />
@@ -1009,7 +1009,7 @@
                                                             href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             <figure class="imghover">
                                                                 <img width="720" height="540"
-                                                                    src="{{ asset('public/file').'/'.$ff }}"
+                                                                    src="{{ asset('/file').'/'.$ff }}"
                                                                     class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
                                                                     alt="{{ $blog->name }}"
                                                                     decoding="async" />
@@ -1053,10 +1053,10 @@
                     </section>
                     <div id="media_image-9" class="widget cm-post-widget-section widget_media_image"><a
                             href="https://www.youtube.com/@SportsHour" target="__blank" ><img width="1170" height="90"
-                                src="{{ asset('public/banner/sports_banner.jpeg') }}"
+                                src="{{ asset('/banner/sports_banner.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('public/banner/sports_banner.jpeg') }} 1024w"
+                                srcset="{{ asset('/banner/sports_banner.jpeg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
                     $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
@@ -1093,7 +1093,7 @@
                                                     href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
-                                                            src="{{ asset('public/file').'/'.$ff }}"
+                                                            src="{{ asset('/file').'/'.$ff }}"
                                                             class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                             alt="{{ $blog->name }}"
                                                             decoding="async" />
@@ -1141,7 +1141,7 @@
                                                     href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                     <figure class="imghover">
                                                         <img width="800" height="450"
-                                                            src="{{ asset('public/file').'/'.$ff }}"
+                                                            src="{{ asset('/file').'/'.$ff }}"
                                                             class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                             alt="{{ $blog->name }}"
                                                             decoding="async" />
