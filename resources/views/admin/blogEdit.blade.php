@@ -390,7 +390,7 @@
                     <div class="row image_row">
                     @foreach($data['file'] as $file)
                         <div class="col-md-3 popup" >
-                          <img style="width: 100%;" class="image_sec" data-name="{{$file->file_name}}" data-id="{{$file->id}}" src="{{ asset('public/file').'/'.$file->file_name }}"/>
+                          <img style="width: 100%;" class="image_sec" data-name="{{$file->file_name}}" data-id="{{$file->id}}" src="{{ asset('file').'/'.$file->file_name }}"/>
                           {{ $file->file_name }}
                         </div>
                     @endforeach
@@ -425,7 +425,7 @@
                     <div class="row image_row">
                     @foreach($data['file'] as $file)
                         <div class="col-md-3 popup" >
-                          <img style="width: 100%;" class="image_sec" data-name="{{$file->file_name}}" data-id="{{$file->id}}" src="{{ asset('public/file').'/'.$file->file_name }}"/>
+                          <img style="width: 100%;" class="image_sec" data-name="{{$file->file_name}}" data-id="{{$file->id}}" src="{{ asset('file').'/'.$file->file_name }}"/>
                           {{ $file->file_name }}
                         </div>
                     @endforeach

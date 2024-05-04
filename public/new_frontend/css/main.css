@@ -6783,6 +6783,9 @@ body.boxed .page-wrapper .cm-container {
     .news_ticker_wrap .ticker_head .ticker_title {
         display: none;
     }
+    .news_ticker_wrap {
+        display:none;
+    }
     .news_ticker_wrap .ticker_items {
         height: auto;
         line-height: 1.3;
