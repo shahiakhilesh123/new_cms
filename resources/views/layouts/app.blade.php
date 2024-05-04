@@ -7,6 +7,24 @@
     <meta name="description" content="{{ isset($setting->meta_description) ? $setting->meta_description : '' }}">
     <meta name="keywords" content="{{ isset($setting->keyword) ? $setting->keyword : '' }}">
     <title>{{ isset($setting->site_name) ? $setting->site_name : '' }}</title>
+
+    <?php
+    if(isset($data['blog'])) { 
+    if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
+        $blog_file = $data['blog']->images->file_name;
+    } else {
+        $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
+        $blog_file = $file->file_name;
+    } 
+    $ff = isset($blog_file) ? $blog_file : ''; ?>
+    <meta property="fb:app_id" content="3916260501994016"/>
+    <meta property="og:site_name" content="newsnmf"/>
+    <meta property="og:title" content="{{ $data['blog']->name }}" />
+    <meta property="og:description" content="{{ $data['blog']->sort_description }}" />
+    <meta property="og:type" content="xxx:photo">
+    <meta property="og:url" content="{{ asset('/').$data['category']->site_url.'/'.$data['blog']->site_url }}"/>
+    <meta property="og:image" content="{{ asset('/file').'/'.$ff }}"/>
+    <?php } ?>
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name="robots" content="max-image-preview:large" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />

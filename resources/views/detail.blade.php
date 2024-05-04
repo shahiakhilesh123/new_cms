@@ -9,21 +9,6 @@
         position: relative;
     }
 </style>
-<?php
-if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
-    $blog_file = $data['blog']->images->file_name;
-} else {
-    $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
-    $blog_file = $file->file_name;
-} 
-$ff = isset($blog_file) ? $blog_file : ''; ?>
-<meta property="fb:app_id" content="3916260501994016"/>
-<meta property="og:site_name" content="newsnmf"/>
-<meta property="og:title" content="{{ $data['blog']->name }}" />
-<meta property="og:description" content="{{ $data['blog']->sort_description }}" />
-<meta property="og:type" content="xxx:photo">
-<meta property="og:url" content="{{ asset('/').$data['category']->site_url.'/'.$data['blog']->site_url }}"/>
-<meta property="og:image" content="{{ asset('/file').'/'.$ff }}"/>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
                     <div id="primary" class="content-area" style="transform: none;">
@@ -72,23 +57,23 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="">
+                                                                <li class="post_author">
                                                                     <a
-                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</i></a>
+                                                                        href="#">{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</a>
                                                                 </li>
-                                                                <li class="">
+                                                                <li class="posted_date">
                                                                     <a
-                                                                        href="#"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
+                                                                        href="#"><time
                                                                             class="entry-date published"
-                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></i></a>
+                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></a>
                                                                 </li>
                                                                 <!-- <li class="comments">
                                                                     <a
                                                                         href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence/#comments">0</a>
                                                                 </li> -->
-                                                                <li class="">
+                                                                <li class="entry_cats">
                                                                     <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
-                                                                        rel="category tag"><i class="fa fa-archive" aria-hidden="true">&nbsp;&nbsp;{{ $data['category']->name }}</i></a>
+                                                                        rel="category tag">{{ $data['category']->name }}</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -97,21 +82,25 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                             @if( $data['blog']->link != '')
                                                             <iframe class="attachment-full size-full wp-post-image" width="1280" height="500" src="{{ $data['blog']->link}}"></iframe>
                                                             @else
-                                                            
+                                                            <?php
+                                                            if (isset($data['blog']->images->file_name) && $data['blog']->images->file_name != '' && !empty($data['blog']->images->file_name) && empty($blog->link)) {
+                                                                $blog_file = $data['blog']->images->file_name;
+                                                            } else {
+                                                                $file = App\Models\File::where( "id", $data['blog']->thumb_images)->first();
+                                                                $blog_file = $file->file_name;
+                                                            } 
+                                                            $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                 <img width="1280" height="853"
-                                                                    src="{{ asset('/file').'/'.$ff }}"
+                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                     class="attachment-full size-full wp-post-image"
                                                                     alt="{{ $data['blog']->name }}"
                                                                     decoding="async"
-                                                                    srcset="{{ asset('/file').'/'.$ff }} 1024w"
+                                                                    srcset="{{ asset('public/file').'/'.$ff }} 1024w"
                                                                     sizes="(max-width: 1280px) 100vw, 1280px">
                                                             @endif
                                                             </figure>
                                                         </div>
                                                         <div class="the_content">
-                                                            <!-- <div class="row">
-                                                            <button class="ui facebook button">Share</button>
-                                                            </div> -->
                                                             <div class="row">
                                                                 <?php echo $data['blog']->description; ?>
                                                             </div>
@@ -143,7 +132,7 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                             href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
-                                                                                    src="{{ asset('/file').'/'.$ff }}"
+                                                                                    src="{{ asset('public/file').'/'.$ff }}"
                                                                                     class="attachment-cream-magazine-thumbnail-2 size-cream-magazine-thumbnail-2 wp-post-image"
                                                                                     alt="{{ $latest->name }}"
                                                                                     decoding="async" loading="lazy">
@@ -164,15 +153,15 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
-                                                                                <li class="">
+                                                                                <li class="post_author">
                                                                                     <a
-                                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
                                                                                 </li>
-                                                                                <li class="">
+                                                                                <li class="posted_date">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
+                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
                                                                                             class="entry-date published"
-                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></i></a>
+                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -191,15 +180,15 @@ $ff = isset($blog_file) ? $blog_file : ''; ?>
                                             <aside id="secondary" class="sidebar-widget-area">
                                             <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
-                                                            <h2>Recommended</h2>
+                                                            <h2>Recommended Host</h2>
                                                         </div><a
-                                                            href="https://www.youtube.com/@DharmGyan" target="__blank"><img
+                                                            href="{{ asset('/election-2024') }}"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('/banner/d_gyan.jpeg') }}"
+                                                                src="{{ asset('public/banner/lokshbha.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/d_gyan.jpeg') }} 300w"
+                                                                srcset="{{ asset('public/banner/lokshbha.jpeg') }} 300w"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                             <div class="theiaStickySidebar"
