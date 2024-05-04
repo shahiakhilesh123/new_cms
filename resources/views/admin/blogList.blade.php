@@ -178,7 +178,7 @@
                             <option value="">Select Author</option>
                             <?php $authors = App\Models\User::whereNot('id', 6)->get()->all() ?>
                             @foreach($authors as $author)
-                              <option value="{{ $author->id }}">{{ $author->name }}</option>
+                              <option value="{{ $author->id }}" <?php if($data['author'] == $author->id) ?>>{{ $author->name }}</option>
                             @endforeach
                     </select>
                     <select name="category" class="form-control float-right">

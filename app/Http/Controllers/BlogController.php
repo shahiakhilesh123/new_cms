@@ -33,7 +33,7 @@ class BlogController extends Controller
             $category = 0;
             $blogs->setPath(asset('/posts'));
         }
-        return view('admin/blogList')->with('data', ['blogs'=> $blogs, 'category'=> $category, 'title' => $title]);
+        return view('admin/blogList')->with('data', ['blogs'=> $blogs, 'category'=> $category, 'title' => $title, 'author' => $request->author]);
     }
     public function addBlog()
     {
