@@ -59,13 +59,13 @@
                                                             <ul class="post_meta">
                                                                 <li class="post_author">
                                                                     <a
-                                                                        href="#">{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</a>
+                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</i></a>
                                                                 </li>
                                                                 <li class="posted_date">
                                                                     <a
-                                                                        href="#"><time
+                                                                        href="#"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published"
-                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></a>
+                                                                            datetime="{{ $data['blog']->created_at }}">{{ $data['blog']->created_at }}</time></i></a>
                                                                 </li>
                                                                 <!-- <li class="comments">
                                                                     <a
@@ -154,14 +154,14 @@
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
                                                                                 <li class="post_author">
-                                                                                    <a
-                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</a>
+                                                                                <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;<a
+                                                                                        href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                 </li>
                                                                                 <li class="posted_date">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><time
+                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                             class="entry-date published"
-                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></a>
+                                                                                            datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></i></a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
