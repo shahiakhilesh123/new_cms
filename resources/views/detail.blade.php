@@ -57,11 +57,11 @@
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
-                                                                <li class="post_author">
+                                                                <li class="">
                                                                     <a
                                                                         href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</i></a>
                                                                 </li>
-                                                                <li class="posted_date">
+                                                                <li class="">
                                                                     <a
                                                                         href="#"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                             class="entry-date published"
@@ -153,11 +153,11 @@
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
-                                                                                <li class="post_author">
+                                                                                <li class="">
                                                                                 <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;<a
                                                                                         href="#">{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                 </li>
-                                                                                <li class="posted_date">
+                                                                                <li class="">
                                                                                     <a
                                                                                         href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                             class="entry-date published"
