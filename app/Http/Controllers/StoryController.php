@@ -21,7 +21,7 @@ class StoryController extends Controller
     }
     public function category($name)
     {
-        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
+        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
         $count = 10;
         $category = Category::where('site_url', $name)->first();
         $blog = Blog::where('categories_ids', $category->id)->with('images')->orderBy('id', 'DESC')->paginate($count);
@@ -46,7 +46,7 @@ class StoryController extends Controller
     }
     public function search()
     {
-        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 0;
+        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
         $search = isset($_REQUEST['search']) ? $_REQUEST['search'] : '';
         $count = 10;
         //$category = Category::where('site_url', $name)->first();
