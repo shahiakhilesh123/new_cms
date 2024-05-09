@@ -175,6 +175,9 @@
               <!-- form start -->
               <form method="post" action="{{asset('posts/edit')}}/{{$data['blogs']->id}}">
               @csrf
+                <div class="card-header">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="name">Edit Title</label>
