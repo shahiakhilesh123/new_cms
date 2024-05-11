@@ -26,13 +26,6 @@
                                     <p><a
                                             href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo $blog->site_url; ?>"><?php echo $truncated; ?></a></p>
                                 </div>
-                                <div class="cm-post-meta">
-                                    <ul class="post_meta">
-                                        <li>
-                                            <a href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
-                                        </li>
-                                    </ul>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
@@ -131,21 +124,21 @@
                                                                 <h2><a
                                                                         href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
                                                             </div>
-                                                            <!-- <div class="cm-post-meta">
+                                                            <div class="cm-post-meta">
                                                                 <ul class="post_meta">
                                                                     <li class="post_author">
                                                                         <a
                                                                             href="#">Cester
                                                                             Kinner</a>
                                                                     </li>
-                                                                    <li class="posted_date">
+                                                                    <!--<li class="posted_date">
                                                                         <a
                                                                             href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><time
                                                                                 class="entry-date published updated"
                                                                                 datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></a>
-                                                                    </li>
+                                                                    </li>-->
                                                                 </ul>
-                                                            </div> -->
+                                                            </div> 
                                                         </div>
                                                     </div>
                                                 </div>
