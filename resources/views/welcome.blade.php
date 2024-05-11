@@ -17,10 +17,21 @@
                                 @foreach($latest_blog as $blog)
                                 <?php  $truncated = $blog->name; 
                                 $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
+                                $author = [];
+                                if(isset($blog->author)) {
+                                    $author = App\Models\User::where( "id", $blog->author)->first();
+                                }
                                 ?>
                                 <div class="item">
                                     <p><a
                                             href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo $blog->site_url; ?>"><?php echo $truncated; ?></a></p>
+                                </div>
+                                <div class="cm-post-meta">
+                                    <ul class="post_meta">
+                                        <li>
+                                            <a href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 @endforeach
                             </div>
