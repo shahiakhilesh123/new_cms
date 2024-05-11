@@ -119,6 +119,7 @@
                                                         <div class="row">
                                                         @foreach($data['latests'] as $latest)
                                                         <?php 
+                                                        $cat = App\Models\Category::where('id',$latest->categories_ids)->first();
                                                         $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : ''); 
                                                         $author = [];
                                                         if(isset($blog->author)) {
@@ -129,7 +130,7 @@
                                                                 <div class="card">
                                                                     <div class="post_thumb">
                                                                         <a
-                                                                            href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
+                                                                            href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-'  }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>">
                                                                             <figure class="imghover">
                                                                                 <img width="800" height="450"
                                                                                     src="{{ asset('/file').'/'.$ff }}"
@@ -142,14 +143,14 @@
                                                                     <div class="card_content">
                                                                         <div class="entry_cats">
                                                                             <ul class="post-categories">
-                                                                                <li><a href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : ''  }}"
-                                                                                        rel="category tag">{{ $data['category']->name }}</a>
+                                                                                <li><a href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : ''  }}"
+                                                                                        rel="category tag">{{ $cat->name }}</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
                                                                         <div class="post_title">
                                                                             <h2><a
-                                                                                    href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-'  }}/<?php echo  $latest->site_url; ?>">{{ $latest->name }} </a></h2>
+                                                                                    href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-'  }}/<?php echo  $latest->site_url; ?>">{{ $latest->name }} </a></h2>
                                                                         </div>
                                                                         <div class="cm-post-meta">
                                                                             <ul class="post_meta">
@@ -159,7 +160,7 @@
                                                                                 </li>
                                                                                 <li class="">
                                                                                     <a
-                                                                                        href="{{ asset('/') }}{{ isset($data['category']->site_url) ? $data['category']->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
+                                                                                        href="{{ asset('/') }}{{ isset($dcat->site_url) ? $cat->site_url : '-' }}/<?php echo str_replace(' ', '-', $latest->eng_name); ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                             class="entry-date published"
                                                                                             datetime="{{ $latest->created_at }}">{{ $latest->created_at }}</time></i></a>
                                                                                 </li>
