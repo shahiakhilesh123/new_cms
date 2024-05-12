@@ -59,7 +59,7 @@
                                             ?>
                                             <div class="item">
                                                 <div class="post_thumb"
-                                                    style="background-image: url({{asset('/file').'/'.$ff }}); background-size:contain;">
+                                                    style="background-image: url({{asset('/file').'/'.$ff }});">
                                                     <div class="post-holder">
                                                         <div class="entry_cats">
                                                             <ul class="post-categories">
