@@ -2,7 +2,7 @@
 
 @section('content')
 <?php $setting = App\Models\Setting::where('id', '1')->first(); ?>
-            <div class="ticker-news-area">
+            <div class="ticker-news-area" style="margin-top: 10px;">
                 <div class="cm-container">
                     <div class="news_ticker_wrap clearfix">
                         <div class="ticker_head">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="banner-area">
+            <div class="banner-area" style="margin-top: 10px;">
                 <div class="cm_banner cm_banner-five">
                     <div class="banner-inner">
                         <div class="cm-container">
