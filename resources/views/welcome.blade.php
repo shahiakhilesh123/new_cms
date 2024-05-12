@@ -112,7 +112,7 @@
                                             <div class="col small_posts">
                                                 <div class="card">
                                                     <div class="post_thumb imghover"
-                                                        style="background-image: url({{ asset('/file').'/'.$ff }}); background-size:contain;">
+                                                        style="background-image: url({{ asset('/file').'/'.$ff }}); background-size:cover;">
                                                         <div class="post-holder">
                                                             <div class="entry_cats">
                                                                 <ul class="post-categories">

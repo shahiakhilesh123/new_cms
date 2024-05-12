@@ -62,6 +62,72 @@
             padding: 0 !important;
         }
     </style>
+    <style>
+        /* new header style*/
+        .header-topstrip {
+            padding: 8px 0;
+        }
+
+        .header-topstrip {
+            background-color: #e2e2e2;
+        }
+
+        .header-topstrip ul.social-icons li a {
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+        }
+
+        ul.topsocial-icons li {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .header-topstrip ul.topsocial-icons li a {
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 0;
+            text-align: center;
+            display: inline-block;
+            border-radius: 50%;
+            color: #fff;
+        }
+
+        .header-topstrip ul.topsocial-icons li.fb a {
+            background: #4267b2;
+        }
+
+        .header-topstrip ul.topsocial-icons li.insta a {
+            background: #8a33a4;
+        }
+
+        .header-topstrip ul.topsocial-icons li.tw a {
+            background: #1da1f2;
+        }
+
+        .header-topstrip ul.topsocial-icons li.linken a {
+            background: #0274b3;
+        }
+
+        .header-topstrip ul.topsocial-icons li.yt a {
+            background: #ff0000;
+        }
+
+        .header-topstrip .contact-link{
+            color: #fe1600;
+            font-size: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .sm-d-none {
+                display: none;
+            }
+
+        /* new header style*/  
+
+    </style>
     <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('/new_frontend/style.min.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" id="cream-magazine-fonts-css"
         href="https://fonts.googleapis.com/css2?family=Inter&#038;family=Poppins:ital,wght@0,600;1,600&#038;display=swap"
@@ -91,18 +157,68 @@
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div class="page-wrapper">
         <header class="general-header cm-header-style-one">
+            <div class="header-topstrip sm-d-none">
+                <div class="cm-container">
+                    <div class="row">
+                        <div class="cm-col-lg-4 cm-col-md-5 cm-col-12">
+                            <div class="top-header-left">
+                                <img src="{{ asset('/frontend/images/header-tagline.png') }}" alt="NMF News">
+                            </div>
+                        </div>
+                        <div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
+                            <div class="top-header-social-links d-flex align-items-center justify-content-end">
+                                <ul class="topsocial-icons mr-2">
+                                    <li class="fb">
+                                        <a href="https://facebook.com/NMFNewsOriginal" target="_blank">
+                                            <i class="fa fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="insta">
+                                        <a href="https://instagram.com/nmfnewsofficial" target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="tw">
+                                        <a href="https://twitter.com/NMFNewsOfficial" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="linken">
+                                        <a href="https://in.linkedin.com/company/khetanmediacreationpvtltd"
+                                            target="_blank">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li class="yt">
+                                        <a href="https://www.youtube.com/c/NMFNews/featured" target="_blank">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+
+                                <a href="https://newsnmf.com/contact" class="contact-link">विज्ञापन के लिए संपर्क करें</a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cm-container">
                 <div class="logo-container">
                     <div class="row align-items-center">
                         <div class="cm-col-lg-4 cm-col-12">
                             <div class="logo">
-                                <h1 class="site-logo">
+                                <h1 class="site-logo d-flex">
                                     <a href="{{ asset('/') }}"
                                         class="custom-logo-link" rel="home" aria-current="page"><img 
                                             src="{{ asset('/frontend/images/logo.png') }}"
                                             class="custom-logo" alt="Cream magazine" decoding="async"
                                             srcset="{{ asset('/frontend/images/logo.png') }}"
                                             sizes="(max-width: 343px) 100vw, 343px" /></a>
+                                            <span class="sm-d-none"><img src="{{ asset('/frontend/images/logo-tagline.png') }}" class="ml-3" alt="NMF News"></span>
                                 </h1>
                             </div>
                         </div>
