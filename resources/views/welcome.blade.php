@@ -96,7 +96,7 @@
                                 <?php
                                 $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(4)->offset(5)->get(); 
                                 ?>
-                                <div class="cm-col-lg-5 cm-col-12 gutter-right" style="margin-top: -25px;">
+                                <div class="cm-col-lg-5 cm-col-12 gutter-right" >
                                     <div class="right-content-holder">
                                         <div class="custom_row clearfix">
                                             @foreach($banner_blog as $blog)
