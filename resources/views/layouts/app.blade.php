@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3VCPPRWL"></script>
+    <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
+    <script src="https://cdn.izooto.com/scripts/08c8e31c0763314b6900fa47547eb2d5bcf2047c.js"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -49,22 +51,8 @@
         /* ]]> */
     </script>
     <style id="wp-emoji-styles-inline-css" type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 0.07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <style>
-        /* new header style*/
-        .header-topstrip {
+         /* new header style*/
+         .header-topstrip {
             padding: 8px 0;
         }
 
@@ -87,7 +75,7 @@
             font-size: 14px;
             width: 30px;
             height: 30px;
-            line-height: 30px;
+            padding-top: 8px;
             margin-right: 0;
             text-align: center;
             display: inline-block;
@@ -115,18 +103,195 @@
             background: #ff0000;
         }
 
-        .header-topstrip .contact-link{
+        .header-topstrip .contact-link {
             color: #fe1600;
             font-size: 15px;
         }
 
+        .social-link-mobile,
+        .mobile-topbanner,
+        .mobile-inline-menu,
+        .mobile-only {
+            display: none;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
         @media (max-width: 992px) {
+
             .sm-d-none {
                 display: none;
             }
 
-        /* new header style*/  
+            .mobile-inline-menu {
+                display: block;
+            }
 
+            .logo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .cm-header-style-one {
+                background-color: #f21500;
+            }
+
+            .social-link-mobile {
+                display: block;
+                text-align: right;
+            }
+
+            .mobile-topbanner {
+                display: block;
+            }
+
+            ul.topsocial-icons {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul.topsocial-icons li {
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            ul.topsocial-icons li:last-child {
+                margin-right: 0px;
+            }
+
+            .social-link-mobile ul.topsocial-icons li a {
+                font-size: 14px;
+                width: 28px;
+                height: 28px;
+                margin-right: 0;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50%;
+                color: #fff;
+                border: 2px solid #fff;
+                padding: 1px 0 0 0;
+                transition: all 0.6s linear;
+                padding-top: 5px;
+            }
+
+            .social-link-mobile ul.topsocial-icons li a:hover {
+                border-color: #e2e2e2;
+            }
+
+            .social-link-mobile ul.topsocial-icons li.fb a {
+                background: #4267b2;
+            }
+
+            .social-link-mobile ul.topsocial-icons li.insta a {
+                background: #8a33a4;
+            }
+
+            .social-link-mobile ul.topsocial-icons li.tw a {
+                background: #1da1f2;
+            }
+
+            .social-link-mobile ul.topsocial-icons li.linken a {
+                background: #0274b3;
+            }
+
+            .social-link-mobile ul.topsocial-icons li.yt a {
+                background: #ff0000;
+            }
+
+            .social-link-mobile .contact-link {
+                color: #fff;
+                font-size: 15px;
+            }
+
+            .mobile-inline-menu {
+                background-color: #ffffff;
+            }
+
+            .mobile-inline-menu ul.mobile-inline-link {
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .mobile-inline-menu ul.mobile-inline-link>li:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            .mobile-inline-menu ul.mobile-inline-link>li>a {
+                text-transform: uppercase;
+                font-size: .875rem;
+                font-weight: 700;
+                color: #888888;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                line-height: 1.5;
+                padding: 4px;
+            }
+
+            .justify-content-sb {
+                justify-content: space-between;
+            }
+
+            .mobile-inline-menu .menu-toggle .fa {
+                font-size: 22px;
+                margin-right: 5px;
+            }
+
+            .mobile-inline-menu .menu-toggle {
+                color: #888888;
+            }
+
+            img.w-100 {
+                width: 100%;
+            }
+
+            .main-navigation>.mobile>.menu-toggle {
+                display: none !important;
+            }
+
+            .w-100 {
+                width: 100%;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+
+            .primary-navigation.mobile ul {
+                position: absolute !important;
+                width: 100% !important;
+                z-index: 999 !important;
+            }
+
+            .primary-navigation.mobile li a {
+                border-bottom: none !important;
+                color: #888888 !important;
+            }
+
+            .primary-navigation.mobile.dark ul>li.home-btn {
+                background: #fff !important;
+            }
+
+            .primary-navigation.mobile.dark ul {
+                background: #fff !important;
+            }
+
+            .logo-container {
+                padding: 9px 0 !important;
+            }
+
+        }
+
+        /* new header style*/
     </style>
     <link rel="stylesheet" id="wp-block-library-css" href="{{ asset('/new_frontend/style.min.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" id="cream-magazine-fonts-css"
@@ -157,7 +322,7 @@
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
     <div class="page-wrapper">
         <header class="general-header cm-header-style-one">
-            <div class="header-topstrip sm-d-none">
+            <div class="header-topstrip">
                 <div class="cm-container">
                     <div class="row">
                         <div class="cm-col-lg-4 cm-col-md-5 cm-col-12">
@@ -165,7 +330,7 @@
                                 <img src="{{ asset('/frontend/images/header-tagline.png') }}" alt="NMF News">
                             </div>
                         </div>
-                        <div class="cm-col-lg-8 cm-col-md-7 cm-col-12">
+                        <div class="cm-col-lg-8 cm-col-md-7 cm-col-12 sm-d-none">
                             <div class="top-header-social-links d-flex align-items-center justify-content-end">
                                 <ul class="topsocial-icons mr-2">
                                     <li class="fb">
@@ -220,6 +385,42 @@
                                             sizes="(max-width: 343px) 100vw, 343px" /></a>
                                             <span class="sm-d-none"><img src="{{ asset('/frontend/images/logo-tagline.png') }}" class="ml-3" alt="NMF News"></span>
                                 </h1>
+                                <div class="social-link-mobile">
+                                    <ul class="topsocial-icons mb-2">
+                                        <li class="fb">
+                                            <a href="https://facebook.com/NMFNewsOriginal" target="_blank">
+                                                <i class="fa fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="insta">
+                                            <a href="https://instagram.com/nmfnewsofficial" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li class="tw">
+                                            <a href="https://twitter.com/NMFNewsOfficial" target="_blank">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="linken">
+                                            <a href="https://in.linkedin.com/company/khetanmediacreationpvtltd"
+                                                target="_blank">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="yt">
+                                            <a href="https://www.youtube.com/c/NMFNews/featured" target="_blank">
+                                                <i class="fa fa-youtube-play"></i>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+
+                                    <a href="https://newsnmf.com/contact" class="contact-link">विज्ञापन के लिए संपर्क
+                                        करें</a>
+
+                                </div>
                             </div>
                         </div>
                         <div class="cm-col-lg-8 cm-col-12">
@@ -236,7 +437,7 @@
                     </div>
                 </div>
                 <nav class="main-navigation">
-                    <div id="" class="primary-navigation">
+                    <div id="" class="primary-navigation-mobile dark">
                         <ul  class>
                             <li class="home-btn"><a href="{{ asset('/') }}"><i
                                         class="fa fa-home" aria-hidden="true"></i></a></li>
@@ -269,16 +470,75 @@
                                     </ul>
                                     <?php } ?>
                             </li>
-                            @endforeach                
+                            @endforeach    
+                            <li class="primarynav_search_icon" style="float: right;"><a class="search_box-mobile" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>            
                         </ul>
                     </div>
-                    <div class="header-search-container" style="display: none;">
+                    <div class="header-search-container-mobile" style="display: none;">
                     <div class="search-form-entry">
                     <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
                     </div>
                 </nav>
             </div>
         </header>
+        <div class="mobile-inline-menu ">
+            <div class="d-flex py-1">
+                <div class="cm-container d-flex justify-content-sb align-items-center">
+
+                    <ul class="mobile-inline-link">
+                    <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
+                    <li class="home-btn"><a href="{{ asset('/election-2024') }}">लोकसभा चुनाव 2024</a></li>
+                    <li class="home-btn"><a href="{{ asset('/states') }}">राज्य</a></li>
+                    <li class="home-btn"><a href="{{ asset('/pol') }}">पोल</a></li>
+                    </ul>
+                    <a href="#" class="menu-toggle full"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-navigation mobile-only">
+            <div id="main-navmbile" class="primary-navigation">
+                <ul id="menu-main-menu2" class>
+                <li class="home-btn"><a href="{{ asset('/') }}"><i
+                                        class="fa fa-home" aria-hidden="true"></i></a></li>
+                            <?php 
+                            $menus = App\Models\Menu::whereHas('type', function ($query) {
+                                $query->where('type', 'Header');
+                            })
+                            ->whereHas('category', function ($query) {
+                                $query->where('category', 'User');
+                            })
+                            ->where('menu_id', '=', 0)->get()->toArray();
+                            // $menus = App\Models\Menu::get()->where('menu_id', 0)->where('status', 1)->where('type_id', '1')->where('category_id', '2')->all();
+                            ?>
+                            @foreach($menus as $menu)
+                            <?php 
+                            $subMenus = App\Models\Menu::get()->where('menu_id', $menu['id'])->where('status', '1')->where('type_id', '1')->where('category_id', '2')->all(); 
+                            ?>
+
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
+                                <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
+                                    aria-current="page">{{ $menu['menu_name'] }}</a>
+                                    <?php if(count($subMenus) > 0){ ?>
+                                    <ul class="sub-menu">
+                                        @foreach($subMenus as $subMenu)
+                                        <li id="menu-item-394"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394">
+                                            <a href="{{ asset('/').$subMenu->menu_link }}">{{ $subMenu->menu_name }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                    <?php } ?>
+                            </li>
+                            @endforeach 
+                </ul>
+            </div>
+            <div class="header-search-container" style="display: none;">
+                    <div class="search-form-entry">
+                    <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
+            </div>
+        </nav>
+        <div class="mobile-topbanner"><img src="{{ asset('/frontend/images/topbanner-mobile.jpg') }}" alt="" class="w-100"></div>
         <div id="content" class="site-content">
         @yield('content')
         </div>
@@ -455,6 +715,20 @@
         integrity="sha512-FIKRFRxgD20moAo96hkZQy/5QojZDAbyx0mQ17jEGHCJc/vi0G2HXLtofwD7Q3NmivvP9at5EVgbRqOaOQb+Rg=="
         data-cf-beacon='{"rayId":"877e2b567a269fa5","r":1,"version":"2024.3.0","token":"e07ffd4cc02748408b326adb64b6cc16"}'
         crossorigin="anonymous"></script>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     
 </body>
 
