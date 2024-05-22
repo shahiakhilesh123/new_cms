@@ -487,7 +487,7 @@
                     <ul class="mobile-inline-link">
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
-                    <li class="home-btn"><a href="{{ asset('/election-2024') }}">लोकसभा चुनाव 2024</a></li>
+                    <li class="home-btn"><a href="{{ asset('/election-2024') }}">चुनाव 2024</a></li>
                     <li class="home-btn"><a href="{{ asset('/states') }}">राज्य</a></li>
                     <li class="home-btn"><a href="{{ asset('/pol') }}">पोल</a></li>
                     </ul>
