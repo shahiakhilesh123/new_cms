@@ -539,7 +539,7 @@
                     <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
             </div>
         </nav>
-        <div class="mobile-topbanner"><img src="{{ asset('/frontend/images/topbanner-mobile.jpg') }}" alt="" class="w-100"></div>
+        <div class="mobile-topbanner"><a href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA" target="__blank"><img src="{{ asset('/frontend/images/topbanner-mobile.jpg') }}" alt="" class="w-100"></a></div>
         <div id="content" class="site-content">
         @yield('content')
         </div>
