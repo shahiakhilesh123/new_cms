@@ -136,7 +136,9 @@
                 justify-content: space-between;
                 align-items: center;
             }
-
+            .primary-navigation.mobile > ul > li > a {
+                font-weight: 600;
+            }
             .cm-header-style-one {
                 background-color: #f21500;
             }
