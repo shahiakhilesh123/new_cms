@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3VCPPRWL"></script>
-    <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
+    <!-- <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
     <script src="https://cdn.izooto.com/scripts/08c8e31c0763314b6900fa47547eb2d5bcf2047c.js"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,7 +42,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-9D3VCPPRWL');
-    </script>
+    </script> -->
     <script type="text/javascript">
         /* <![CDATA[ */
         window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.themebeez.com\/demos-2\/cream-magazine-free\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.4" } };
