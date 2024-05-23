@@ -449,7 +449,7 @@
                             })
                             ->whereHas('category', function ($query) {
                                 $query->where('category', 'User');
-                            })
+                            })->where('status', '1')
                             ->where('menu_id', '=', 0)->get()->toArray();
                             // $menus = App\Models\Menu::get()->where('menu_id', 0)->where('status', 1)->where('type_id', '1')->where('category_id', '2')->all();
                             ?>
@@ -509,7 +509,7 @@
                             })
                             ->whereHas('category', function ($query) {
                                 $query->where('category', 'User');
-                            })
+                            })->where('status', '1')
                             ->where('menu_id', '=', 0)->get()->toArray();
                             // $menus = App\Models\Menu::get()->where('menu_id', 0)->where('status', 1)->where('type_id', '1')->where('category_id', '2')->all();
                             ?>
