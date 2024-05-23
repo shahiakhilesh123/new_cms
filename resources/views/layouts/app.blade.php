@@ -491,7 +491,7 @@
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
                     <li class="home-btn"><a href="{{ asset('/election-2024') }}">चुनाव 2024</a></li>
                     <li class="home-btn"><a href="{{ asset('/dharma-gyan') }}">धर्म ज्ञान</a></li>
-                    <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव </a></li>
+                    <!-- <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव </a></li> -->
                     <li class="home-btn"><a href="{{ asset('/program') }}">कार्यक्रम </a></li>
                     </ul>
                     <a href="#" class="menu-toggle full"><i class="fa fa-bars"></i></a>
