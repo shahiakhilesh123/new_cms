@@ -712,11 +712,11 @@
     <script type="text/javascript"
         src="{{ asset('/new_frontend/js/bundle.min.js') }}"
         id="cream-magazine-bundle-js"></script>
-    <!-- <script defer
+    <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793"
         integrity="sha512-FIKRFRxgD20moAo96hkZQy/5QojZDAbyx0mQ17jEGHCJc/vi0G2HXLtofwD7Q3NmivvP9at5EVgbRqOaOQb+Rg=="
         data-cf-beacon='{"rayId":"877e2b567a269fa5","r":1,"version":"2024.3.0","token":"e07ffd4cc02748408b326adb64b6cc16"}'
-        crossorigin="anonymous"></script> -->
+        crossorigin="anonymous"></script>
     <script>
         window.onscroll = function () { myFunction() };
 
