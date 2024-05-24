@@ -118,8 +118,13 @@
         .psticky {
             position: fixed;
             top: 0;
-            width: 100%;
+            left: 0;
+            right: 0;
             z-index: 999;
+            margin: 0 auto;
+            max-width: 1170px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         @media (max-width: 992px) {
@@ -444,7 +449,7 @@
                         </div>
                     </div>
                 </div>
-                <nav class="main-navigation">
+                <nav class="main-navigation" id="myHeader">
                     <div id="" class="primary-navigation-mobile dark">
                         <ul  class>
                             <li class="home-btn"><a href="{{ asset('/') }}"><i
@@ -490,8 +495,8 @@
             </div>
         </header>
         <div class="mobile-inline-menu">
-            <div class="d-flex py-1 px-1">
-                <div class="d-flex justify-content-sb align-items-center w-100 px-2">
+            <div class="d-flex py-1">
+                <div class="cm-container d-flex justify-content-sb align-items-center">
                     <ul class="mobile-inline-link">
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
