@@ -51,8 +51,8 @@
         /* ]]> */
     </script>
     <style id="wp-emoji-styles-inline-css" type="text/css">
-         /* new header style*/
-         .header-topstrip {
+           /* new header style*/
+        .header-topstrip {
             padding: 8px 0;
         }
 
@@ -75,7 +75,7 @@
             font-size: 14px;
             width: 30px;
             height: 30px;
-            padding-top: 8px;
+            padding-top: 4px;
             margin-right: 0;
             text-align: center;
             display: inline-block;
@@ -115,10 +115,11 @@
             display: none;
         }
 
-        .sticky {
-            position: sticky;
+        .psticky {
+            position: fixed;
             top: 0;
             width: 100%;
+            z-index: 999;
         }
 
         @media (max-width: 992px) {
@@ -136,9 +137,7 @@
                 justify-content: space-between;
                 align-items: center;
             }
-            .primary-navigation.mobile > ul > li > a {
-                font-weight: 600;
-            }
+
             .cm-header-style-one {
                 background-color: #f21500;
             }
@@ -178,7 +177,7 @@
                 border: 2px solid #fff;
                 padding: 1px 0 0 0;
                 transition: all 0.6s linear;
-                padding-top: 5px;
+                padding-top: 1px;
             }
 
             .social-link-mobile ul.topsocial-icons li a:hover {
