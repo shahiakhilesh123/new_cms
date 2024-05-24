@@ -489,9 +489,9 @@
                 </nav>
             </div>
         </header>
-        <div class="mobile-inline-menu" id="myHeader">
-            <div class="d-flex py-1">
-                <div class="cm-container d-flex justify-content-sb align-items-center">
+        <div class="mobile-inline-menu">
+            <div class="d-flex py-1 px-1">
+                <div class="d-flex justify-content-sb align-items-center w-100 px-2">
                     <ul class="mobile-inline-link">
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
