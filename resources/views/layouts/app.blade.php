@@ -316,6 +316,13 @@
         <link rel="stylesheet"
         href="{{ asset('/new_frontend/css/style.css') }}"
         type="text/css" media="all" />
+    <style id="theia-sticky-sidebar-stylesheet-TSS">
+        .theiaStickySidebar:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
 
 <body data-rsssl="1"
