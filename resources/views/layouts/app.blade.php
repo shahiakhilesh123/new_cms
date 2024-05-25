@@ -736,9 +736,9 @@
 
         function myFunction() {
             if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
+                header.classList.add("psticky");
             } else {
-                header.classList.remove("sticky");
+                header.classList.remove("psticky");
             }
         }
     </script>
