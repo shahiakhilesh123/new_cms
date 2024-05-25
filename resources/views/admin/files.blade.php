@@ -171,16 +171,19 @@
                 <h3 class="card-title">Files</h3>
 
                 <div class="card-tool s">
+                <form>
                   <div class="input-group input-group-sm float-right" style="width: 150px;">
-                    <!-- <input type="text" name="table_search" class="form-control float-right" placeholder="Search"> -->
-
-                    <!-- <div class="input-group-append"> -->
+                  <input class="form-control float-right" name="title" type="text" value="{{ $data['title'] }}" placeholder="Enter Title">
+                      <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
                       <a href="{{ asset('files') }}/add" class="btn btn-primary ">
                         Add File
                       </a>
-                    <!-- </div> -->
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
@@ -197,8 +200,8 @@
                     </tr> 
                   </thead>
                   <tbody>
-                  @if(count($files) > 0)
-                    @foreach($files as $file)
+                  @if(count($data['files']) > 0)
+                    @foreach($data['files'] as $file)
                     <tr>
                       <td>{{ $file->id }}</td>
                       <td>{{ $file->file_name }}</td>
@@ -217,8 +220,7 @@
                 </table>
               </div>
               <div class="card-footer clearfix">
-                <!-- {{ $files->url(asset('/')) }} -->
-              {{ $files->links() }}
+              {{ $data['files']->links() }}
               </div>
               <!-- /.card-body -->
             </div>

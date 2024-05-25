@@ -8,11 +8,21 @@ use Illuminate\Support\Facades\Auth;
 
 class FileController extends Controller
 {
-    public function index()
-    {
-        $files = File::orderBy('id', 'DESC')->paginate(20);
-        $files->setPath(asset('/files'));
-        return view('admin/files')->with('files',$files);
+    public function index(Request $request)
+    {    
+        $files = File::orderBy('id', 'DESC');
+        if (isset($request->title)) {
+            $files->Where('file_name', 'like', '%' .$request->title . '%');
+        }
+        $files = $files->paginate(20);
+        if (isset($request->title)) {
+            $title = $request->title;
+            $files->setPath(asset('/files').'?title='.$title);
+        } else {
+            $title = '';
+            $files->setPath(asset('/files'));
+        }
+        return view('admin/files')->with('data',['files' => $files, 'title' => $title ]);
     }
     public function fileAdd(Request $request)
     {
