@@ -172,7 +172,7 @@
 
                 <div class="card-tool s">
                 <form>
-                  <div class="input-group input-group-sm float-right" style="width: 150px;">
+                  <div class="input-group input-group-sm float-right" style="width: 200px;">
                   <input class="form-control float-right" name="title" type="text" value="{{ $data['title'] }}" placeholder="Enter Title">
                       <div class="input-group-append">
                       <button type="submit" class="btn btn-default">
