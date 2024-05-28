@@ -264,11 +264,11 @@
                                                         </div><a target="__blank"
                                                             href="https://www.youtube.com/@SportsHour"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('/banner/sports.jpeg') }}"
+                                                                src="{{ asset('/banner/Website_Sports.jpeg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/sports.jpeg') }}"
+                                                                srcset="{{ asset('/banner/Website_Sports.jpeg') }}"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                 </aside>
