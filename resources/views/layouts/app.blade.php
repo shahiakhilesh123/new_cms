@@ -35,14 +35,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3VCPPRWL"></script>
     <!-- <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
-    <script src="https://cdn.izooto.com/scripts/08c8e31c0763314b6900fa47547eb2d5bcf2047c.js"></script>
+    <script src="https://cdn.izooto.com/scripts/08c8e31c0763314b6900fa47547eb2d5bcf2047c.js"></script>-->
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-9D3VCPPRWL');
-    </script> -->
+    </script> 
     <script type="text/javascript">
         /* <![CDATA[ */
         window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.themebeez.com\/demos-2\/cream-magazine-free\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.4" } };
@@ -393,7 +393,7 @@
                                     <a href="{{ asset('/') }}"
                                         class="custom-logo-link" rel="home" aria-current="page"><img 
                                             src="{{ asset('/frontend/images/logo.png') }}"
-                                            class="custom-logo" alt="Cream magazine" decoding="async"
+                                            class="custom-logo" alt="NewsNmf" decoding="async"
                                             srcset="{{ asset('/frontend/images/logo.png') }}"
                                             sizes="(max-width: 343px) 100vw, 343px" /></a>
                                             <span class="sm-d-none"><img src="{{ asset('/frontend/images/logo-tagline.png') }}" class="ml-3" alt="NMF News"></span>
@@ -681,8 +681,6 @@
                                 <div class="copyrights">
                                     <p>
                                         <span class="copyright-text">© COPYRIGHT KMC PVT. LTD. ALL RIGHTS RESERVED.</span>
-                                        <!--Cream Magazine by <a href="https://themebeez.com" rel="designer noopener"
-                                            target="_blank">Themebeez</a> -->
                                     </p>
                                 </div>
                             </div>

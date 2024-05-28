@@ -152,11 +152,11 @@
             <h1>Edit Post</h1>
           </div>
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
+            <!-- <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ asset('/home') }}">Home</a></li>
               <li class="breadcrumb-item"><a href="{{ asset('/posts') }}">Posts</a></li>
               <li class="breadcrumb-item active">Edit Post</li>
-            </ol>
+            </ol> -->
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -334,7 +334,7 @@
                       </div>
                     @enderror
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="exampleInputPassword1">Display on Home page</label>
                     <div class="form-check">
                           <input class="form-check-input" name="home_page_status" <?php if($data['blogs']->home_page_status == 1) { echo "checked"; } ?> type="checkbox">
@@ -347,7 +347,7 @@
                           <input class="form-check-input" name="header_sec" <?php if($data['blogs']->header_sec == 1) { echo "checked"; } ?> type="checkbox">
                           <label class="form-check-label">Header Section Component(Home)</label>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label>Select Thumb Images</label>
                     <div class="select2-purple">

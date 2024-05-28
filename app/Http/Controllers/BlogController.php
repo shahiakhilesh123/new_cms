@@ -13,12 +13,15 @@ class BlogController extends Controller
 {
     public function index(Request $request)
     {
-        $blogs = Blog::orderBy('id', 'DESC');
+        $blogs = Blog::orderBy('created_at', 'DESC');
         if (isset($request->title)) {
             $blogs->Where('name', 'like', '%' .$request->title . '%');
         }
         if (isset($request->category)) {
             $blogs->where('categories_ids', $request->category);
+        }
+        if (isset($request->status)) {
+            $blogs->where('status', $request->status);
         }
         if (isset($request->author)) {
             $blogs->where('author', $request->author);
@@ -27,13 +30,22 @@ class BlogController extends Controller
         if (isset($request->category)) {
             $category = $request->category;
             $title = $request->title;
-            $blogs->setPath(asset('/posts').'?category='.$request->category.'&title='.$title.'&author='.$request->author);
+            $blogs->setPath(asset('/posts').'?category='.$request->category.'&title='.$title.'&status='.$request->status.'&author='.$request->author);
         } else {
             $title = '';
             $category = 0;
             $blogs->setPath(asset('/posts'));
         }
-        return view('admin/blogList')->with('data', ['blogs'=> $blogs, 'category'=> $category, 'title' => $title, 'author' => $request->author]);
+        return view('admin/blogList')->with('data', ['blogs'=> $blogs, 'category'=> $category, 'title' => $title, 'author' => $request->author, 'status' => $request->status]);
+    }
+    public function statusBlog($id, $status){
+        $status = $status == 0 ? 1 : 0; 
+        $data = [
+            'status' => $status,
+            'created_at' => date('Y-m-d h:i:s'),
+        ];
+        Blog::where('id', $id)->update($data);
+        return redirect('posts');
     }
     public function addBlog()
     {

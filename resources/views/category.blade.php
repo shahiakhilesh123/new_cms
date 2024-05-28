@@ -236,7 +236,7 @@
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/gummkad.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/gummkad.jpeg') }}"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
@@ -268,7 +268,7 @@
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/sports.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/sports.jpeg') }}"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                 </aside>

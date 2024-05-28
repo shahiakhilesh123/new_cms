@@ -327,20 +327,20 @@
                       </div>
                     @enderror
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="exampleInputPassword1">Display on Home page</label>
                     <div class="form-check">
                           <input class="form-check-input" name="home_page_status" type="checkbox">
                           <label class="form-check-label">Display on Home page</label>
                     </div>
-                </div>
-                <div class="form-group">
+                </div> -->
+                <!-- <div class="form-group">
                     <label for="exampleInputPassword1">Header Section Component(Home)</label>
                     <div class="form-check">
                           <input class="form-check-input" name="header_sec" type="checkbox">
                           <label class="form-check-label">Header Section Component(Home)</label>
                     </div>
-                </div>
+                </div> -->
                   <div class="form-group">
                     <label>Select Thumb Images</label>
                     <div class="select2-purple">

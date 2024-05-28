@@ -174,6 +174,11 @@
                 <form>
                   <div class="input-group input-group-sm" style="width: 500px;">  
                     <input class="form-control float-right" name="title" type="text" value="{{ $data['title'] }}" placeholder="Enter Title">                
+                    <select name="status" class="form-control float-right">
+                            <option value="">Select status</option>
+                            <option value="0" <?php if($data['status'] == "0") { echo "selected"; } ?>>Draft</option>
+                            <option value="1" <?php if($data['status'] == "1") { echo "selected"; } ?>>Published</option>
+                    </select>
                     <select name="author" class="form-control float-right">
                             <option value="">Select Author</option>
                             <?php $authors = App\Models\User::whereNot('id', 6)->get()->all() ?>
@@ -208,6 +213,7 @@
                       <th>ID</th>
                       <th>Post Name</th>
                       <th>Author name</th>
+                      <th>Status</th>
                       <th>Publish Date</th>
                       <th></th>
                     </tr>
@@ -220,6 +226,7 @@
                         <td >{{ $blog->id }}</td>
                         <td style="white-space: pre-wrap; word-wrap: break-word; width: 290px;">{{ $blog->name }}</td>
                         <td >{{ isset($author->name) ? $author->name : '' }}</td>
+                        <td><a href="{{ asset('posts/status') }}/{{$blog->id}}/{{$blog->status}}">{{ $blog->status == 0 ? 'Draft' : 'Publish' }}</a></td>
                         <td >{{ $blog->created_at }}</td>                      
                         <td >
                           <!-- <a href="{{ asset('blogs') }}/{{$blog->id}}/{{ str_replace(" ","-",$blog->name) }}" target="_blank"><i class="fas fa-copy"></i></a> -->
