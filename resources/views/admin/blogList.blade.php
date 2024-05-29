@@ -226,7 +226,7 @@
                         <td >{{ $blog->id }}</td>
                         <td style="white-space: pre-wrap; word-wrap: break-word; width: 290px;">{{ $blog->name }}</td>
                         <td >{{ isset($author->name) ? $author->name : '' }}</td>
-                        <td><a href="{{ asset('posts/status') }}/{{$blog->id}}/{{$blog->status}}">{{ $blog->status == 0 ? 'Draft' : 'Publish' }}</a></td>
+                        <td>{{ $blog->status == 0 ? 'Draft' : 'Publish' }}</td>
                         <td >{{ $blog->created_at }}</td>                      
                         <td >
                           <!-- <a href="{{ asset('blogs') }}/{{$blog->id}}/{{ str_replace(" ","-",$blog->name) }}" target="_blank"><i class="fas fa-copy"></i></a> -->

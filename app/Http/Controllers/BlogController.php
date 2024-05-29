@@ -63,6 +63,7 @@ class BlogController extends Controller
             'category' => 'required|numeric',
             'author' => 'required|numeric'
         ]);
+        $status = isset($request->draft) ? 0 : 1;
         $ima = $request->images;
         $cat = $request->category;
         $state = $request->state;
@@ -84,6 +85,7 @@ class BlogController extends Controller
             'link' => $request->link,
             'author' => $request->author,
             'home_page_status' => $home_page_status,
+            'status' => $status,
             'header_sec' => $header_sec,
             'sort_description' => $request->sort_desc,
             'keyword' => $request->keyword,
@@ -117,6 +119,7 @@ class BlogController extends Controller
         $ima = $request->images;
         $cat = $request->category;
         $state = $request->state;
+        $status = isset($request->draft) ? 0 : 1;
         $district = $request->district;
         $home_page_status = 0;
         $url = $this->clean($request->eng_name);
@@ -136,6 +139,7 @@ class BlogController extends Controller
             'link' => $request->link,
             'home_page_status' => $home_page_status,
             'header_sec' => $header_sec,
+            'status' => $status,
             'sort_description' => $request->sort_desc,
             'keyword' => $request->keyword,
             'state_ids' => $state,

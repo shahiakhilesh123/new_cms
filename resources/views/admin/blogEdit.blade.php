@@ -373,7 +373,8 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="publish" value="pub" class="btn btn-primary">Publish</button>&nbsp;&nbsp;&nbsp;
+                  <button type="submit" name="draft" value="du" class="btn btn-primary">Save as Draft</button>
                 </div>
               </form>
               <div class="modal fade" id="modal-default">

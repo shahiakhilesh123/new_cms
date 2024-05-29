@@ -152,11 +152,11 @@
             <h1>Add Post</h1>
           </div>
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
+            <!-- <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{ asset('/home') }}">Home</a></li>
               <li class="breadcrumb-item"><a href="{{ asset('/posts') }}">Posts</a></li>
               <li class="breadcrumb-item active">Add Post</li>
-            </ol>
+            </ol> -->
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -366,7 +366,8 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="publish" value="pub" class="btn btn-primary">Publish</button>&nbsp;&nbsp;&nbsp;
+                  <button type="submit" name="draft" value="du" class="btn btn-primary">Save as Draft</button>
                 </div>
               </form>
               
