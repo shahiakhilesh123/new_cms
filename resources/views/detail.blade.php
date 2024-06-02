@@ -125,10 +125,10 @@
                                                             </figure>
                                                         </div>
                                                         <div style="text-align: end; margin-top: -20px">
-                                                                <!-- //@if($data['blog']->credits != '') -->
+                                                                @if($data['blog']->credits != '')
                                                                     <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
                                                                         rel="category tag">Photo by:&nbsp;&nbsp;{{ $data['blog']->credits }}</a>
-                                                                <!-- @endif -->
+                                                                @endif
                                                         </div>
                                                         <div class="the_content">
                                                             <!-- <div class="row"> -->
