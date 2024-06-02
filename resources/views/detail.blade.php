@@ -124,16 +124,16 @@
                                                             @endif
                                                             </figure>
                                                         </div>
-                                                        <div style="text-align: end;">
+                                                        <div style="text-align: end; margin-top: -20px">
                                                                 <!-- //@if($data['blog']->credits != '') -->
                                                                     <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
                                                                         rel="category tag">Photo by:&nbsp;&nbsp;{{ $data['blog']->credits }}</a>
                                                                 <!-- @endif -->
                                                         </div>
                                                         <div class="the_content">
-                                                            <div class="row">
+                                                            <!-- <div class="row"> -->
                                                                 <?php echo $data['blog']->description; ?>
-                                                            </div>
+                                                            <!-- </div> -->
                                                         </div>
                                                         <!-- <div class="post_tags">
                                                             <a href="https://demo.themebeez.com/demos-2/cream-magazine-free/tag/public-voices/"
