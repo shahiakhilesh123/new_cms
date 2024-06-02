@@ -90,8 +90,9 @@
                                                                     <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
                                                                         rel="category tag"><i class="fa fa-list-alt" aria-hidden="true">&nbsp;&nbsp;{{ $data['category']->name }}</i></a>
                                                                 </li>
-                                                                <li style="text-align: end; width: 40%;">
+                                                                <li style="text-align: end; width: 50%;">
                                                             <!-- Facebook -->
+                                                            Share: &nbsp;&nbsp;&nbsp;
 <a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" class="fb" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #4267b2;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 
 <!-- Twitter -->
@@ -126,8 +127,7 @@
                                                         </div>
                                                         <div style="text-align: end; margin-top: -20px">
                                                                 @if($data['blog']->credits != '')
-                                                                    <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
-                                                                        rel="category tag">Photo by:&nbsp;&nbsp;{{ $data['blog']->credits }}</a>
+                                                                Photo by:&nbsp;&nbsp;{{ $data['blog']->credits }}
                                                                 @endif
                                                         </div>
                                                         <div class="the_content">
