@@ -178,7 +178,7 @@
                                                                                         </div>
                                                                                         <div class="post_title">
                                                                                             <h2><a
-                                                                                                    href="{{ asset('/') }}{{isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
+                                                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">
@@ -188,7 +188,7 @@
                                                                                                 </li>
                                                                                                 <li class="">
                                                                                                     <a
-                                                                                                        href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
+                                                                                                        href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;<time
                                                                                                             class="entry-date published"
                                                                                                             datetime="{{ $blog->created_at }}">{{ $blog->created_at }}</time></i></a>
                                                                                                 </li>

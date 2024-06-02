@@ -96,7 +96,7 @@
                                                                         rel="category tag"><i class="fa fa-credit-card" aria-hidden="true">&nbsp;&nbsp;{{ $data['blog']->credits }}</i></a>
                                                                 </li>
                                                                 @endif
-                                                                <li>
+                                                                <li style="text-align: end; width: 40%;">
                                                             <!-- Facebook -->
 <a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" class="fb" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #4267b2;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 
@@ -148,7 +148,7 @@
                                                         <div class="section-title">
                                                             <h2>Tags</h2>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row" style="margin-left: 10px;">
                                                             <?php
                                                             $tags = explode(',', $data['blog']->tags); ?>
                                                             @foreach($tags as $tag)
