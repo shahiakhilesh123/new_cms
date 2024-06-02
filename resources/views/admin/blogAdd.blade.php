@@ -190,6 +190,45 @@
                     @enderror
                   </div>
                   <div class="form-group">
+                    <label for="name">Image Credits</label>
+                    <input type="text" name="credits" class="form-control" id="credits">
+                    @error('credits')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('credits') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Google Tags</label>
+                    <input type="text" name="tags" class="form-control" id="tags">
+                    @error('tags')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('tags') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Keywords</label>
+                    <input type="text" name="keywords" class="form-control" id="keywords">
+                    @error('keywords')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('keywords') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
                     <label for="name">Title URL</label>
                     <input type="text" name="eng_name" class="form-control" id="eng_name">
                     @error('eng_name')

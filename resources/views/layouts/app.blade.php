@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('/frontend/images/logo.png') }}" rel="shortcut icon" type="image/x-icon">
-    <meta name="description" content="{{ isset($setting->meta_description) ? $setting->meta_description : '' }}">
-    <meta name="keywords" content="{{ isset($setting->keyword) ? $setting->keyword : '' }}">
-    <title>{{ isset($setting->site_name) ? $setting->site_name : '' }}</title>
+    <meta name="description" content="{{ isset($data['blog']->sort_description) ? $data['blog']->sort_description : (isset($setting->meta_description) ? $setting->meta_description : '') }}">
+    <meta name="keywords" content="{{ isset($data['blog']->keywords) ? $data['blog']->keywords : (isset($setting->keyword) ? $setting->keyword : '') }}">
+    <title>{{ isset($data['blog']->name) ? $data['blog']->name : (isset($setting->site_name) ? $setting->site_name : '') }}</title>
 
     <?php
     if(isset($data['blog'])) { 

@@ -55,6 +55,9 @@
                                                         <div class="the_title">
                                                             <h1>{{ $data['blog']->name }}</h1>
                                                         </div>
+                                                        <div>
+                                                            {{ $data['blog']->sort_description }}
+                                                        </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
                                                                 <li class="">
@@ -71,10 +74,16 @@
                                                                     <a
                                                                         href="https://demo.themebeez.com/demos-2/cream-magazine-free/public-was-forced-to-go-against-the-violence/#comments">0</a>
                                                                 </li> -->
-                                                                <li class="entry_cats">
+                                                                <li>
                                                                     <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
-                                                                        rel="category tag">{{ $data['category']->name }}</a>
+                                                                        rel="category tag"><i class="fa fa-list-alt" aria-hidden="true">&nbsp;&nbsp;{{ $data['category']->name }}</i></a>
                                                                 </li>
+                                                                @if($data['blog']->credits != '')
+                                                                <li>
+                                                                    <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
+                                                                        rel="category tag"><i class="fa fa-credit-card" aria-hidden="true">&nbsp;&nbsp;{{ $data['blog']->credits }}</i></a>
+                                                                </li>
+                                                                @endif
                                                             </ul>
                                                         </div>
                                                         <div class="post_thumb">
@@ -99,6 +108,16 @@
                                                                     sizes="(max-width: 1280px) 100vw, 1280px">
                                                             @endif
                                                             </figure>
+                                                        </div>
+                                                        <div style="text-align: right;">
+                                                            <!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+<!-- Twitter -->
+<a href="http://twitter.com/share?url={{asset('/')}}{{$data['blog']->site_url}}&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&url={{asset('/')}}{{$data['blog']->site_url}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
                                                         </div>
                                                         <div class="the_content">
                                                             <div class="row">

@@ -176,7 +176,8 @@
               <form method="post" action="{{asset('posts/edit')}}/{{$data['blogs']->id}}">
               @csrf
                 <div class="card-header">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" name="publish" value="pub" class="btn btn-primary">Publish</button>&nbsp;&nbsp;&nbsp;
+                  <button type="submit" name="draft" value="du" class="btn btn-primary">Save as Draft</button>
                 </div>
                 <div class="card-body">
                   <div class="form-group">
@@ -187,6 +188,45 @@
                         <div class="input-group-text">
                           <!-- <span class="fas fa-envelope"> -->
                           {{ $errors->first('name') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Image Credits</label>
+                    <input type="text" name="credits" value="{{ $data['blogs']->credits }}" class="form-control" id="credits">
+                    @error('credits')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('credits') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Google Tags</label>
+                    <input type="text" name="tags" value="{{ $data['blogs']->tags }}" class="form-control" id="tags">
+                    @error('tags')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('tags') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Keywords</label>
+                    <input type="text" name="keywords" value="{{ $data['blogs']->keywords }}" class="form-control" id="keywords">
+                    @error('keywords')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('keywords') }}
                           <!-- </span> -->
                         </div>
                       </div>
