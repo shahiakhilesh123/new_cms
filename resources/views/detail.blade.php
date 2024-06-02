@@ -8,6 +8,18 @@
         padding: 7px 20px;
         position: relative;
     }
+    .trendingtopic_container{
+    font-size: 12px;
+    color: #505050;
+    font-weight: 700;
+    border-radius: 15px;
+    border: .5px solid #505050;
+    margin-right: 10px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    }
 </style>
 <div class="cm-container" style="transform: none;">
                 <div class="inner-page-wrapper" style="transform: none;">
@@ -84,6 +96,15 @@
                                                                         rel="category tag"><i class="fa fa-credit-card" aria-hidden="true">&nbsp;&nbsp;{{ $data['blog']->credits }}</i></a>
                                                                 </li>
                                                                 @endif
+                                                                <li>
+                                                            <!-- Facebook -->
+<a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" class="fb" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #4267b2;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+
+<!-- Twitter -->
+<a href="http://twitter.com/share?url={{asset('/')}}{{$data['blog']->site_url}}&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #1da1f2;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<!-- LinkedIn -->
+<a href="http://www.linkedin.com/shareArticle?mini=true&url={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #1da1f2;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <div class="post_thumb">
@@ -109,16 +130,7 @@
                                                             @endif
                                                             </figure>
                                                         </div>
-                                                        <div style="text-align: right;">
-                                                            <!-- Facebook -->
-<a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-
-<!-- Twitter -->
-<a href="http://twitter.com/share?url={{asset('/')}}{{$data['blog']->site_url}}&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<!-- LinkedIn -->
-<a href="http://www.linkedin.com/shareArticle?mini=true&url={{asset('/')}}{{$data['blog']->site_url}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-
-                                                        </div>
+                                                        
                                                         <div class="the_content">
                                                             <div class="row">
                                                                 <?php echo $data['blog']->description; ?>
@@ -130,6 +142,22 @@
                                                         </div> -->
                                                     </article>
                                                 </div>
+                                                <?php if($data['blog']->tags != ''){ ?>
+                                                <section class="cm_related_post_container">
+                                                    <div class="section_inner">
+                                                        <div class="section-title">
+                                                            <h2>Tags</h2>
+                                                        </div>
+                                                        <div class="row">
+                                                            <?php
+                                                            $tags = explode(',', $data['blog']->tags); ?>
+                                                            @foreach($tags as $tag)
+                                                            <a href="{{ asset('/search') }}?search={{$tag}}" class="trendingtopic_container" key="Tag_article_0">{{$tag}}</a>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <?php } ?>
                                                 <section class="cm_related_post_container">
                                                     <div class="section_inner">
                                                         <div class="section-title">

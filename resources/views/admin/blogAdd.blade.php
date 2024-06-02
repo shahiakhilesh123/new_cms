@@ -190,19 +190,6 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="name">Google Tags</label>
-                    <input type="text" name="tags" class="form-control" id="tags">
-                    @error('tags')
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <!-- <span class="fas fa-envelope"> -->
-                          {{ $errors->first('tags') }}
-                          <!-- </span> -->
-                        </div>
-                      </div>
-                    @enderror
-                  </div>
-                  <div class="form-group">
                     <label for="name">Title URL</label>
                     <input type="text" name="eng_name" class="form-control" id="eng_name">
                     @error('eng_name')
@@ -231,6 +218,19 @@
                         <div class="input-group-text">
                           <!-- <span class="fas fa-envelope"> -->
                           {{ $errors->first('author') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Tags</label>
+                    <input type="text" name="tags" class="form-control" id="tags">
+                    @error('tags')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('tags') }}
                           <!-- </span> -->
                         </div>
                       </div>

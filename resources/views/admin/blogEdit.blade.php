@@ -192,20 +192,7 @@
                         </div>
                       </div>
                     @enderror
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Google Tags</label>
-                    <input type="text" name="tags" value="{{ $data['blogs']->tags }}" class="form-control" id="tags">
-                    @error('tags')
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <!-- <span class="fas fa-envelope"> -->
-                          {{ $errors->first('tags') }}
-                          <!-- </span> -->
-                        </div>
-                      </div>
-                    @enderror
-                  </div>                  
+                  </div>             
                   <div class="form-group">
                     <label for="name">Title URL</label>
                     <input type="text" name="eng_name" value="{{ $data['blogs']->eng_name }}" class="form-control" id="eng_name">
@@ -240,6 +227,19 @@
                       </div>
                     @enderror
                   </div>
+                  <div class="form-group">
+                    <label for="name">Tags</label>
+                    <input type="text" name="tags" value="{{ $data['blogs']->tags }}" class="form-control" id="tags">
+                    @error('tags')
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <!-- <span class="fas fa-envelope"> -->
+                          {{ $errors->first('tags') }}
+                          <!-- </span> -->
+                        </div>
+                      </div>
+                    @enderror
+                  </div>     
                   <div class="form-group">
                     <label for="name">Keyword</label>
                     <input type="text" name="keyword" value="{{ $data['blogs']->keyword }}" class="form-control" id="keyword">
