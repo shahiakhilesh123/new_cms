@@ -484,13 +484,16 @@
                                     <?php } ?>
                             </li>
                             @endforeach    
-                            <li class="primarynav_search_icon" style="float: right;"><a class="search_box-mobile" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>            
+                            <li class="primarynav_search_icon" style="float: right;"><a class="search_box-mobile" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li> 
+                            <li>
+                            <div class="header-search-container-mobile" style="display: none;">
+                            <div class="search-form-entry">
+                            <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
+                            </div>
+                            </div>
+                            </li>           
                         </ul>
-                    </div>
-                    <div class="header-search-container-mobile" style="display: none;">
-                    <div class="search-form-entry">
-                    <form role="search" class="cm-search-form" method="get" action="{{ asset('/search')}}"><input type="search" name="search" placeholder="Search..." value=""><button type="submit" class="cm-submit-btn"><i class="fa fa-search"></i></button></form> </div>
-                    </div>
+                    
                 </nav>
             </div>
         </header>
