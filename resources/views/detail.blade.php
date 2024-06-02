@@ -90,12 +90,6 @@
                                                                     <a href="/{{ isset($data['category']->site_url) ? $data['category']->site_url : '' }}"
                                                                         rel="category tag"><i class="fa fa-list-alt" aria-hidden="true">&nbsp;&nbsp;{{ $data['category']->name }}</i></a>
                                                                 </li>
-                                                                @if($data['blog']->credits != '')
-                                                                <li>
-                                                                    <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
-                                                                        rel="category tag"><i class="fa fa-credit-card" aria-hidden="true">&nbsp;&nbsp;{{ $data['blog']->credits }}</i></a>
-                                                                </li>
-                                                                @endif
                                                                 <li style="text-align: end; width: 40%;">
                                                             <!-- Facebook -->
 <a href="http://www.facebook.com/sharer.php?u={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" class="fb" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #4267b2;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -130,7 +124,12 @@
                                                             @endif
                                                             </figure>
                                                         </div>
-                                                        
+                                                        <div style="text-align: end;">
+                                                                <!-- //@if($data['blog']->credits != '') -->
+                                                                    <a href="/{{ isset($data['blog']->credits) ? $data['blog']->credits : '' }}"
+                                                                        rel="category tag">Photo by:&nbsp;&nbsp;{{ $data['blog']->credits }}</a>
+                                                                <!-- @endif -->
+                                                        </div>
                                                         <div class="the_content">
                                                             <div class="row">
                                                                 <?php echo $data['blog']->description; ?>
