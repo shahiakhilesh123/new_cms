@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::table('blogs', function (Blueprint $table) {
             $table->string('credits')->after('status')->nullable();
             $table->text('tags')->after('credits')->nullable();
-            $table->text('keywords')->after('tags')->nullable();
         });
     }
 
