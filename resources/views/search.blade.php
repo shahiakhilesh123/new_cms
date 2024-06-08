@@ -157,7 +157,7 @@
                                                                                 <div class="card">
                                                                                     <div class="post_thumb">
                                                                                         <a
-                                                                                            href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                                                            href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
