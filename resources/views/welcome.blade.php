@@ -68,8 +68,13 @@
                                                             </ul>
                                                         </div>
                                                         <div class="post_title">
-                                                            <h2><a
-                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
+                                                            <h2><a href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                            @if($blog->link != '')
+                                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                            @endif
+                                                            <!-- <i class="fa fa-video-camera" aria-hidden="true"></i> -->
+                                                            {{ $blog->name }}
+                                                                </a></h2>
                                                         </div>
                                                         <div class="cm-post-meta">
                                                             <ul class="post_meta">
@@ -121,8 +126,13 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="post_title">
-                                                                <h2><a
-                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
+                                                                <h2><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                                    @if($blog->link != '')
+                                                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                                    @endif
+                                                                    {{ $blog->name }}
+                                                                    </a>
+                                                                </h2>
                                                             </div>
                                                             <!-- <div class="cm-post-meta">
                                                                 <ul class="post_meta">
@@ -182,7 +192,11 @@
                                 if(isset($blog->author)) {
                                     $author = App\Models\User::where( "id", $blog->author)->first();
                                 }
-                                $truncated = $blog->name;
+                                $symbol = '';
+                                if($blog->link != ''){
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                }
+                                $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                 if($i == 0 || $i == 2){
                             ?>
@@ -289,7 +303,11 @@
                     </section>
                     <?php
                     $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
-                    $truncated = $blog->name;
+                    $symbol = '';
+                    if($blog->link != ''){
+                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                    }
+                    $truncated = $symbol.$blog->name;
                     $cat = App\Models\Category::where('id',$setting->secound_row_secound_col_category)->first();
                     ?>
                     <section class="cm-post-widget-section cm-post-widget-three">
@@ -376,7 +394,11 @@
                                     if(isset($blog->author)) {
                                       $author = App\Models\User::where( "id", $blog->author)->first();
                                     }
-                                    $truncated = $blog->name;
+                                    $symbol = '';
+                                    if($blog->link != ''){
+                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                    }
+                                    $truncated = $symbol.$blog->name;
                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                     ?>
                                     <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -463,7 +485,11 @@
                                                 if(isset($blog->author)) {
                                                     $author = App\Models\User::where( "id", $blog->author)->first();
                                                 }
-                                                $truncated = $blog->name;
+                                                $symbol = '';
+                                                if($blog->link != ''){
+                                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                }
+                                                $truncated = $symbol.$blog->name;
                                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                 ?>
                                                 @if ($i == 0 || $i == 2 ) 
@@ -597,7 +623,11 @@
                                                     if(isset($blog->author)) {
                                                         $author = App\Models\User::where( "id", $blog->author)->first();
                                                     }
-                                                    $truncated = $blog->name;
+                                                    $symbol = '';
+                                                    if($blog->link != ''){
+                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                    }
+                                                    $truncated = $symbol.$blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                                     ?>
                                                     <div class="item">
@@ -670,7 +700,11 @@
                                                     if(isset($blog->author)) {
                                                         $author = App\Models\User::where( "id", $blog->author)->first();
                                                     }
-                                                    $truncated = $blog->name;
+                                                    $symbol = '';
+                                                    if($blog->link != ''){
+                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                    }
+                                                    $truncated = $symbol.$blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                                     ?>
                                                     @if($i == 0 || $i == 1)
@@ -925,7 +959,11 @@
                                 if(isset($blog->author)) {
                                     $author = App\Models\User::where( "id", $blog->author)->first();
                                 }
-                                $truncated = $blog->name;
+                                $symbol = '';
+                                if($blog->link != ''){
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                }
+                                $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                 <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -1001,7 +1039,11 @@
                                 if(isset($blog->author)) {
                                    $author = App\Models\User::where( "id", $blog->author)->first();
                                 }
-                                $truncated = $blog->name;
+                                $symbol = '';
+                                if($blog->link != ''){
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                }
+                                $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                     <div class="cm-col-lg-4 cm-col-md-6 cm-col-12">
@@ -1083,7 +1125,11 @@
                                 if(isset($blog->author)) {
                                    $author = App\Models\User::where( "id", $blog->author)->first();
                                 }
-                                $truncated = $blog->name;
+                                $symbol = '';
+                                if($blog->link != ''){
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                }
+                                $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
                                 ?>
                                 @if($i == 0 || $i == 2)

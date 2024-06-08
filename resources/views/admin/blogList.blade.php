@@ -211,6 +211,7 @@
                   <thead>
                     <tr>
                       <th>ID</th>
+                      <th></th>
                       <th>Post Name</th>
                       <th>Author name</th>
                       <th>Status</th>
@@ -223,7 +224,12 @@
                       @foreach($data['blogs'] as $blog)
                       <?php $author = App\Models\User::where('id',$blog->author)->first(); ?>
                       <tr>
-                        <td >{{ $blog->id }}</td>
+                        <td>{{ $blog->id }}</td>
+                        <td>
+                          @if($blog->link != '')
+                          <i class="fa fa-video" aria-hidden="true"></i>
+                          @endif
+                        </td>
                         <td style="white-space: pre-wrap; word-wrap: break-word; width: 290px;">{{ $blog->name }}</td>
                         <td >{{ isset($author->name) ? $author->name : '' }}</td>
                         <td>{{ $blog->status == 0 ? 'Draft' : 'Publish' }}</td>
