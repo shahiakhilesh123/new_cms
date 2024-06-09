@@ -33,6 +33,7 @@ class UsersController extends Controller
         User::create([
             'role' => $request->role,
             'name' =>  $request->name,
+            'url_name' => $request->url_name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -53,6 +54,7 @@ class UsersController extends Controller
         User::where('id', $id)->update([
             'role' => $request->role,
             'name' =>  $request->name,
+            'url_name' => $request->url_name,
             'description' => $request->description
         ]);
         return redirect('users');   
