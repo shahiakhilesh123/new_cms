@@ -11,7 +11,7 @@ class StoryController extends Controller
     public function showStory($cat_name, $name)
     {
         //echo $blog_name = str_replace('-', ' ', $name);
-        $blog = Blog::where('id', 10)->with('images')->first();
+        $blog = Blog::where('site_url', $name)->with('images')->first();
         $author =  User::where('id', $blog->author)->first();
         $category = Category::where('id', $blog->categories_ids)->first();
         $other_blog = Blog::where('id','!=', $blog->id)->with('thumbnail')->where('categories_ids', $blog->categories_ids)->with('images')->limit(6)->get()->all();
