@@ -80,7 +80,7 @@
                                                             <ul class="post_meta">
                                                                 <li>
                                                                     <a
-                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
                                                                 <li>
                                                                     <a
@@ -229,7 +229,7 @@
                                                         <ul class="post_meta">
                                                             <li class="">
                                                                 <a
-                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                    href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                             </li>
                                                             <li class="">
                                                                 <a
@@ -273,7 +273,7 @@
                                                 <ul class="post_meta">
                                                     <li class="">
                                                         <a
-                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                            href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
                                                     <li class="">
                                                         <a
@@ -355,7 +355,7 @@
                                                 <ul class="post_meta">
                                                     <li class="">
                                                         <a
-                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                            href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
                                                     <li class="">
                                                         <a
@@ -428,7 +428,7 @@
                                                             <ul class="post_meta">
                                                                 <li class="">
                                                                     <a
-                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
                                                                 <li class="">
                                                                     <a
@@ -527,7 +527,7 @@
                                                                     <ul class="post_meta">
                                                                         <li class="">
                                                                             <a
-                                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                         </li>
                                                                         <li class="">
                                                                             <a
@@ -575,7 +575,7 @@
                                                                             <ul class="post_meta">
                                                                                 <li class="">
                                                                                     <a
-                                                                                        href=""><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                 </li>
                                                                                 <li class="">
                                                                                     <a
@@ -648,7 +648,7 @@
                                                                     <ul class="post_meta">
                                                                         <li class="">
                                                                             <a
-                                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                         </li>
                                                                         <li class="">
                                                                             <a
@@ -746,7 +746,7 @@
                                                                         <ul class="post_meta">
                                                                             <li class="">
                                                                                 <a
-                                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                    href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                             </li>
                                                                             <li class="">
                                                                                 <a
@@ -800,7 +800,7 @@
                                                                                         <ul class="post_meta">
                                                                                             <li class="">
                                                                                                 <a
-                                                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                                    href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                                             </li>
                                                                                             <li class="">
                                                                                                 <a
@@ -995,7 +995,7 @@
                                                 <ul class="post_meta">
                                                     <li class="">
                                                         <a
-                                                            href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                            href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                     </li>
                                                     <li class="">
                                                         <a
@@ -1073,7 +1073,7 @@
                                                             <ul class="post_meta">
                                                                 <li class="">
                                                                     <a
-                                                                        href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                                 </li>
                                                                 <li class="">
                                                                     <a
@@ -1164,7 +1164,7 @@
                                                         <ul class="post_meta">
                                                             <li class="">
                                                                 <a
-                                                                    href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                    href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                             </li>
                                                             <li class="">
                                                                 <a
@@ -1207,7 +1207,7 @@
                                                     <ul class="post_meta">
                                                         <li class="">
                                                             <a
-                                                                href="#"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
                                                         </li>
                                                         <li class="">
                                                             <a
