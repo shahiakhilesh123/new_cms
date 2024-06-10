@@ -51,7 +51,22 @@
         /* ]]> */
     </script>
     <style id="wp-emoji-styles-inline-css" type="text/css">
-           /* new header style*/
+         img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <style>
+        /* new header style*/
         .header-topstrip {
             padding: 8px 0;
         }
@@ -132,6 +147,11 @@
             .sm-d-none {
                 display: none;
             }
+
+            #myHeader{
+                display: none;
+            }
+            
 
             .mobile-inline-menu {
                 display: block;
