@@ -70,7 +70,7 @@
                                                         <div class="post_title">
                                                             <h2><a href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                             @if($blog->link != '')
-                                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                            <i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>
                                                             @endif
                                                             <!-- <i class="fa fa-video-camera" aria-hidden="true"></i> -->
                                                             {{ $blog->name }}
@@ -128,7 +128,7 @@
                                                             <div class="post_title">
                                                                 <h2><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                     @if($blog->link != '')
-                                                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                                    <i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>
                                                                     @endif
                                                                     {{ $blog->name }}
                                                                     </a>
@@ -194,7 +194,7 @@
                                 }
                                 $symbol = '';
                                 if($blog->link != ''){
-                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                 }
                                 $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
@@ -305,7 +305,7 @@
                     $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
                     $symbol = '';
                     if($blog->link != ''){
-                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                     }
                     $truncated = $symbol.$blog->name;
                     $cat = App\Models\Category::where('id',$setting->secound_row_secound_col_category)->first();
@@ -396,7 +396,7 @@
                                     }
                                     $symbol = '';
                                     if($blog->link != ''){
-                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                     }
                                     $truncated = $symbol.$blog->name;
                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
@@ -487,7 +487,7 @@
                                                 }
                                                 $symbol = '';
                                                 if($blog->link != ''){
-                                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                                 }
                                                 $truncated = $symbol.$blog->name;
                                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
@@ -625,7 +625,7 @@
                                                     }
                                                     $symbol = '';
                                                     if($blog->link != ''){
-                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                                     }
                                                     $truncated = $symbol.$blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
@@ -702,7 +702,7 @@
                                                     }
                                                     $symbol = '';
                                                     if($blog->link != ''){
-                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                                        $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                                     }
                                                     $truncated = $symbol.$blog->name;
                                                     $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
@@ -961,7 +961,7 @@
                                 }
                                 $symbol = '';
                                 if($blog->link != ''){
-                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                 }
                                 $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
@@ -1041,7 +1041,7 @@
                                 }
                                 $symbol = '';
                                 if($blog->link != ''){
-                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                 }
                                 $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
@@ -1127,7 +1127,7 @@
                                 }
                                 $symbol = '';
                                 if($blog->link != ''){
-                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true"></i>&nbsp;&nbsp;';
+                                    $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                 }
                                 $truncated = $symbol.$blog->name;
                                 $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';                                                
