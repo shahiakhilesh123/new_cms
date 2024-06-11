@@ -73,6 +73,6 @@ class StoryController extends Controller
         $state  = State::where('name', $name)->first();
         $blog = Blog::where('state_ids', $state->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
         $blog->setPath(asset('/').$name);
-        return view('author',['users'=> $state,'blogs' => $blog, 'page' => $page, 'count' => $count]);
+        return view('state',['state'=> $state,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
 }
