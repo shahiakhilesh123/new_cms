@@ -128,7 +128,7 @@
                                                 <div class="content-entry">
                                                     <section class="list_page_iner">
                                                         <div class="section-title">
-                                                            <h1><span>Stories From:&nbsp;&nbsp;{{ isset($state->name) ? $state->name : '' }}</span></h1>
+                                                            <h1><span>{{ isset($state->name) ? $state->name : '' }}</span></h1>
                                                         </div>
                                                         <div class="list_entry">
                                                             <section class="post-display-grid">
