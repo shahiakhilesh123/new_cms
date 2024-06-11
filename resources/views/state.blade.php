@@ -104,15 +104,15 @@
                                             <meta name="numberOfItems" content="3">
                                             <meta name="itemListOrder" content="Ascending">
                                             <li itemprop="itemListElement" itemscope=""
-                                                itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a
+                                                itemtype="" class="trail-item trail-begin"><a
                                                     href="/"
                                                     rel="home" itemprop="item"><span itemprop="name">Home</span></a>
                                                 <meta itemprop="position" content="1">
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
-                                                itemtype="http://schema.org/ListItem" class="trail-item trail-end"><a
+                                                itemtype="" class="trail-item trail-end"><a
                                                     href="#"
-                                                    itemprop="item"><span itemprop="name">Search results for:{{ isset($search) ? $search : '' }}</span></a>
+                                                    itemprop="item"><span itemprop="name">State</span></a>
                                                 <meta itemprop="position" content="3">
                                             </li>
                                         </ul>
@@ -128,7 +128,7 @@
                                                 <div class="content-entry">
                                                     <section class="list_page_iner">
                                                         <div class="section-title">
-                                                            <!-- <h1><span>{{ isset($category->name) ? $category->name : '' }}</span></h1> -->
+                                                            <h1><span>Stories From:&nbsp;&nbsp;{{ isset($state->name) ? $state->name : '' }}</span></h1>
                                                         </div>
                                                         <div class="list_entry">
                                                             <section class="post-display-grid">
@@ -153,7 +153,7 @@
                                                                         ?>
                                                                         <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
                                                                             <article id="post-619"
-                                                                                class="grid-post-holder post-619 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-photograph">
+                                                                                class="grid-post-holder post-619 post type-post status-publish format-standard has-post-thumbnail hentry cat-lifestyle tag-photograph">
                                                                                 <div class="card">
                                                                                     <div class="post_thumb">
                                                                                         <a
@@ -171,8 +171,8 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}"
-                                                                                                        rel="category tag">{{ isset($cat->name) ? $cat->name : '' }}</a>
+                                                                                                <li><a href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}"
+                                                                                                        rel="cat tag">{{isset($cat->name) ? $cat->name : ''}}</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
@@ -213,7 +213,7 @@
                                                     <div class="pagination float-left" style="text-align: end;">
                                                             <!-- <div class="left"> -->
                                                                 @if($page <= 4 && count($blogs) == $count)
-                                                                <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}search?search={{ isset($search) ? $search : '' }}&page={{ $page +1}}">Read more&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+                                                                <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}?page={{ $page +1}}">Read more&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
                                                                 @endif
                                                                 <!-- <div> -->
                                                     </div>
@@ -237,36 +237,36 @@
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/gummkad.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/gummkad.jpeg') }}"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
-                                                        <div class="widget-title">
-                                                            <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
-                                                        </div>
-                                                        <ul>
-                                                            <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
-                                                            ?>
-                                                            @foreach($blogs as $blog)
-                                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); ?>
-                                                            <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $blog->name }}</a>
-                                                                
-                                                            </li>
-                                                            @endforeach
-                                                        </ul>
+                                                    <div class="widget-title">
+                                                        <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
                                                     </div>
+                                                    <ul>
+                                                        <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
+                                                        ?>
+                                                        @foreach($blogs as $blog)
+                                                        <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); ?>
+                                                        <li class="cat-item cat-item-16"><a
+                                                                href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $blog->name }}</a>
+                                                            
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                                     <div id="media_image-3" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
                                                         </div><a target="__blank"
                                                             href="https://www.youtube.com/@SportsHour"><img
                                                                 width="400" height="300"
-                                                                src="{{ asset('/banner/sports.jpeg') }}"
+                                                                src="{{ asset('/banner/Website_Sports.jpg') }}"
                                                                 class="image wp-image-709  attachment-full size-full"
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="{{ asset('/banner/sports.jpeg') }} 300w"
+                                                                srcset="{{ asset('/banner/Website_Sports.jpg') }}"
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                 </aside>

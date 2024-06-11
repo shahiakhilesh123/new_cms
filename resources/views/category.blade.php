@@ -240,22 +240,20 @@
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
+                                                    <div id="categories-2" class="widget widget_categories">
                                                         <div class="widget-title">
-                                                            <h2>Category</h2>
+                                                            <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
                                                         </div>
                                                         <ul>
-                                                        <?php $category =  App\Models\Category::get()->all();
+                                                            <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
                                                             ?>
-                                                            @foreach($category as $showCat)
-                                                            <?php
-                                                            // $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
-                                                            ?>
+                                                            @foreach($blogs as $blog)
+                                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); ?>
                                                             <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/') }}{{  isset($showCat->site_url) ? $showCat->site_url : '' }}">{{ $showCat->name }}</a>
+                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $blog->name }}</a>
                                                                 
                                                             </li>
                                                             @endforeach
-                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <div id="media_image-3" class="widget widget_media_image">

@@ -104,15 +104,15 @@
                                             <meta name="numberOfItems" content="3">
                                             <meta name="itemListOrder" content="Ascending">
                                             <li itemprop="itemListElement" itemscope=""
-                                                itemtype="http://schema.org/ListItem" class="trail-item trail-begin"><a
+                                                itemtype="" class="trail-item trail-begin"><a
                                                     href="/"
                                                     rel="home" itemprop="item"><span itemprop="name">Home</span></a>
                                                 <meta itemprop="position" content="1">
                                             </li>
                                             <li itemprop="itemListElement" itemscope=""
-                                                itemtype="http://schema.org/ListItem" class="trail-item trail-end"><a
-                                                    href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-' }}"
-                                                    itemprop="item"><span itemprop="name">{{ isset($cat->name) ? $cat->name : '' }}</span></a>
+                                                itemtype="" class="trail-item trail-end"><a
+                                                    href="#"
+                                                    itemprop="item"><span itemprop="name">Author</span></a>
                                                 <meta itemprop="position" content="3">
                                             </li>
                                         </ul>
@@ -128,7 +128,7 @@
                                                 <div class="content-entry">
                                                     <section class="list_page_iner">
                                                         <div class="section-title">
-                                                            <h1><span>{{ isset($users->name) ? $users->name : '' }}</span></h1>
+                                                            <h1><span>Stories by:&nbsp;&nbsp;{{ isset($users->name) ? $users->name : '' }}</span></h1>
                                                         </div>
                                                         <div class="list_entry">
                                                             <section class="post-display-grid">
@@ -241,24 +241,21 @@
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
-                                                        <div class="widget-title">
-                                                            <h2>cat</h2>
-                                                        </div>
-                                                        <ul>
-                                                        <?php $cat =  App\Models\Category::get()->all();
-                                                            ?>
-                                                            @foreach($cat as $showCat)
-                                                            <?php
-                                                            // $count = App\Models\Blog::where('categories_ids', $showCat->id)->get()->count();
-                                                            ?>
-                                                            <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/') }}{{  isset($showCat->site_url) ? $showCat->site_url : '' }}">{{ $showCat->name }}</a>
-                                                                
-                                                            </li>
-                                                            @endforeach
-                                                            </li>
-                                                        </ul>
+                                                    <div class="widget-title">
+                                                        <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
                                                     </div>
+                                                    <ul>
+                                                        <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
+                                                        ?>
+                                                        @foreach($blogs as $blog)
+                                                        <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); ?>
+                                                        <li class="cat-item cat-item-16"><a
+                                                                href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $blog->name }}</a>
+                                                            
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                                     <div id="media_image-3" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>

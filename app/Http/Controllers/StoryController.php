@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\State;
 class StoryController extends Controller
 {
     public function showStory($cat_name, $name)
@@ -63,5 +64,15 @@ class StoryController extends Controller
         $blog = Blog::where('author', $user->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
         $blog->setPath(asset('/').$name);
         return view('author',['users'=> $user,'blogs' => $blog, 'page' => $page, 'count' => $count]);
+    }
+    public function state($name)
+    {
+        $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
+        $count = 10;
+        $name = str_replace('_', ' ', $name);
+        $state  = State::where('name', $name)->first();
+        $blog = Blog::where('state_ids', $state->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
+        $blog->setPath(asset('/').$name);
+        return view('author',['users'=> $state,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
 }
