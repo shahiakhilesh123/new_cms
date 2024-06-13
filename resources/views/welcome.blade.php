@@ -46,11 +46,7 @@
                                             @foreach($banner_blog as $blog)
                                             <?php
                                             $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
-                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
-                                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
-                                            } else {
-                                                $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
-                                            }
+                                            $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
                                             $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';  
                                             $author = [];
                                             if(isset($blog->author)) {
