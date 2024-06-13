@@ -25,7 +25,7 @@ class StoryController extends Controller
         $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
         $count = 10;
         $category = Category::where('site_url', $name)->first();
-        $blog = Blog::where('categories_ids', $category->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
+        $blog = Blog::where('categories_ids', $category->id)->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
         $blog->setPath(asset('/').$name);
         return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
@@ -61,7 +61,7 @@ class StoryController extends Controller
         $count = 10;
         $name = str_replace('_', ' ', $name);
         $user  = User::where('url_name', $name)->first();
-        $blog = Blog::where('author', $user->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
+        $blog = Blog::where('author', $user->id)->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
         $blog->setPath(asset('/').$name);
         return view('author',['users'=> $user,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
@@ -71,7 +71,7 @@ class StoryController extends Controller
         $count = 10;
         $name = str_replace('_', ' ', $name);
         $state  = State::where('name', $name)->first();
-        $blog = Blog::where('state_ids', $state->id)->where('status', 1)->with('images')->orderBy('id', 'DESC')->paginate($count);
+        $blog = Blog::where('state_ids', $state->id)->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
         $blog->setPath(asset('/').$name);
         return view('state',['state'=> $state,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }

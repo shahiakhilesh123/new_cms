@@ -41,7 +41,7 @@
                                     <div class="card">
                                         <div class="owl-carousel cm_banner-carousel-five">
                                             <?php
-                                            $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(5)->get();   
+                                            $banner_blog = App\Models\Blog::where('status', '1')->orderBy('id', 'DESC')->limit(5)->get();   
                                             ?>
                                             @foreach($banner_blog as $blog)
                                             <?php
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                                 <?php
-                                $banner_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(4)->offset(5)->get(); 
+                                $banner_blog = App\Models\Blog::where('status', '1')->orderBy('id', 'DESC')->limit(4)->offset(5)->get(); 
                                 ?>
                                 <div class="cm-col-lg-5 cm-col-12 gutter-right" >
                                     <div class="right-content-holder">
@@ -173,7 +173,7 @@
                                 srcset=""
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                                 <?php
-                                $second_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_first_file)->orderBy('id', 'DESC')->limit(6)->get();  
+                                $second_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->secound_row_first_file)->orderBy('id', 'DESC')->limit(6)->get();  
                                 $cat = App\Models\Category::where('id',$setting->secound_row_first_file)->first();
                                  ?>
                     <section class="cm-post-widget-section cm-post-widget-two">
@@ -303,7 +303,7 @@
                         </div>
                     </section>
                     <?php
-                    $third_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
+                    $third_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->secound_row_secound_col_category)->orderBy('id', 'DESC')->limit(6)->get();  
                     $symbol = '';
                     if($blog->link != ''){
                         $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
@@ -374,7 +374,7 @@
                         </div>
                     </section>
                     <?php
-                    $fourth_row_blog = App\Models\Blog::where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(6)->get();  
+                    $fourth_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->secound_row_third_file)->orderBy('id', 'DESC')->limit(6)->get();  
                     $cat = App\Models\Category::where('id',$setting->secound_row_third_file)->first();
                     ?>
                     <section class="cm-post-widget-section cm_post_widget_six">
@@ -466,7 +466,7 @@
                                 <div id="primary" class="content-area">
                                     <main id="main" class="site-main">
                                         <?php
-                                          $fifth_row_blog = App\Models\Blog::where('categories_ids', $setting->third_row_category)->orderBy('id', 'DESC')->limit(6)->get();  
+                                          $fifth_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->third_row_category)->orderBy('id', 'DESC')->limit(6)->get();  
                                           $cat = App\Models\Category::where('id',$setting->third_row_category)->first();
                                           $i = 0; 
                                         ?>
@@ -604,7 +604,7 @@
                                             </div>
                                         </section>
                                         <?php
-                                          $sixth_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_image)->orderBy('id', 'DESC')->limit(6)->get();  
+                                          $sixth_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fourth_row_first_image)->orderBy('id', 'DESC')->limit(6)->get();  
                                           $cat = App\Models\Category::where('id',$setting->fourth_row_first_image)->first();
                                         ?>
                                         <section class="cm-post-widget-section cm_middle_post_widget_six">
@@ -680,7 +680,7 @@
                                                     srcset="{{ asset('/banner/beingghmakad.jpeg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
-                                          $seven_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
+                                          $seven_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
                                           $cat = App\Models\Category::where('id',$setting->fourth_row_first_cat)->first();
                                           $i = 0;
                                         ?>
@@ -905,7 +905,7 @@
                                             <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
                                         </div>
                                         <ul>
-                                            <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
+                                            <?php $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
                                             ?>
                                             @foreach($blogs as $blog)
                                             <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); ?>
@@ -937,7 +937,7 @@
             <div class="bottom-news-area news-area">
                 <div class="cm-container">
                     <?php
-                     $eight_row_blog = App\Models\Blog::where('categories_ids', $setting->fourth_row_secound_cat)->orderBy('id', 'DESC')->limit(6)->get();  
+                     $eight_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fourth_row_secound_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                      $cat = App\Models\Category::where('id',$setting->fourth_row_secound_cat)->first();
                      $i = 0;
                     ?>
@@ -1016,7 +1016,7 @@
                         </div>
                     </section>
                     <?php
-                     $ninth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_first_cat)->orderBy('id', 'DESC')->limit(6)->get();  
+                     $ninth_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fifth_row_first_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                      $cat = App\Models\Category::where('id',$setting->fifth_row_first_cat)->first();
                      $i = 0;
                     ?>
@@ -1104,7 +1104,7 @@
                                 srcset="{{ asset('/banner/sports_banner.jpeg') }} 1024w"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
                     <?php 
-                    $tenth_row_blog = App\Models\Blog::where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
+                    $tenth_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fifth_row_second_cat)->orderBy('id', 'DESC')->limit(6)->get();  
                     $cat = App\Models\Category::where('id',$setting->fifth_row_second_cat)->first();
                     $i = 0;
                     ?>
