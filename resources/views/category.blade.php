@@ -138,7 +138,11 @@
                                                                         @foreach($blogs as $blog)
                                                                         <?php
                                                                         //$blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                                                        $truncated = $blog->name;
+                                                                        $symbol = '';
+                                                                        if($blog->link != ''){
+                                                                            $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
+                                                                        }
+                                                                        $truncated = $symbol.$blog->name;
                                                                         if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                                             $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                                                         } else {
