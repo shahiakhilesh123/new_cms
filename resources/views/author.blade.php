@@ -182,7 +182,7 @@
                                                                                         </div>
                                                                                         <div class="post_title">
                                                                                             <h2><a
-                                                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
+                                                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $truncated }}</a></h2>
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">

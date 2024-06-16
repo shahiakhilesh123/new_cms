@@ -139,7 +139,11 @@
                                                                         <?php
                                                                         $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
                                                                         //$blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
-                                                                        $truncated = $blog->name;
+                                                                        $symbol = '';
+                                                                        if($blog->link != ''){
+                                                                            $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
+                                                                        }
+                                                                        $truncated = $symbol.$blog->name;
                                                                         if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                                             $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                                                         } else {
@@ -178,7 +182,7 @@
                                                                                         </div>
                                                                                         <div class="post_title">
                                                                                             <h2><a
-                                                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $blog->name }}</a></h2>
+                                                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">{{ $truncated }}</a></h2>
                                                                                         </div>
                                                                                         <div class="cm-post-meta">
                                                                                             <ul class="post_meta">
