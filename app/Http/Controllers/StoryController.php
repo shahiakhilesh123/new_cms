@@ -61,7 +61,11 @@ class StoryController extends Controller
         $count = 10;
         $name = str_replace('_', ' ', $name);
         $user  = User::where('url_name', $name)->first();
-        $blog = Blog::where('author', isset($user->id) ? $user->id : 'NULL')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+        if(isset($user->id)){
+            $blog = Blog::whereNull('author')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+        } else {
+            $blog = Blog::where('author', isset($user->id) ? $user->id : 'NULL')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+        }
         $blog->setPath(asset('/').$name);
         return view('author',['users'=> $user,'blogs' => $blog, 'page' => $page, 'count' => $count]);
     }
