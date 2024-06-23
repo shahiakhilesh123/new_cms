@@ -288,11 +288,10 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Sub Select Category</label>
+                    <label for="exampleInputPassword1">Other Select Category</label>
                     <?php $multi_cat = explode(',',$data['blogs']->mult_cat); ?>
                     <div class="select2-purple">
                         <select class="form-control" name="mult_cat[]" multiple>
-                            <option value="">Sub Select Category</option>
                             @foreach($data['categories'] as $category)
                               <option value="{{ $category->id }}" <?php if(in_array($category->id, $multi_cat)){ echo "selected"; } ?>>{{ $category->name }}</option>
                             @endforeach
