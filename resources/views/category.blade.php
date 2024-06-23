@@ -137,6 +137,7 @@
                                                                     @if(count($blogs) > 0)
                                                                         @foreach($blogs as $blog)
                                                                         <?php
+                                                                        $cat = App\Models\Category::where('id',$blog->categories_ids)->first();
                                                                         //$blog_file = App\Models\File::where( "id", isset($blog->image_ids)? $blog->image_ids : $blog->thumb_images)->first();
                                                                         $symbol = '';
                                                                         if($blog->link != ''){
@@ -160,7 +161,7 @@
                                                                                 <div class="card">
                                                                                     <div class="post_thumb">
                                                                                         <a
-                                                                                            href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                                                            href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '-' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
                                                                                             <figure class="imghover">
                                                                                                 <img width="800"
                                                                                                     height="450"
@@ -174,8 +175,8 @@
                                                                                     <div class="card_content">
                                                                                         <div class="entry_cats">
                                                                                             <ul class="post-categories">
-                                                                                                <li><a href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}"
-                                                                                                        rel="category tag">{{isset($category->name) ? $category->name : ''}}</a>
+                                                                                                <li><a href="{{ asset('/') }}{{ isset($cat->site_url) ? $cat->site_url : '' }}"
+                                                                                                        rel="cat tag">{{isset($cat->name) ? $cat->name : ''}}</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>

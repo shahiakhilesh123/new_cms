@@ -288,6 +288,27 @@
                       @enderror
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Sub Select Category</label>
+                    <?php $multi_cat = explode(',',$data['blogs']->mult_cat); ?>
+                    <div class="select2-purple">
+                        <select class="form-control" name="mult_cat[]" multiple>
+                            <option value="">Sub Select Category</option>
+                            @foreach($data['categories'] as $category)
+                              <option value="{{ $category->id }}" <?php if(in_array($category->id, $multi_cat)){ echo "selected"; } ?>>{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                      @error('mult_cat')
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <!-- <span class="fas fa-envelope"> -->
+                            {{ $errors->first('mult_cat') }}
+                            <!-- </span> -->
+                          </div>
+                        </div>
+                      @enderror
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Select State</label>
                     <?php $sta = explode(',', $data['blogs']->state_ids); ?>
                     <div class="select2-purple">

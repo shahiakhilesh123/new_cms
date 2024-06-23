@@ -283,6 +283,26 @@
                       @enderror
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Other Select Category</label>
+                    <div class="select2-purple">
+                        <select class="form-control" name="mult_cat[]" multiple>
+                            <option value="">Sub Select Category</option>
+                            @foreach($data['categories'] as $category)
+                              <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                      @error('mult_cat')
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <!-- <span class="fas fa-envelope"> -->
+                            {{ $errors->first('mult_cat') }}
+                            <!-- </span> -->
+                          </div>
+                        </div>
+                      @enderror
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputPassword1">Select State</label>
                     <div class="select2-purple">
                         <select class="form-control" name="state">
