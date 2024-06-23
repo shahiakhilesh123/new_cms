@@ -286,7 +286,6 @@
                     <label for="exampleInputPassword1">Other Select Category</label>
                     <div class="select2-purple">
                         <select class="form-control" name="mult_cat[]" multiple>
-                            <option value="">Sub Select Category</option>
                             @foreach($data['categories'] as $category)
                               <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
