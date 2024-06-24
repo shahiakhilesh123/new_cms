@@ -243,7 +243,7 @@
                                                 <aside id="secondary" class="sidebar-widget-area">
                                                     <div id="categories-2" class="widget widget_categories">
                                                     <div class="widget-title">
-                                                        <h2>यूटीलिटी/ टेक्नोलॉजी</h2>
+                                                        <h2 style="overflow: visible;">यूटीलिटी/ टेक्नोलॉजी</h2>
                                                     </div>
                                                     <ul>
                                                         <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
