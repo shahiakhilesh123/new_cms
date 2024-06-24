@@ -263,10 +263,10 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Select Category</label>
+                    <label for="exampleInputPassword1">Select Primary Category</label>
                     <div class="select2-purple">
                         <select class="form-control" name="category">
-                            <option value="">Select Category</option>
+                            <option value="">Select Primary Category</option>
                             @foreach($data['categories'] as $category)
                               <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
@@ -283,7 +283,7 @@
                       @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Other Select Category</label>
+                    <label for="exampleInputPassword1">Select More Category</label>
                     <div class="select2-purple">
                         <select class="form-control" name="mult_cat[]" multiple>
                             @foreach($data['categories'] as $category)
