@@ -68,7 +68,7 @@ class BlogController extends Controller
         $cat = $request->category;
         $state = $request->state;
         $district = $request->district;
-        $mult_cat = count($request->mult_cat) > 0 ? implode(',', $request->mult_cat) : '';
+        $mult_cat = isset($request->mult_cat) ? (count($request->mult_cat) > 0 ? implode(',', $request->mult_cat) : '') : '';
         $home_page_status = 0;
         $url = $this->clean($request->eng_name);
         $url = strtolower(str_replace(' ', '-',trim($url)));
@@ -125,7 +125,7 @@ class BlogController extends Controller
         $state = $request->state;
         $status = isset($request->draft) ? 0 : 1;
         $district = $request->district;
-        $mult_cat = count($request->mult_cat) > 0 ? implode(',', $request->mult_cat) : '';
+        $mult_cat = isset($request->mult_cat) ? (count($request->mult_cat) > 0 ? implode(',', $request->mult_cat) : '') : '';
         $home_page_status = 0;
         $url = $this->clean($request->eng_name);
         $url = strtolower(str_replace(' ', '-',trim($url)));
