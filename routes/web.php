@@ -22,7 +22,7 @@ Route::get('/admin', function(){
 });
 Route::fallback(function ()
 {
-    return response()->view('error', [], 404);
+    return view('error');
 });
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

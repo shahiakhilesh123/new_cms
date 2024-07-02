@@ -25,9 +25,13 @@ class StoryController extends Controller
         $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
         $count = 10;
         $category = Category::where('site_url', $name)->first();
-        $blog = Blog::where('categories_ids', $category->id)->orWhereRaw('FIND_IN_SET('.$category->id.', mult_cat)')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
-        $blog->setPath(asset('/').$name);
-        return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page, 'count' => $count]);
+        if (!is_null($category)) {
+            $blog = Blog::where('categories_ids', $category->id)->orWhereRaw('FIND_IN_SET('.$category->id.', mult_cat)')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+            $blog->setPath(asset('/').$name);
+            return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page, 'count' => $count]);
+        } else {
+            return view('error');
+        }        
     }
     public function privacy()
     {
