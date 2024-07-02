@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 //Route::get('/urlchange',[App\Http\Controllers\TestController::class, 'changeUrl'])->name('changeUrl');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'homePage'])->name('homePage');
+Route::get('/admin', function(){
+    return redirect('/login');
+});
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/menu', [App\Http\Controllers\MenuController::class, 'menuList'])->name('menulist');
