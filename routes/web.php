@@ -20,6 +20,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'homePage'])->name(
 Route::get('/admin', function(){
     return redirect('/login');
 });
+Route::get('/admin/', function(){
+    return redirect('/login');
+});
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/menu', [App\Http\Controllers\MenuController::class, 'menuList'])->name('menulist');
