@@ -20,8 +20,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'homePage'])->name(
 Route::get('/admin', function(){
     return redirect('/login');
 });
-Route::get('/admin/', function(){
-    return redirect('/login');
+Route::fallback(function ()
+{
+    return response()->view('error', [], 404);
 });
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
