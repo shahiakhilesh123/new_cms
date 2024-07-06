@@ -86,6 +86,8 @@
 <script src="{{ asset('/admin/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
 <script src="{{ asset('/admin/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
 <script src="{{ asset('/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3986924419662120"
+     crossorigin="anonymous"></script>
   <script>
   $(function () {
     bsCustomFileInput.init();
