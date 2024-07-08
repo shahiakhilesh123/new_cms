@@ -680,7 +680,7 @@
                                                     srcset="{{ asset('/banner/beingghmakad.jpeg') }}"
                                                     sizes="(max-width: 728px) 100vw, 728px" /></a></div>
                                         <?php
-                                          $seven_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(5)->get();  
+                                          $seven_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->fourth_row_first_cat)->orderBy('id', 'DESC')->limit(4)->get();  
                                           $cat = App\Models\Category::where('id',$setting->fourth_row_first_cat)->first();
                                           $i = 0;
                                         ?>
