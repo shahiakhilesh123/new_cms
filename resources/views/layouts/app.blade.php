@@ -522,7 +522,6 @@
                     <ul class="mobile-inline-link">
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
-                    <li class="home-btn"><a href="{{ asset('/election-2024') }}">चुनाव 2024</a></li>
                     <li class="home-btn"><a href="{{ asset('/dharma-gyan') }}">धर्म ज्ञान</a></li>
                     <!-- <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव </a></li> -->
                     <li class="home-btn"><a href="{{ asset('/program') }}">कड़क बात </a></li>
