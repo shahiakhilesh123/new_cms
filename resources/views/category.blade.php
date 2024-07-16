@@ -225,7 +225,7 @@
                                                     <div class="pagination float-left col-md-6" style="width: 50%;">
                                                             <!-- <div class="left"> -->
                                                                 @if($page <= 4 && count($blogs) == $count)
-                                                                <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">आगे&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+                                                                <a style="color: #1da1f2; float: inline-end;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">आगे&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
                                                                 @endif
                                                                 <!-- <div> -->
                                                     </div>
