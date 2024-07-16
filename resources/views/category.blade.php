@@ -215,14 +215,14 @@
                                                         </div>
                                                     </section>
                                                     <div class="row">
-                                                    <div class="pagination float-right col-md-6">
+                                                    <div class="pagination float-right col-md-6" style="width: 50%;">
                                                             <!-- <div class="left"> -->
                                                                 @if($page <= 4 && count($blogs) == $count && $page != 1)
                                                                 <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page -1}}"><i class="fa fa-angle-double-left"></i>&nbsp;&nbsp;पीछे</a>
                                                                 @endif
                                                                 <!-- <div> -->
                                                     </div>
-                                                    <div class="pagination float-left col-md-6" style="text-align: end;">
+                                                    <div class="pagination float-left col-md-6" style="width: 50%;">
                                                             <!-- <div class="left"> -->
                                                                 @if($page <= 4 && count($blogs) == $count)
                                                                 <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page +1}}">आगे&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
