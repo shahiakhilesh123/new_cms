@@ -214,7 +214,7 @@
                                                             </section>
                                                         </div>
                                                     </section>
-                                                    <div class="pagination float-left">
+                                                    <div class="pagination float-left" style="text-align: right">
                                                             <!-- <div class="left"> -->
                                                                  @if(count($blogs) == $count && $page != 1)
                                                                 <a style="color: #1da1f2;" href="{{ asset('/') }}{{ isset($category->site_url) ? $category->site_url : '' }}?page={{ $page -1}}"><i class="fa fa-angle-double-left"></i>&nbsp;&nbsp;पीछे</a>
