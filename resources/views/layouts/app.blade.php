@@ -460,13 +460,23 @@
                         </div>
                         <div class="cm-col-lg-8 cm-col-12">
                             <div class="advertisement-area">
-                                <div id="media_image-4" class="widget widget_media_image"><a
+                                <!-- Newsnmf_Header728 -->
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-3986924419662120"
+                                data-ad-slot="5487378089"
+                                data-ad-format="auto"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                                <!-- <div id="media_image-4" class="widget widget_media_image"><a
                                 target="__blank"  href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="728" height="90"
                                             src="{{ asset('/banner/news.jpeg') }}"
                                             class="image wp-image-756  attachment-full size-full" alt
                                             style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high"
                                             srcset=""
-                                            sizes="(max-width: 728px) 100vw, 728px" /></a></div>
+                                            sizes="(max-width: 728px) 100vw, 728px" /></a></div> -->
                             </div>
                         </div>
                     </div>
