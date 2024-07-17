@@ -585,7 +585,19 @@
                 </ul>
             </div>
         </nav>
-        <div class="mobile-topbanner"><a href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA" target="__blank"><img src="{{ asset('/frontend/images/topbanner-mobile.jpg') }}" alt="" class="w-100"></a></div>
+        <div class="mobile-topbanner">
+            <!-- HeaderResponsive_728 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-3986924419662120"
+                data-ad-slot="5487378089"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- <a href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA" target="__blank"><img src="{{ asset('/frontend/images/topbanner-mobile.jpg') }}" alt="" class="w-100"></a> -->
+        </div>
         <div id="content" class="site-content">
         @yield('content')
         </div>
