@@ -229,14 +229,17 @@
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
                                                         </div>
+                                                        <!-- SquareAd_1_Responsitve -->
                                                         <ins class="adsbygoogle"
-                                                            style="display:inline-block;width:400px;height:300px"
+                                                            style="display:block"
                                                             data-ad-client="ca-pub-3986924419662120"
-                                                            data-ad-slot="9101489349"></ins>
+                                                            data-ad-slot="8746266124"
+                                                            data-ad-format="auto"
+                                                            data-full-width-responsive="true"></ins>
                                                         <script>
                                                             (adsbygoogle = window.adsbygoogle || []).push({});
                                                         </script>
-                                                        <!-- <a
+                                                                                                                <!-- <a
                                                             href="{{ asset('/election-2024') }}"><img
                                                                 width="400" height="300"
                                                                 src="{{ asset('/banner/lokshbha.jpeg') }}"
