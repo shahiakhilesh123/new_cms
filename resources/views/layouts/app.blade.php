@@ -461,6 +461,7 @@
                         <div class="cm-col-lg-8 cm-col-12">
                             <div class="advertisement-area">
                                 <!-- Newsnmf_Header728 -->
+                           <!-- HeaderResponsive_728 -->
                             <ins class="adsbygoogle"
                                 style="display:block"
                                 data-ad-client="ca-pub-3986924419662120"
