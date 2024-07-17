@@ -74,7 +74,7 @@
                                                             <ul class="post_meta">
                                                                 <li class="">
                                                                     <a
-                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($data['author']->url_name) ? $data['author']->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'Admin'  }}</i></a>
+                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($data['author']->url_name) ? $data['author']->url_name : '-') }}"><i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;{{ isset($data['author']->name) ? $data['author']->name : 'NMF News'  }}</i></a>
                                                                 </li>
                                                                 <li class="">
                                                                     <a
@@ -202,7 +202,7 @@
                                                                             <ul class="post_meta">
                                                                                 <li class="">
                                                                                 <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;<a
-                                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}">{{ isset($author->name) ? $author->name : 'Admin'  }}</i></a>
+                                                                                        href="{{ asset('/author')}}/{{  str_replace(' ', '_', isset($author->url_name) ? $author->url_name : '-') }}">{{ isset($author->name) ? $author->name : 'NMF News'  }}</i></a>
                                                                                 </li>
                                                                                 <li class="">
                                                                                     <a
@@ -228,7 +228,15 @@
                                             <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
-                                                        </div><a
+                                                        </div>
+                                                        <ins class="adsbygoogle"
+                                                            style="display:inline-block;width:400px;height:300px"
+                                                            data-ad-client="ca-pub-3986924419662120"
+                                                            data-ad-slot="9101489349"></ins>
+                                                        <script>
+                                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                                        </script>
+                                                        <!-- <a
                                                             href="{{ asset('/election-2024') }}"><img
                                                                 width="400" height="300"
                                                                 src="{{ asset('/banner/lokshbha.jpeg') }}"
@@ -236,7 +244,7 @@
                                                                 alt="" style="max-width: 100%; height: auto;"
                                                                 decoding="async" loading="lazy"
                                                                 srcset="{{ asset('/banner/lokshbha.jpeg') }} 300w"
-                                                                sizes="(max-width: 400px) 100vw, 400px"></a>
+                                                                sizes="(max-width: 400px) 100vw, 400px"></a> -->
                                                     </div>
                                             <div class="theiaStickySidebar"
                                                 style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 841.656px;">
