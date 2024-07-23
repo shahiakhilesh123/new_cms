@@ -894,10 +894,10 @@
                                         </div><a target="__blank"
                                             href="https://www.youtube.com/watch?v=GY-TOSYYKoc&list=PLYJga9j5EgnhYj1BGw2ZgMXuq6NlwudrU"><img
                                                 width="400" height="300"
-                                                src="{{ asset('/banner/lokshbha.jpeg') }}"
+                                                src="{{ asset('/banner/PM.jpeg') }}"
                                                 class="image wp-image-709  attachment-full size-full" alt
                                                 style="max-width: 100%; height: auto;" decoding="async"
-                                                srcset="{{ asset('/banner/lokshbha.jpeg') }}"
+                                                srcset="{{ asset('/banner/PM.jpeg') }}"
                                                 sizes="(max-width: 400px) 100vw, 400px" /></a>
                                     </div>
                                     <div id="categories-2" class="widget widget_categories">
