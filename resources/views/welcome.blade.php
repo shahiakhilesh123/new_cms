@@ -179,7 +179,7 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                             </div>
                             <?php 
                             $i = 0;
@@ -314,7 +314,7 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                             </div>
                             <div class="row">
                             @foreach($third_row_blog as $blog)
@@ -380,7 +380,7 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : ''}}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : ''}}</a></h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
@@ -473,7 +473,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_one">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
+                                                    <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                                                 </div>
                                                 @foreach($fifth_row_blog as $blog)
                                                 <?php 
@@ -610,7 +610,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_six">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2>{{ isset($cat->name) ? $cat->name : '' }}</h2>
+                                                    <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                                                 </div>
                                                 <div class="owl-carousel middle_widget_six_carousel">
                                                     @foreach($sixth_row_blog as $blog)
@@ -687,7 +687,7 @@
                                         <section class="cm-post-widget-section cm_middle_post_widget_four">
                                             <div class="section_inner">
                                                 <div class="section-title">
-                                                    <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                                    <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                                                 </div>
                                                 <div class="row">
                                                     @foreach($seven_row_blog as $blog)
@@ -950,7 +950,7 @@
                     <section class="cm-post-widget-section cm-post-widget-three">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                             </div>
                             <div class="row">
                                 @forEach($eight_row_blog as $blog)
@@ -1029,7 +1029,7 @@
                     <section class="cm-post-widget-section cm_post_widget_six">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                             </div>
                             <div class="post_widget_inner">
                                 <div class="row">
@@ -1117,7 +1117,7 @@
                     <section class="cm-post-widget-section cm-post-widget-two">
                         <div class="section_inner">
                             <div class="section-title">
-                                <h2><a href="{{ asset('/') }}/{{ $cat->name }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
+                                <h2><a href="{{ asset('/') }}{{ $cat->site_url }}">{{ isset($cat->name) ? $cat->name : '' }}</a></h2>
                             </div>
                             @forEach($tenth_row_blog as $blog)
                                 <?php 
