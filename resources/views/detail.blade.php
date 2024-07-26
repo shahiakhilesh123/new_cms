@@ -168,8 +168,8 @@
                                                         $cat = App\Models\Category::where('id',$latest->categories_ids)->first();
                                                         $ff = isset($latest->images->file_name) ? $latest->images->file_name : (isset($latest->thumbnail->file_name) ? $latest->thumbnail->file_name : ''); 
                                                         $author = [];
-                                                        if(isset($blog->author)) {
-                                                            $author = App\Models\User::where( "id", $blog->author)->first();
+                                                        if(isset($latest->author)) {
+                                                            $author = App\Models\User::where( "id", $latest->author)->first();
                                                         }
                                                         ?>
                                                             <div class="cm-col-lg-6 cm-col-md-6 cm-col-12">
