@@ -925,8 +925,13 @@
                                             ?>
                                             <li class="cat-item cat-item-16"><a
                                                     href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">
-                                                    <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
-                                                     decoding="async" /><?php echo $truncated; ?></a>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                        <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
+                                                        decoding="async" />
+                                                        </div>
+                                                        <div class="col-md-9"><?php echo $truncated; ?></div>
+                                                    </a>
                                                 
                                             </li>
                                             @endforeach
@@ -956,9 +961,14 @@
                                             ?>
                                             <li class="cat-item cat-item-16"><a
                                                     href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">
-                                                    <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
-                                                    decoding="async" />
-                                                    <?php echo $truncated; ?></a>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                        <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
+                                                        decoding="async" />
+                                                        </div>
+                                                        <div class="col-md-9"><?php echo $truncated; ?></div>
+                                                    </div>
+                                                </a>
                                                 
                                             </li>
                                             @endforeach
