@@ -907,14 +907,15 @@
                                         <ul>
                                             <?php 
                                             $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(21))->orderBy('updated_at')->limit(5)->get()->all();
+                                            
+                                            ?>
+                                            @foreach($blogs as $blog)
+                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
                                             if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                             } else {
                                                 $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
                                             }
-                                            ?>
-                                            @foreach($blogs as $blog)
-                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
                                             $symbol = '';
                                             if($blog->link != ''){
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
@@ -938,14 +939,14 @@
                                         <ul>
                                             <?php 
                                             $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(18))->orderBy('updated_at')->limit(5)->get()->all();
+                                            ?>
+                                            @foreach($blogs as $blog)
+                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
                                             if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
                                                 $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
                                             } else {
                                                 $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
                                             }
-                                            ?>
-                                            @foreach($blogs as $blog)
-                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
                                             $symbol = '';
                                             if($blog->link != ''){
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
