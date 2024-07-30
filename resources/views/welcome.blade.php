@@ -942,8 +942,8 @@
                                                     <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                         <div class="right_box">
                                                             <div class="post_title">
-                                                                <h2><a
-                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
+                                                                <a
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -992,8 +992,8 @@
                                                     <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
                                                         <div class="right_box">
                                                             <div class="post_title">
-                                                                <h2><a
-                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a></h2>
+                                                                <a
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a>
                                                             </div>
                                                         </div>
                                                     </div>
