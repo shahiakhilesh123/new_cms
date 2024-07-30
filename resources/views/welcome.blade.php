@@ -914,9 +914,12 @@
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                             }
                                             $truncated = $symbol.$blog->name;
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : ''; 
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">
+                                                    <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
+                                                     decoding="async" /><?php echo $truncated; ?></a>
                                                 
                                             </li>
                                             @endforeach
@@ -936,9 +939,13 @@
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                             }
                                             $truncated = $symbol.$blog->name;
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : ''; 
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">
+                                                    <img width="50" height="100" src="{{ asset('/file').'/'.$ff }}" alt="{{ $blog->name }}"
+                                                    decoding="async" />
+                                                    <?php echo $truncated; ?></a>
                                                 
                                             </li>
                                             @endforeach
