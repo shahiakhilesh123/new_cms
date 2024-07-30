@@ -245,6 +245,49 @@
                                                                 sizes="(max-width: 400px) 100vw, 400px"></a>
                                                     </div>
                                                     <div id="categories-2" class="widget widget_categories">
+                                        <div class="widget-title">
+                                            <h2  style="overflow: visible;">टेक्नोलॉजी</h2>
+                                        </div>
+                                        <ul>
+                                            <?php $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(21))->orderBy('updated_at')->limit(5)->get()->all();
+                                            ?>
+                                            @foreach($blogs as $blog)
+                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
+                                            $symbol = '';
+                                            if($blog->link != ''){
+                                                $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
+                                            }
+                                            $truncated = $symbol.$blog->name;
+                                            ?>
+                                            <li class="cat-item cat-item-16"><a
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $truncated }}</a>
+                                                
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <div id="categories-2" class="widget widget_categories">
+                                        <div class="widget-title">
+                                            <h2  style="overflow: visible;">स्पेशल्स</h2>
+                                        </div>
+                                        <ul>
+                                            <?php $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(18))->orderBy('updated_at')->limit(5)->get()->all();
+                                            ?>
+                                            @foreach($blogs as $blog)
+                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
+                                            $symbol = '';
+                                            if($blog->link != ''){
+                                                $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
+                                            }
+                                            $truncated = $symbol.$blog->name;
+                                            ?>
+                                            <li class="cat-item cat-item-16"><a
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $truncated }}</a>
+                                                
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                                     <div class="widget-title">
                                                         <h2  style="overflow: visible;">यूटीलिटी/ टेक्नोलॉजी</h2>
                                                     </div>
