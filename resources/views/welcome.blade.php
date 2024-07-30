@@ -916,7 +916,7 @@
                                             $truncated = $symbol.$blog->name;
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $truncated }}</a>
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
                                                 
                                             </li>
                                             @endforeach
@@ -938,7 +938,7 @@
                                             $truncated = $symbol.$blog->name;
                                             ?>
                                             <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}">{{ $truncated }}</a>
+                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
                                                 
                                             </li>
                                             @endforeach
