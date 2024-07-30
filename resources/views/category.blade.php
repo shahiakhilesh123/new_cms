@@ -293,27 +293,6 @@
                                             @endforeach
                                         </ul>
                                     </div>
-                                                        <div class="widget-title">
-                                                            <h2  style="overflow: visible;">यूटीलिटी/ टेक्नोलॉजी</h2>
-                                                        </div>
-                                                        <ul>
-                                                            <?php $blogs =  App\Models\Blog::whereIn('categories_ids',array(20, 21))->orderBy('updated_at')->limit(10)->get()->all();
-                                                            ?>
-                                                            @foreach($blogs as $blog)
-                                                            <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
-                                                            $symbol = '';
-                                                            if($blog->link != ''){
-                                                                $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
-                                                            }
-                                                            $truncated = $symbol.$blog->name;
-                                                            ?>
-                                                            <li class="cat-item cat-item-16"><a
-                                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
-                                                                
-                                                            </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
                                                     <div id="media_image-3" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
