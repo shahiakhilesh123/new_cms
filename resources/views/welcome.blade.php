@@ -902,7 +902,7 @@
                                     </div>
                                     <div id="categories-2" class="widget widget_categories">
                                         <div class="widget-title">
-                                            <h2  style="overflow: visible;">यटेक्नोलॉजी</h2>
+                                            <h2  style="overflow: visible;">टेक्नोलॉजी</h2>
                                         </div>
                                         <ul>
                                             <?php $blogs =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(21))->orderBy('updated_at')->limit(5)->get()->all();
