@@ -32,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{asset('menuadd')}}">
+              <form method="post" action="{{asset('menuadd')}}" enctype="multipart/form-data">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -46,6 +46,22 @@
                           <!-- </span> -->
                         </div>
                       </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Upload File</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="file" id="customFile">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    @error('customFile')
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <!-- <span class="fas fa-envelope"> -->
+                            {{ $errors->first('customFile') }}
+                            <!-- </span> -->
+                          </div>
+                        </div>
                     @enderror
                   </div>
                   <div class="form-group">

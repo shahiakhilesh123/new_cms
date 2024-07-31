@@ -37,7 +37,13 @@ class MenuController extends Controller
             'link' => 'required|string|max:255',
             'class'=>'required|string|max:255',
         ]);
-
+        $fileName = '';
+        if(isset($request->file)) {
+            $destinationPath = public_path('file');
+            $fileName = $request->file->getClientOriginalName();
+            $fileName = str_replace(' ', '_',$fileName);
+            $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $request->file->extension();
+        }
         $menu = Menu::create([
             'menu_name' => $request->name,
             'menu_id' => $request->menu,
@@ -45,8 +51,12 @@ class MenuController extends Controller
             'type_id' => $request->type,
             'category_id' => $request->category,
             'menu_link' => $request->link,
+            'image' => $fileName,
             'menu_class' => $request->class,
         ]);
+        if(isset($request->file)) {
+        $request->file->move($destinationPath,$fileName);
+        }
         return redirect('/menu');
     }
     public function editmenu(Request $request, $id){
@@ -64,7 +74,13 @@ class MenuController extends Controller
             'link' => 'required|string|max:255',
             'class'=>'required|string|max:255',
         ]);
-
+        $fileName = '';
+        if(isset($request->file)) {
+            $destinationPath = public_path('file');
+            $fileName = $request->file->getClientOriginalName();
+            $fileName = str_replace(' ', '_',$fileName);
+            $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $request->file->extension();
+        }
         $menu = Menu::where('id', $id)->update([
             'menu_name' => $request->name,
             'menu_id' => $request->menu,
@@ -72,8 +88,12 @@ class MenuController extends Controller
             'type_id' => $request->type,
             'category_id' => $request->category,
             'menu_link' => $request->link,
+            'image' => $fileName,
             'menu_class' => $request->class,
         ]);
+        if(isset($request->file)) {
+            $request->file->move($destinationPath,$fileName);
+        }
         return redirect('/menu');
     }
     public function add(Request $request) {

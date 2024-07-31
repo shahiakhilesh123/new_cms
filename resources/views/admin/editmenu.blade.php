@@ -33,7 +33,7 @@
               <!-- /.card-header -->
               <!-- form start -->
               <?php $menu_data = $data['menu']; ?>
-              <form method="post" action="{{asset('menuedit')}}/{{ $menu_data->id }}">
+              <form method="post" action="{{asset('menuedit')}}/{{ $menu_data->id }}" enctype="multipart/form-data">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -47,6 +47,22 @@
                           <!-- </span> -->
                         </div>
                       </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Upload File</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="file" id="file">
+                      <label class="custom-file-label" for="customFile"><?php if($menu_data->image != '') { echo $menu_data->image; } else { echo "Choose file"; } ?></label>
+                    </div>
+                    @error('file')
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <!-- <span class="fas fa-envelope"> -->
+                            {{ $errors->first('file') }}
+                            <!-- </span> -->
+                          </div>
+                        </div>
                     @enderror
                   </div>
                   <div class="form-group">
