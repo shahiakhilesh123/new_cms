@@ -10,7 +10,7 @@
                             <h5>Contact Us</h5>
                             <p>For any questions, comments, suggestions, feedback or advertisements, please contact us at info@kmcliv.com.</p>
                             <p>Address: D-4 1st Floor, Sector 10, Noida, Uttar Pradesh 201301</p>
-                            <p>Contact Number: 08076727261</p>
+                            <p>Contact Number: <a href="tel:08076727261">08076727261</a></p>
 
                             </div>
                         </main>
