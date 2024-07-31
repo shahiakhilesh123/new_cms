@@ -76,6 +76,8 @@ class MenuController extends Controller
         ]);
         $fileName = '';
         if(isset($request->file)) {
+            echo $request->file->extension();
+            die();
             $destinationPath = public_path('file');
             $fileName = $request->file->getClientOriginalName();
             $fileName = str_replace(' ', '_',$fileName);
