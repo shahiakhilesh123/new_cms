@@ -394,6 +394,11 @@
                                             <i class="fa fa-youtube-play"></i>
                                         </a>
                                     </li>
+                                    <li class="whatsapp" style="background-color: green; border-radius: 14px;">
+                                        <a href="https://whatsapp.com/channel/0029VajdZqv9xVJbRYtSFM3C" target="_blank">
+                                            <i class="fa fa-whatsapp"></i>
+                                        </a>
+                                    </li>
 
 
                                 </ul>
@@ -691,6 +696,11 @@
                                             <li class="yt">
                                                 <a href="https://{{ isset($setting->youtube) ? $setting->youtube : '' }}" target="_blank">
                                                     <i class="fa fa-youtube-play"></i><span>Follow</span>
+                                                </a>
+                                            </li>
+                                            <li class="wp"style="background-color: green;">
+                                                <a href="https://whatsapp.com/channel/0029VajdZqv9xVJbRYtSFM3C" target="_blank">
+                                                    <i class="fa fa-whatsapp"></i><span>Follow</span>
                                                 </a>
                                             </li>
                                         </ul>
