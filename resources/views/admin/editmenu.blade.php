@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Edit Menu</h1>
+            <h1>Add Menu</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,7 +28,7 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Menu</h3>
+                <h3 class="card-title">Add Menu</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -227,10 +227,68 @@
                   <!-- /.modal-content -->
                 </div>
                 <!-- /.modal-dialog -->
+              </div>
             <!-- /.card -->
           </div>
         </div>
       </div>
     </section>
 </div>
+<script>
+  $('.upload_image_button').click(function () {
+    $('#image_box').val($(this).data('box'));
+  });
+  $('.image_sec').click(function () {
+    $('.popup').removeAttr('style');
+    $(this).parent().attr('style','border: 5px solid blue;');
+    $('#image_name').val($(this).data('name'));
+    $('#image_id').val($(this).data('id'));
+    $('#image_thumb_name').val($(this).data('name'));
+    $('#image_thumb_id').val($(this).data('id'));
+  })
+  $('#save_image').click(function () {
+    $('#id_images').val($('#image_id').val());
+    $('#name_images').val($('#image_name').val());
+    //$('#images').val($(this).data('id'));
+  })
+  $('#save_thumb_image').click(function () {
+    $('#id_thumb_images').val($('#image_thumb_id').val());
+    $('#name_thumb_images').val($('#image_thumb_name').val());
+    //$('#images').val($(this).data('id'));
+  })
+  $('#image_upload_form').submit(function(event) {
+    event.preventDefault();
+    var file = $('#customFile').prop('files')[0];
+    var form_data = new FormData($(this)[0]);
+    form_data.append('file', file, file.name);
+    $.ajax({
+            url: '{{ asset("/files/upload") }}',
+            type: 'POST',   
+            contentType: false,
+            processData: false,   
+            cache: false,        
+            data: form_data,
+            success: function(data) {
+              let html = '';
+                if (data.success) {
+                  if(data.box == 'thumb') {
+                    $('#id_thumb_images').val(data.file_id);
+                    $('#name_thumb_images').val(data.file_name);
+                  } else {
+                    $('#id_images').val(data.file_id);
+                    $('#name_images').val(data.file_name);
+                  }
+                  $('#close').attr('data-dismiss',"modal");
+                  $('#close').click();
+                  $('#close').removeAttr('data-dismiss');
+                } else {
+                  alert('error');
+                }
+            },
+            error: function(data) {
+                console.log("this is error");
+            }
+    });
+  });
+</script>
 @endsection
