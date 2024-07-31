@@ -49,20 +49,15 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Upload File</label>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" name="file" id="customFile">
-                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    <label>Select Thumb Images</label>
+                    <div class="select2-purple">
+                      <input type="hidden" name="thumb_images" id="id_thumb_images" value="{{ isset($data['blogs']->thumb_images) ? $data['blogs']->thumb_images : 0 }}" id="id_thumb_images">
+                      <input type="text" class="form-control" id="name_thumb_images" value="{{ isset($data['blogs']->thumbnail->file_name) ? $data['blogs']->thumbnail->file_name : ''  }}" id="name_thumb_images" disabled>
+                      <button type="button" class="form-control btn btn-default" data-toggle="modal" data-target="#modal-thumb">
+                        Select Thumb Images
+                      </button>
+                      <button type="button" class="form-control btn btn-default upload_image_button" data-toggle="modal" data-box="thumb" data-target="#modal-upload">Upload Image</button>
                     </div>
-                    @error('customFile')
-                        <div class="input-group-append">
-                          <div class="input-group-text">
-                            <!-- <span class="fas fa-envelope"> -->
-                            {{ $errors->first('customFile') }}
-                            <!-- </span> -->
-                          </div>
-                        </div>
-                    @enderror
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Select Menus</label>
@@ -151,10 +146,148 @@
                 </div>
               </form>
             </div>
+            <div class="modal fade" id="modal-upload">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Upload Image</h4>
+                      
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" style="height:50%;">
+                    <form method="post" id="image_upload_form">
+                      @csrf
+                      <input type="hidden" name="box" id="image_box">
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Upload File</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" name="file" id="customFile">
+                              <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                            @error('customFile')
+                                <div class="input-group-append">
+                                  <div class="input-group-text">
+                                    <!-- <span class="fas fa-envelope"> -->
+                                    {{ $errors->first('customFile') }}
+                                    <!-- </span> -->
+                                  </div>
+                                </div>
+                            @enderror
+                          </div>
+                        </div>
+                        <!-- /.card-body -->
+                       
+                      
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" id="close" >Save Image</button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
+              <div class="modal fade" id="modal-thumb">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Select Thumb Image</h4>
+                      
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <input type="hidden" id="image_thumb_name">
+                    <input type="hidden" id="image_thumb_id">
+                    <div class="modal-body" style="height: 400px; overflow: scroll;">
+                    <div class="row image_row">
+                    @foreach($data['file'] as $file)
+                        <div class="col-md-3 popup" >
+                          <img style="width: 100%;" class="image_sec" data-name="{{$file->file_name}}" data-id="{{$file->id}}" src="{{ asset('file').'/'.$file->file_name }}"/>
+                          {{ $file->file_name }}
+                        </div>
+                    @endforeach
+                    </div>
+                    <div class="card-footer clearfix">
+                    {{ $data['file']->links() }}
+                    </div>
+                      <!-- <p>One fine body&hellip;</p> -->
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal" id="save_thumb_image">Save changes</button>
+                    </div>
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+              </div>
             <!-- /.card -->
           </div>
         </div>
       </div>
     </section>
 </div>
+<script>
+  $('.upload_image_button').click(function () {
+    $('#image_box').val($(this).data('box'));
+  });
+  $('.image_sec').click(function () {
+    $('.popup').removeAttr('style');
+    $(this).parent().attr('style','border: 5px solid blue;');
+    $('#image_name').val($(this).data('name'));
+    $('#image_id').val($(this).data('id'));
+    $('#image_thumb_name').val($(this).data('name'));
+    $('#image_thumb_id').val($(this).data('id'));
+  })
+  $('#save_image').click(function () {
+    $('#id_images').val($('#image_id').val());
+    $('#name_images').val($('#image_name').val());
+    //$('#images').val($(this).data('id'));
+  })
+  $('#save_thumb_image').click(function () {
+    $('#id_thumb_images').val($('#image_thumb_id').val());
+    $('#name_thumb_images').val($('#image_thumb_name').val());
+    //$('#images').val($(this).data('id'));
+  })
+  $('#image_upload_form').submit(function(event) {
+    event.preventDefault();
+    var file = $('#customFile').prop('files')[0];
+    var form_data = new FormData($(this)[0]);
+    form_data.append('file', file, file.name);
+    $.ajax({
+            url: '{{ asset("/files/upload") }}',
+            type: 'POST',   
+            contentType: false,
+            processData: false,   
+            cache: false,        
+            data: form_data,
+            success: function(data) {
+              let html = '';
+                if (data.success) {
+                  if(data.box == 'thumb') {
+                    $('#id_thumb_images').val(data.file_id);
+                    $('#name_thumb_images').val(data.file_name);
+                  } else {
+                    $('#id_images').val(data.file_id);
+                    $('#name_images').val(data.file_name);
+                  }
+                  $('#close').attr('data-dismiss',"modal");
+                  $('#close').click();
+                  $('#close').removeAttr('data-dismiss');
+                } else {
+                  alert('error');
+                }
+            },
+            error: function(data) {
+                console.log("this is error");
+            }
+    });
+  });
+</script>
 @endsection

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\MenuType;
 use App\Models\MenuCategory;
+use App\Models\File;
 
 class MenuController extends Controller
 {
@@ -24,10 +25,11 @@ class MenuController extends Controller
     } 
 
     public function addMenu(Request $request){
+        $file = File::orderBy('id', 'DESC')->paginate(12);
         $menu = Menu::all();
         $type = MenuType::all();
         $category = MenuCategory::all();
-        return view('admin/addmenu')->with('data', ['menus' => $menu , 'types' => $type, 'categories' => $category]);
+        return view('admin/addmenu')->with('data', ['menus' => $menu , 'types' => $type, 'categories' => $category, 'file' => $file]);
     }
     public function menuAdd(Request $request){
         $request->validate([
@@ -37,13 +39,6 @@ class MenuController extends Controller
             'link' => 'required|string|max:255',
             'class'=>'required|string|max:255',
         ]);
-        $fileName = '';
-        if(isset($request->file)) {
-            $destinationPath = public_path('file');
-            $fileName = $request->file->getClientOriginalName();
-            $fileName = str_replace(' ', '_',$fileName);
-            $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $request->file->extension();
-        }
         $menu = Menu::create([
             'menu_name' => $request->name,
             'menu_id' => $request->menu,
@@ -51,20 +46,18 @@ class MenuController extends Controller
             'type_id' => $request->type,
             'category_id' => $request->category,
             'menu_link' => $request->link,
-            'image' => $fileName,
+            'image' => $request->thumb_images,
             'menu_class' => $request->class,
         ]);
-        if(isset($request->file)) {
-        $request->file->move($destinationPath,$fileName);
-        }
         return redirect('/menu');
     }
     public function editmenu(Request $request, $id){
+        $file = File::orderBy('id', 'DESC')->paginate(12);
         $menus = Menu::all();
         $type = MenuType::all();
         $category = MenuCategory::all();
         $menu = Menu::where('id', $id)->first();
-        return view('admin/editmenu')->with('data', ['menus' => $menus , 'types' => $type, 'categories' => $category, 'menu' => $menu]);
+        return view('admin/editmenu')->with('data', ['menus' => $menus , 'types' => $type, 'categories' => $category, 'menu' => $menu, 'file' => $file]);
     }
     public function menuedit(Request $request, $id){
         $request->validate([
@@ -74,17 +67,6 @@ class MenuController extends Controller
             'link' => 'required|string|max:255',
             'class'=>'required|string|max:255',
         ]);
-        $fileName = '';
-        if(isset($request->request)) {
-            echo public_path('file');
-            echo $request->file->getClientOriginalName();
-            echo $request->file->extension();
-            die();
-            $destinationPath = public_path('file');
-            $fileName = $request->file->getClientOriginalName();
-            $fileName = str_replace(' ', '_',$fileName);
-            $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $request->file->extension();
-        }
         $menu = Menu::where('id', $id)->update([
             'menu_name' => $request->name,
             'menu_id' => $request->menu,
@@ -92,12 +74,9 @@ class MenuController extends Controller
             'type_id' => $request->type,
             'category_id' => $request->category,
             'menu_link' => $request->link,
-            'image' => $fileName,
+            'image' => $request->thumb_images,
             'menu_class' => $request->class,
         ]);
-        if(isset($request->file)) {
-            $request->file->move($destinationPath,$fileName);
-        }
         return redirect('/menu');
     }
     public function add(Request $request) {
