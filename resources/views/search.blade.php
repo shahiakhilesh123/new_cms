@@ -254,15 +254,43 @@
                                             ?>
                                             @foreach($blogs as $blog)
                                             <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
+                                            if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
+                                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                            } else {
+                                                $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
+                                            }
                                             $symbol = '';
                                             if($blog->link != ''){
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                             }
                                             $truncated = $symbol.$blog->name;
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                             ?>
-                                            <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
-                                                
+                                            <li class="cat-item cat-item-16">
+                                            <div class="row">
+                                                    <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
+                                                        <div class="post_thumb">
+                                                            <a
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                                <figure class="imghover">
+                                                                    <img width="720" height="540"
+                                                                        src="{{ asset('/file').'/'.$ff }}"
+                                                                        class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
+                                                                        alt="{{ $blog->name }}"
+                                                                        decoding="async" />
+                                                                </figure>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
+                                                        <div class="right_box">
+                                                            <div class="post_title">
+                                                                <a
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </li>
                                             @endforeach
                                         </ul>
@@ -276,15 +304,43 @@
                                             ?>
                                             @foreach($blogs as $blog)
                                             <?php $cat = App\Models\Category::where('id',$blog->categories_ids)->first(); 
+                                             if (isset($blog->image_ids) && $blog->image_ids != '' && !empty($blog->image_ids) && empty($blog->link)) {
+                                                $blog_file = App\Models\File::where( "id", $blog->image_ids)->first();
+                                            } else {
+                                                $blog_file = App\Models\File::where( "id", $blog->thumb_images)->first();
+                                            }
                                             $symbol = '';
                                             if($blog->link != ''){
                                                 $symbol = '<i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>&nbsp;&nbsp;';
                                             }
                                             $truncated = $symbol.$blog->name;
+                                            $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';
                                             ?>
-                                            <li class="cat-item cat-item-16"><a
-                                                    href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : ''}}/{{  $blog->site_url }}"><?php echo $truncated; ?></a>
-                                                
+                                            <li class="cat-item cat-item-16">
+                                                <div class="row">
+                                                    <div class="cm-col-lg-5 cm-col-md-5 cm-col-4">
+                                                        <div class="post_thumb">
+                                                            <a
+                                                                href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>">
+                                                                <figure class="imghover">
+                                                                    <img width="720" height="540"
+                                                                        src="{{ asset('/file').'/'.$ff }}"
+                                                                        class="attachment-cream-magazine-thumbnail-3 size-cream-magazine-thumbnail-3 wp-post-image"
+                                                                        alt="{{ $blog->name }}"
+                                                                        decoding="async" />
+                                                                </figure>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cm-col-lg-7 cm-col-md-7 cm-col-8">
+                                                        <div class="right_box">
+                                                            <div class="post_title">
+                                                                <a
+                                                                        href="{{ asset('/') }}{{  isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($blog->site_url) ? $blog->site_url : ''; ?>"><?php echo $truncated; ?></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </li>
                                             @endforeach
                                         </ul>
