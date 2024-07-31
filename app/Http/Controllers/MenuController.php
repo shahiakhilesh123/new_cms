@@ -76,6 +76,7 @@ class MenuController extends Controller
         ]);
         $fileName = '';
         if(isset($request->file)) {
+            echo public_path('file');
             echo $request->file->extension();
             die();
             $destinationPath = public_path('file');
