@@ -75,9 +75,10 @@ class MenuController extends Controller
             'class'=>'required|string|max:255',
         ]);
         $fileName = '';
-        if(isset($request->file)) {
+        if(isset($request->request)) {
             echo public_path('file');
-            echo $request->file->extension();
+            echo $request->file->getClientOriginalName();
+            //echo $request->file->extension();
             die();
             $destinationPath = public_path('file');
             $fileName = $request->file->getClientOriginalName();
