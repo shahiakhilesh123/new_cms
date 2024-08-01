@@ -560,13 +560,13 @@
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
                     <li class="home-btn"><a href="{{ asset('/dharma-gyan') }}">धर्म ज्ञान</a></li>
-                    <!-- <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव</a></li> -->
-                    <!-- <li class="home-btn"><a href="{{ asset('/program') }}">कड़क बात </a></li> -->
-                    <li>
+                    <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव</a></li>
+                    <li class="home-btn"><a href="{{ asset('/program') }}">कड़क बात </a></li>
+                    <!-- <li>
                     <a href="{{ asset('/Podcast') }}" aria-current="page">
                        <img src="{{ asset('/file') }}/Website_Button_Podcast1722477534.jpg"> 
                     </a>
-                    </li>
+                    </li>-->
                     </ul>
                     <a href="#" class="menu-toggle full"><i class="fa fa-bars"></i></a>
                 </div>
