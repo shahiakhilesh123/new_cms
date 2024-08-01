@@ -151,6 +151,7 @@
                                                                         }
                                                                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : "";
                                                                         $author = [];
+                                                                        echo $blog->author;
                                                                         if(isset($blog->author)) {
                                                                             $author = App\Models\User::where( "id", $blog->author)->first();
                                                                         }
