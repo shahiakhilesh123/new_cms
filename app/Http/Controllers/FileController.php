@@ -51,13 +51,18 @@ class FileController extends Controller
     }
     public function uploadFile(Request $request)
     {
+        // Define the destination path
         $destinationPath = public_path('file');
+        // Get the uploaded file
         $file = $request->file('file');
+        // Get the file's original extension
         $extension = $file->getClientOriginalExtension();
-        $fileName = $file->getClientOriginalName();
-        $fileName = str_replace(' ', '_',$fileName);
-        $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $extension;
-        $file = File::create(
+        // Get the original filename without extension
+        $originalFileName = $file->getClientOriginalName();
+        $fileNameWithoutExt = pathinfo($originalFileName, PATHINFO_FILENAME);
+        // Replace spaces with underscores and add a timestamp for uniqueness
+        $fileName = str_replace(' ', '_', $fileNameWithoutExt) . time() . '.' . $extension;
+        $file_data = File::create(
             [
                 "user_id" => '1',
                 "file_name" => $fileName,
@@ -67,7 +72,7 @@ class FileController extends Controller
             ]
         );
         $file->storeAs('file',$fileName);
-        return response()->json(['file_id' => $file->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
+        return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
     }
 }
 
