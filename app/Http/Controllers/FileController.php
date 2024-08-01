@@ -54,11 +54,7 @@ class FileController extends Controller
         $destinationPath = public_path('file');
         $file = $request->file('file');
         $extension = $file->getClientOriginalExtension();
-        echo $extension;
         $fileName = $file->getClientOriginalName();
-        echo pathinfo($fileName, PATHINFO_FILENAME);
-        die();
-        $fileName = $request->file->getClientOriginalName();
         $fileName = str_replace(' ', '_',$fileName);
         $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $extension;
         $file = File::create(
