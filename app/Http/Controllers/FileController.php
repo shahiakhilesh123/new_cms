@@ -51,37 +51,35 @@ class FileController extends Controller
     }
     public function uploadFile(Request $request)
     {
-        // Define the destination path
-       // Define the destination path within the public directory
-    $destinationPath = public_path('file');
+        // Define the destination path within the public directory
+        $destinationPath = public_path('file');
 
-    // Get the uploaded file
-    $file = $request->file('file');
+        // Get the uploaded file
+        $file = $request->file('file');
 
-    // Get the file's original extension
-    $extension = $file->getClientOriginalExtension();
+        // Get the file's original extension
+        $extension = $file->getClientOriginalExtension();
 
-    // Get the original filename without extension
-    $originalFileName = $file->getClientOriginalName();
-    $fileNameWithoutExt = pathinfo($originalFileName, PATHINFO_FILENAME);
+        // Get the original filename without extension
+        $originalFileName = $file->getClientOriginalName();
+        $fileNameWithoutExt = pathinfo($originalFileName, PATHINFO_FILENAME);
 
-    // Replace spaces with underscores and add a timestamp for uniqueness
-    $fileName = str_replace(' ', '_', $fileNameWithoutExt) . time() . '.' . $extension;
+        // Replace spaces with underscores and add a timestamp for uniqueness
+        $fileName = str_replace(' ', '_', $fileNameWithoutExt) . time() . '.' . $extension;
 
-    // Move the file to the destination path
-    $file->move($destinationPath, $fileName);
-        // $file_data = File::create(
-        //     [
-        //         "user_id" => '1',
-        //         "file_name" => $fileName,
-        //         "file_type" => $request->file->getClientMimeType(),
-        //         "file_size" => $request->file->getSize(),
-        //         "full_path" => public_path('file'),
-        //     ]
-        // );
-        echo $fileName;
-        die();
-        //return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
+        
+        $file_data = File::create(
+            [
+                "user_id" => '1',
+                "file_name" => $fileName,
+                "file_type" => $request->file->getClientMimeType(),
+                "file_size" => $request->file->getSize(),
+                "full_path" => public_path('file'),
+            ]
+        );
+        //Move the file to the destination path
+        $file->move($destinationPath, $fileName);
+        return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
     }
 }
 
