@@ -511,7 +511,11 @@
                                 <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
                                     aria-current="page" style="<?php echo $menu['image'] != '' ?  'padding: 0px 0px;' : 'padding: 15px 6px;' ?>">
                                     @if($menu['image'] != '') 
-                                     <img src="{{ asset('/file') }}/{{ $file->file_name }}"> 
+                                        @if(isset($file->file_name))
+                                            <img src="{{ asset('/file') }}/{{  $file->file_name  }}"> 
+                                        @else
+                                            {{ $menu['menu_name'] }}
+                                        @endif
                                     @else 
                                     {{ $menu['menu_name'] }} 
                                     @endif
@@ -524,7 +528,11 @@
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394">
                                             <a href="{{ asset('/').$subMenu->menu_link }}">
                                             @if($subMenu->image != '') 
-                                            <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}"> 
+                                                @if(isset($subfile->file_name))
+                                                <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}"> 
+                                                @else
+                                                {{ $subMenu->menu_name }}
+                                                @endif
                                             @else 
                                             {{ $subMenu->menu_name }}
                                             @endif
