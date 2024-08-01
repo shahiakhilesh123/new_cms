@@ -52,11 +52,11 @@ class FileController extends Controller
     public function uploadFile(Request $request)
     {
         $destinationPath = public_path('file');
+        $file = $request->file('file');
+        $extension = $file->getClientOriginalExtension();
         $fileName = $request->file->getClientOriginalName();
         $fileName = str_replace(' ', '_',$fileName);
-        echo pathinfo($fileName, PATHINFO_FILENAME);
-        die();
-        $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $request->file->extension();
+        $fileName = pathinfo($fileName, PATHINFO_FILENAME).time() . '.'. $extension;
         $file = File::create(
             [
                 "user_id" => '1',
