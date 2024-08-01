@@ -71,7 +71,7 @@ class FileController extends Controller
         //         "full_path" => public_path('file'),
         //     ]
         // );
-        echo $file->storeAs('file',$fileName, 'public');
+        $file->storeAs('file', $fileName, 'public');
         die();
         //return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
     }
