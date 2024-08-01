@@ -560,7 +560,7 @@
                     <li class="home-btn"><a href="{{ asset('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li class="home-btn"><a href="{{ asset('/news') }}">न्यूज</a></li>
                     <li class="home-btn"><a href="{{ asset('/dharma-gyan') }}">धर्म ज्ञान</a></li>
-                    <li class="home-btn"><a href="{{ asset('/PodCast') }}">PodCast </a></li>
+                    <li class="home-btn"><a href="{{ asset('/exclusive') }}">एक्सक्लूसिव</a></li>
                     <li class="home-btn"><a href="{{ asset('/program') }}">कड़क बात </a></li>
                     </ul>
                     <a href="#" class="menu-toggle full"><i class="fa fa-bars"></i></a>
@@ -590,13 +590,33 @@
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
                                 <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
-                                    aria-current="page">{{ $menu['menu_name'] }}</a>
+                                    aria-current="page">
+                                    @if($menu['image'] != '') 
+                                        @if(isset($file->file_name))
+                                            <img src="{{ asset('/file') }}/{{  $file->file_name  }}"> 
+                                        @else
+                                            {{ $menu['menu_name'] }}
+                                        @endif
+                                    @else 
+                                    {{ $menu['menu_name'] }} 
+                                    @endif
+                                    </a>
                                     <?php if(count($subMenus) > 0){ ?>
                                     <ul class="sub-menu">
                                         @foreach($subMenus as $subMenu)
                                         <li id="menu-item-394"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394">
-                                            <a href="{{ asset('/').$subMenu->menu_link }}">{{ $subMenu->menu_name }}</a></li>
+                                            <a href="{{ asset('/').$subMenu->menu_link }}">
+                                            @if($subMenu->image != '') 
+                                                @if(isset($subfile->file_name))
+                                                <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}"> 
+                                                @else
+                                                {{ $subMenu->menu_name }}
+                                                @endif
+                                            @else 
+                                            {{ $subMenu->menu_name }}
+                                            @endif
+                                            </a></li>
                                         @endforeach
                                     </ul>
                                     <?php } ?>
