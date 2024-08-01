@@ -66,7 +66,7 @@ class FileController extends Controller
                 "full_path" => public_path('file'),
             ]
         );
-        $request->file->move($destinationPath,$fileName);
+        $file->move($destinationPath,$fileName);
         return response()->json(['file_id' => $file->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
     }
 }
