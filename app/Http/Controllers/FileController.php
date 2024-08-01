@@ -62,17 +62,18 @@ class FileController extends Controller
         $fileNameWithoutExt = pathinfo($originalFileName, PATHINFO_FILENAME);
         // Replace spaces with underscores and add a timestamp for uniqueness
         $fileName = str_replace(' ', '_', $fileNameWithoutExt) . time() . '.' . $extension;
-        $file_data = File::create(
-            [
-                "user_id" => '1',
-                "file_name" => $fileName,
-                "file_type" => $request->file->getClientMimeType(),
-                "file_size" => $request->file->getSize(),
-                "full_path" => public_path('file'),
-            ]
-        );
-        $file->storeAs('file',$fileName);
-        return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
+        // $file_data = File::create(
+        //     [
+        //         "user_id" => '1',
+        //         "file_name" => $fileName,
+        //         "file_type" => $request->file->getClientMimeType(),
+        //         "file_size" => $request->file->getSize(),
+        //         "full_path" => public_path('file'),
+        //     ]
+        // );
+        echo $file->storeAs('file',$fileName, 'public');
+        die();
+        //return response()->json(['file_id' => $file_data->id, 'file_name' => $fileName, 'box' => $request->box, 'success'=> true]);
     }
 }
 
