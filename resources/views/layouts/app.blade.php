@@ -585,7 +585,8 @@
                             @foreach($menus as $menu)
                             <?php 
                             $subMenus = App\Models\Menu::get()->where('menu_id', $menu['id'])->where('status', '1')->where('type_id', '1')->where('category_id', '2')->all(); 
-                            ?>
+                            $file = App\Models\File::where( "id", $menu['image'])->first(); 
+                           ?>
 
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
@@ -604,6 +605,7 @@
                                     <?php if(count($subMenus) > 0){ ?>
                                     <ul class="sub-menu">
                                         @foreach($subMenus as $subMenu)
+                                        <?php  $subfile = App\Models\File::where( "id", $subMenu->image)->first();  ?>
                                         <li id="menu-item-394"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394">
                                             <a href="{{ asset('/').$subMenu->menu_link }}">
