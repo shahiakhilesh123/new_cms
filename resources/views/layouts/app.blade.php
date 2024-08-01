@@ -509,7 +509,7 @@
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
                                 <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
-                                    aria-current="page" style="<?php echo ($menu['image'] != '') || $menu['image'] != '0' ?  'padding: 0px 0px;' : 'padding: 15px 6px;' ?>">
+                                    aria-current="page" style="<?php echo ($menu['image'] != '') ?   ($menu['image'] == '0' ? 'padding: 15px 6px;' : 'padding: 0px 0px;') : 'padding: 15px 6px;' ?>">
                                     @if($menu['image'] != '') 
                                         @if(isset($file->file_name))
                                             <img src="{{ asset('/file') }}/{{  $file->file_name  }}"> 
