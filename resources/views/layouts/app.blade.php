@@ -725,9 +725,9 @@
                                     </div>
                                     <div class="widget-contents">
                                         <ul>
-                                            <li>
+                                            <!-- <li>
                                             <img src="{{ asset('/banner') }}/follow.png">
-                                            </li>
+                                            </li> -->
                                             <li class="fb">
                                                 <a href="https://{{ isset($setting->facebook) ? $setting->facebook : '' }}" target="_blank">
                                                     <i class="fa fa-facebook-f"></i><span>Like</span>
