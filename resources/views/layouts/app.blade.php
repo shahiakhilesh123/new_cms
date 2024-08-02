@@ -427,6 +427,9 @@
                                 </h1>
                                 <div class="social-link-mobile">
                                     <ul class="topsocial-icons mb-2">
+                                        <li>
+                                            <img src="{{ asset('/banner') }}/follow.png">
+                                        </li>
                                         <li class="fb">
                                             <a href="https://facebook.com/NMFNewsOriginal" target="_blank">
                                                 <i class="fa fa-facebook-f"></i>
@@ -722,6 +725,9 @@
                                     </div>
                                     <div class="widget-contents">
                                         <ul>
+                                            <li>
+                                            <img src="{{ asset('/banner') }}/follow.png">
+                                            </li>
                                             <li class="fb">
                                                 <a href="https://{{ isset($setting->facebook) ? $setting->facebook : '' }}" target="_blank">
                                                     <i class="fa fa-facebook-f"></i><span>Like</span>
