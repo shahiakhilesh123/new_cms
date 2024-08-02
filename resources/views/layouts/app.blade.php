@@ -368,6 +368,9 @@
                         <div class="cm-col-lg-8 cm-col-md-7 cm-col-12 sm-d-none">
                             <div class="top-header-social-links d-flex align-items-center justify-content-end">
                                 <ul class="topsocial-icons mr-2">
+                                    <li>
+                                            <img src="{{ asset('/banner') }}/follow.png">
+                                    </li>
                                     <li class="fb">
                                         <a href="https://facebook.com/NMFNewsOriginal" target="_blank">
                                             <i class="fa fa-facebook-f"></i>
@@ -427,9 +430,6 @@
                                 </h1>
                                 <div class="social-link-mobile">
                                     <ul class="topsocial-icons mb-2">
-                                        <li>
-                                            <img src="{{ asset('/banner') }}/follow.png">
-                                        </li>
                                         <li class="fb">
                                             <a href="https://facebook.com/NMFNewsOriginal" target="_blank">
                                                 <i class="fa fa-facebook-f"></i>
