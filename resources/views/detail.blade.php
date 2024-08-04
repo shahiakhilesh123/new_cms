@@ -235,7 +235,7 @@
                                                         ?>
                                                         <!-- SquareAd_1_Responsitve -->
                                                         <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}}"></iframe>
-                                                        <p><h5>{{ $podcast->name }}</h5></p>
+                                                        <p><h5 style="margin-left: 11px;">{{ $podcast->name }}</h5></p>
                                             </div>
                                             <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
