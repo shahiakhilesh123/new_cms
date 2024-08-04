@@ -165,13 +165,27 @@
             </div>
             <div class="top-news-area news-area">
                 <div class="cm-container">
-                    <div id="media_image-5" class="widget cm-post-widget-section widget_media_image"><a
+                            <div id="media_image-5" class="widget cm-post-widget-section widget_media_image">
+                                <!-- <a
                             href="https://www.youtube.com/@BeingGhumakkad" target="__blank" ><img width="1170" height="90"
                                 src="{{ asset('/banner/beingghmakad.jpeg') }}"
                                 class="image wp-image-757  attachment-full size-full" alt
                                 style="max-width: 100%; height: auto;" decoding="async"
                                 srcset=""
-                                sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
+                                sizes="(max-width: 1170px) 100vw, 1170px" /></a> -->
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3986924419662120"
+                                    crossorigin="anonymous"></script>
+                                <!-- HeaderResponsive_728 -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-3986924419662120"
+                                    data-ad-slot="5487378089"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
                                 <?php
                                 $second_row_blog = App\Models\Blog::where('status', '1')->where('categories_ids', $setting->secound_row_first_file)->orderBy('id', 'DESC')->limit(6)->get();  
                                 $cat = App\Models\Category::where('id',$setting->secound_row_first_file)->first();
