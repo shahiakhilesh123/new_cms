@@ -26,7 +26,7 @@
                     <div id="primary" class="content-area" style="transform: none;">
                         <main id="main" class="site-main" style="transform: none;">
                             <div class="cm_post_page_lay_wrap" style="transform: none;">
-                                <div class="row">
+                                <div class="single-container">
                                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3986924419662120"
                                     crossorigin="anonymous"></script>
                                 <!-- HeaderResponsive_728 -->
