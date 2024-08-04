@@ -228,6 +228,17 @@
                                             <aside id="secondary" class="sidebar-widget-area">
                                             <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
+                                                            <h2>PODCAST</h2>
+                                                        </div>
+                                                        <?php
+                                                        $podcast =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(21))->orderBy('id', 'DESC')->first();
+                                                        ?>
+                                                        <!-- SquareAd_1_Responsitve -->
+                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}}"></iframe>
+                                                        
+                                                    </div>
+                                            <div id="media_image-2" class="widget widget_media_image">
+                                                        <div class="widget-title">
                                                             <h2>Recommended</h2>
                                                         </div>
                                                         <!-- SquareAd_1_Responsitve -->
