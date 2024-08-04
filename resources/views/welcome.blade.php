@@ -896,7 +896,7 @@
                                                         $podcast =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(23))->orderBy('id', 'DESC')->first();
                                                         ?>
                                                         <!-- SquareAd_1_Responsitve -->
-                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}} autoplay=1&mute=1"></iframe>
+                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}}?rel=0&amp;autoplay=1&mute=1"></iframe>
                                                         <p><h5 style="margin-left: 11px;">{{ $podcast->name }}</h5></p>
                                     </div>
                                     <div id="media_image-2" class="widget widget_media_image">
