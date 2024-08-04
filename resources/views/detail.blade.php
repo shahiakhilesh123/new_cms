@@ -99,7 +99,7 @@
 <a href="http://twitter.com/share?url={{asset('/')}}{{$data['blog']->site_url}}&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #1da1f2;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 <!-- LinkedIn -->
 <a href="http://www.linkedin.com/shareArticle?mini=true&url={{asset('/')}}{{$data['blog']->site_url}}" target="_blank" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: #1da1f2;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-<a href="whatsapp://send?text={{asset('/')}}{{$data['blog']->site_url}}" data-action="share/whatsapp/share" target="_blank" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: green;"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+<a data-activity="whatsapp_share" href="https://web.whatsapp.com:/send?text={{asset('/')}}{{$data['blog']->site_url}}" data-action="share/whatsapp/share" target="_blank" aria-label="#" style="font-size: 14px; width: 30px; height: 30px; padding-top: 4px; margin-right: 0; text-align: center; display: inline-block; border-radius: 50%; color: #fff; background: green;"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
