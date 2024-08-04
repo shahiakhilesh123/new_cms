@@ -230,7 +230,17 @@
                                             <div class="theiaStickySidebar"
                                                 style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
                                                 <aside id="secondary" class="sidebar-widget-area">
-                                                    
+                                                <div class="widget widget_media_image">
+                                                        <div class="widget-title">
+                                                            <h2>PODCAST</h2>
+                                                        </div>
+                                                        <?php
+                                                        $podcast =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(23))->orderBy('id', 'DESC')->first();
+                                                        ?>
+                                                        <!-- SquareAd_1_Responsitve -->
+                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}}"></iframe>
+                                                        <p><h5 style="margin-left: 11px;">{{ $podcast->name }}</h5></p>
+                                                </div>
                                                     <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
                                                             <h2>Recommended</h2>
