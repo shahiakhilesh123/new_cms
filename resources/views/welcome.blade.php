@@ -1124,21 +1124,6 @@
                                     </div>
                                 </div>
                                 @endforeach
-                                <div id="media_image-6" class="widget cm-post-widget-section widget_media_image">
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3986924419662120"
-                                    crossorigin="anonymous"></script>
-                                <!-- HeaderResponsive_728 -->
-                                <ins class="adsbygoogle"
-                                    style="display:block"
-                                    data-ad-client="ca-pub-3986924419662120"
-                                    data-ad-slot="5487378089"
-                                    data-ad-format="auto"
-                                    data-full-width-responsive="true"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                                </div>
-                    </div>
                             </div>
                         </div>
                     </section>
