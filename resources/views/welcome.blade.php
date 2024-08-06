@@ -470,7 +470,7 @@
                                 style="max-width: 100%; height: auto;" decoding="async"
                                 srcset="{{ asset('/banner/news.jpeg') }}"
                                 sizes="(max-width: 1170px) 100vw, 1170px" /></a></div>
-                </div>
+                    </div>
             </div>
             <div class="middle-news-area news-area">
                 <div class="cm-container">
@@ -1341,6 +1341,14 @@
                                 @endif
                                 <?php $i++; ?>
                             @endforeach
+                            <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
+                    target="__blank" href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
+                                src="{{ asset('/banner/news.jpeg') }}"
+                                class="image wp-image-731  attachment-full size-full" alt
+                                style="max-width: 100%; height: auto;" decoding="async"
+                                srcset="{{ asset('/banner/news.jpeg') }}"
+                                sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                        </div>
                         </div>
                     </section>
                 </div>
