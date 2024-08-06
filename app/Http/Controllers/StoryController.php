@@ -26,7 +26,7 @@ class StoryController extends Controller
         $count = 10;
         $category = Category::where('site_url', $name)->first();
         if (!is_null($category)) {
-            $blog = Blog::where('categories_ids', $category->id)->orWhereRaw('FIND_IN_SET('.$category->id.', mult_cat)')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+            $blog = Blog::where('status', '1')->where('categories_ids', $category->id)->orWhereRaw('FIND_IN_SET('.$category->id.', mult_cat)')->with('images')->orderBy('created_at', 'DESC')->paginate($count);
             $blog->setPath(asset('/').$name);
             return view('category',['category'=> $category,'blogs' => $blog, 'page' => $page, 'count' => $count]);
         } else {
@@ -55,7 +55,7 @@ class StoryController extends Controller
         $search = isset($_REQUEST['search']) ? $_REQUEST['search'] : '';
         $count = 10;
         //$category = Category::where('site_url', $name)->first();
-        $blog = Blog::where('name', 'like', '%' . $search . '%')->orWhere('tags', 'like', '%' . $search . '%')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
+        $blog = Blog::where('status', '1')->where('name', 'like', '%' . $search . '%')->orWhere('tags', 'like', '%' . $search . '%')->where('status', 1)->with('images')->orderBy('created_at', 'DESC')->paginate($count);
         $blog->setPath(asset('/search').'?search='.$search);
         return view('search',['blogs' => $blog, 'search' => $search, 'page' => $page, 'count' => $count]);
     }

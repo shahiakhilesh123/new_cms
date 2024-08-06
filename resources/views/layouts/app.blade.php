@@ -668,7 +668,7 @@
                                         <h2>लेटेस्ट न्यूज</h2>
                                     </div>
                                     <?php
-                                    $latest_blog = App\Models\Blog::orderBy('id', 'DESC')->limit(3)->get();
+                                    $latest_blog = App\Models\Blog::where('status', '1')->orderBy('id', 'DESC')->limit(3)->get();
                                     ?>
                                     <div class="cm_recent_posts_widget">
                                         @foreach($latest_blog as $blog)
