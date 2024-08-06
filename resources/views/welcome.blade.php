@@ -1341,13 +1341,19 @@
                                 @endif
                                 <?php $i++; ?>
                             @endforeach
-                            <div id="media_image-6" class="widget cm-post-widget-section widget_media_image"><a
-                    target="__blank" href="https://www.youtube.com/channel/UCEWHoHLo89dkQJR_axIupEA"><img width="1170" height="135"
-                                src="{{ asset('/banner/news.jpeg') }}"
-                                class="image wp-image-731  attachment-full size-full" alt
-                                style="max-width: 100%; height: auto;" decoding="async"
-                                srcset="{{ asset('/banner/news.jpeg') }}"
-                                sizes="(max-width: 1170px) 100vw, 1170px" /></a>
+                            <div  class="widget cm-post-widget-section widget_media_image">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3986924419662120"
+                            crossorigin="anonymous"></script>
+                        <!-- HeaderResponsive_728 -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-3986924419662120"
+                            data-ad-slot="5487378089"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         </div>
                         </div>
                     </section>
