@@ -490,6 +490,7 @@
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                         </div>
+                        </div>
                             <div class="cm-col-lg-8 cm-col-12 sticky_portion">
                                 <div id="primary" class="content-area">
                                     <main id="main" class="site-main">
