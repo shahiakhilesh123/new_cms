@@ -512,10 +512,10 @@
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
                                 <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
-                                    aria-current="page" style="<?php echo ($menu['image'] != '') ?   ($menu['image'] == '0' ? 'font-size: 20px;;' : 'padding: 0px 0px;') : 'font-size: 20px;' ?>">
+                                    aria-current="page" style="<?php echo ($menu['image'] != '') ?   ($menu['image'] == '0' ? 'padding: 0px 0px;' : 'padding: 0px 0px;') : 'padding: 0px 0px;' ?>">
                                     @if($menu['image'] != '') 
                                         @if(isset($file->file_name))
-                                            <img src="{{ asset('/file') }}/{{  $file->file_name  }}"> 
+                                            <img src="{{ asset('/file') }}/{{  $file->file_name  }}" style="height: 30px;"> 
                                         @else
                                             {{ $menu['menu_name'] }}
                                         @endif
@@ -532,7 +532,7 @@
                                             <a href="{{ asset('/').$subMenu->menu_link }}">
                                             @if($subMenu->image != '') 
                                                 @if(isset($subfile->file_name))
-                                                <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}"> 
+                                                <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}" height: 30px;> 
                                                 @else
                                                 {{ $subMenu->menu_name }}
                                                 @endif
@@ -546,7 +546,7 @@
                                     <?php } ?>
                             </li>
                             @endforeach    
-                            <li class="primarynav_search_icon" style="float: right;"><a class="search_box-mobile" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>         
+                            <li class="primarynav_search_icon"><a class="search_box-mobile" href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>         
                         </ul>
                 </nav>
                 <div class="header-search-container-mobile" style="display: none;">
