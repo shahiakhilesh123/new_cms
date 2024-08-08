@@ -118,6 +118,21 @@
                                         </ul>
                                     </nav>
                                 </div>
+                                <div class="breadcrumb  default-breadcrumb" style="display: block;">
+                                    <div class="row">
+                                        <?php $author_image = App\Models\File::where('id', $users->image)->first(); ?>
+                                        <div class="cm-col-lg-3 cm-col-3 sticky_portion">
+                                            @if(isset($author_image->file_name))
+                                            <img src="{{ asset('file') }}/{{ $author_image->file_name }}">
+                                            @endif
+                                        </div>
+                                        <div class="cm-col-lg-9 cm-col-9 sticky_portion">
+                                            @if(isset($users->description))
+                                            {{ $users->description }}
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="archive-container" style="transform: none;">
                                     <div class="row" style="transform: none;">
                                         <div class="cm-col-lg-8 cm-col-12 sticky_portion"
@@ -238,8 +253,8 @@
                                                         $podcast =  App\Models\Blog::where('status', '1')->whereIn('categories_ids',array(23))->orderBy('id', 'DESC')->first();
                                                         ?>
                                                         <!-- SquareAd_1_Responsitve -->
-                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ $podcast->link}}?rel=0&amp;autoplay=1&mute=1"></iframe>
-                                                        <p><h5 style="margin-left: 11px;">{{ $podcast->name }}</h5></p>
+                                                        <iframe class="attachment-full size-full wp-post-image" width="320px" height="250px" src="{{ isset($podcast->link) ? $podcast->link : '' }}?rel=0&amp;autoplay=1&mute=1"></iframe>
+                                                        <p><h5 style="margin-left: 11px;">{{ isset($podcast->name) ? $podcast->name : '' }}</h5></p>
                                                 </div>
                                                     <div id="media_image-2" class="widget widget_media_image">
                                                         <div class="widget-title">
