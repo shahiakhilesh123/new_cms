@@ -512,7 +512,7 @@
                             <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom <?php if(count($subMenus) > 0){ echo "menu-item-has-children menu-item-369"; }  else { echo "current-menu-item current_page_item menu-item-home menu-item-400"; }?>">
                                 <a href="<?php if(count($subMenus) > 0){ echo asset('/').$menu['menu_link']; } else { echo $menu['menu_link']; } ?>"
-                                    aria-current="page" style="<?php echo ($menu['image'] != '') ?   ($menu['image'] == '0' ? 'padding: 0px 5px;' : 'padding: 0px 5px;') : 'padding: 0px 5px;' ?>">
+                                    aria-current="page" style="<?php echo ($menu['image'] != '') ?   ($menu['image'] == '0' ? 'padding: 0px 5px; font-size: 21px;' : 'padding: 0px 5px; font-size: 21px;') : 'padding: 0px 5px; font-size: 21px;' ?>">
                                     @if($menu['image'] != '') 
                                         @if(isset($file->file_name))
                                             <img src="{{ asset('/file') }}/{{  $file->file_name  }}" style="height: 40px;"> 
@@ -529,7 +529,7 @@
                                         <?php $subfile = App\Models\File::where( "id", $subMenu->image)->first(); ?>
                                         <li id="menu-item-394"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394">
-                                            <a href="{{ asset('/').$subMenu->menu_link }}">
+                                            <a href="{{ asset('/').$subMenu->menu_link }}" style="font-size: 21px;">
                                             @if($subMenu->image != '') 
                                                 @if(isset($subfile->file_name))
                                                 <img src="{{ asset('/file') }}/{{  $subfile->file_name  }}" height: 30px;> 
