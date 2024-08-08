@@ -121,16 +121,16 @@
                                 <div class="breadcrumb  default-breadcrumb" style="display: block;">
                                     <div class="row">
                                         <?php $author_image = App\Models\File::where('id', $users->image)->first(); ?>
+                                        @if(isset($author_image->file_name))
                                         <div class="cm-col-lg-3 cm-col-3 sticky_portion">
-                                            @if(isset($author_image->file_name))
-                                            <img src="{{ asset('file') }}/{{ $author_image->file_name }}">
-                                            @endif
+                                            <img src="{{ asset('file') }}/{{ $author_image->file_name }}">  
                                         </div>
+                                        @endif
+                                        @if(isset($users->description))
                                         <div class="cm-col-lg-9 cm-col-9 sticky_portion">
-                                            @if(isset($users->description))
                                             {{ $users->description }}
-                                            @endif
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="archive-container" style="transform: none;">
