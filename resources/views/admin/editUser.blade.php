@@ -32,7 +32,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{asset('users/edit')}}/{{$user->id}}">
+              <form method="post" action="{{asset('users/edit')}}/{{$user->id}}" enctype="multipart/form-data">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -59,6 +59,20 @@
                           <!-- </span> -->
                         </div>
                       </div>
+                    @enderror
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Upload Image</label>
+                    <input type="file" class="form-control" value="{{ old('image') }}" id="image" name="image">
+                    {{ isset($file->file_name) ? $file->file_name : '' }}
+                    @error('image')
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <!-- <span class="fas fa-envelope"> -->
+                            {{ $errors->first('image') }}
+                            <!-- </span> -->
+                          </div>
+                        </div>
                     @enderror
                   </div>
                   <div class="form-group">

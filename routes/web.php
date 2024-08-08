@@ -101,6 +101,8 @@ Route::prefix('users')->group(function () {
     Route::post('/add', [App\Http\Controllers\UsersController::class, 'save'])->name('userAdd');
     Route::get('edit/{id}', [App\Http\Controllers\UsersController::class, 'edit'])->name('editUser');
     Route::post('edit/{id}', [App\Http\Controllers\UsersController::class, 'editSave'])->name('userSave');
+    Route::get('/change-password', [App\Http\Controllers\UsersController::class, 'changePassword'])->name('changePassword');
+    Route::post('/change-password/{id}', [App\Http\Controllers\UsersController::class, 'savePassword'])->name('savePassword');
 });
 Route::get('author/{name}', [App\Http\Controllers\StoryController::class, 'author'])->name('author');
 Route::get('state/{name}', [App\Http\Controllers\StoryController::class, 'state'])->name('state');
