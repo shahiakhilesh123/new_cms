@@ -57,6 +57,8 @@ Route::prefix('/posts')->group(function () {
     Route::get('/delete/{id}', [App\Http\Controllers\BlogController::class, 'del'])->name('deleteBoxBlog');
     Route::get('/del/{id}', [App\Http\Controllers\BlogController::class, 'deleteBlog'])->name('delBlog');
     Route::get('/status/{id}/{status}', [App\Http\Controllers\BlogController::class, 'statusBlog'])->name('statusBlog');
+    Route::get('/breaking', [App\Http\Controllers\BlogController::class, 'breaking'])->name('braking');
+    Route::post('/breaking', [App\Http\Controllers\BlogController::class, 'changeStatus'])->name('changeStatus');
 });
 Route::get('/setting', [App\Http\Controllers\SettingController::class,'index'])->name('Setting');
 Route::post('/setting', [App\Http\Controllers\SettingController::class,'saveSetting'])->name('saveSetting');

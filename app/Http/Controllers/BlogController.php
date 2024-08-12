@@ -7,7 +7,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\File;
 use App\Models\State;
-use App\Models\District;
+use App\Models\District; 
 
 class BlogController extends Controller
 {
@@ -181,6 +181,21 @@ class BlogController extends Controller
         $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
         $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
         return preg_replace('/-+/', ' ', $string); // Replaces multiple hyphens with single one.
-     }
-   
+    }
+    public function breaking()
+    {
+        $blogs = Blog::limit(30)->orderBy('id', 'DESC')->get();
+        return view('admin/breaking', ['blogs'=>$blogs]);
+    }
+    public function changeStatus(Request $request)
+    {
+        if ($request->status == 0) {
+            $status = 1;
+        } else {
+            $status = 0;
+        }
+        $data = ['breaking_status'=>  $status];
+        Blog::where('id', $request->id)->update($data);
+        return "status";
+    }
 }

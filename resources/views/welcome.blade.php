@@ -2,8 +2,53 @@
 
 @section('content')
 <?php $setting = App\Models\Setting::where('id', '1')->first(); ?>
+<?php $breaking = App\Models\Blog::where('breaking_status', '1')->orderBy('id','DESC')->first(); ?>
             <div class="ticker-news-area" style="margin-top: 10px;">
                 <div class="cm-container">
+                @if(isset($breaking->thumb_images))
+                <div class="breadcrumb  default-breadcrumb" style="display: block; margin-bottom: 20px;">
+                    <div class="ticker_title"><h4>Breaking News</h4></div>  
+                    <div class="row">
+                        <?php $breaking_file = App\Models\File::where('id', $breaking->thumb_images)->first(); 
+                         $cat = App\Models\Category::where('id',$breaking->categories_ids)->first();
+                         $blog_file = '';
+                         if (isset($breaking->image_ids) && $breaking->image_ids != '' && !empty($breaking->image_ids) && empty($breaking->link)) {
+                             $blog_file = App\Models\File::where( "id", $breaking->image_ids)->first();
+                         } else if($blog_file == '') {
+                             $blog_file = App\Models\File::where( "id", $breaking->thumb_images)->first();
+                         }
+                         $ff = isset($blog_file->file_name) ? $blog_file->file_name : '';  
+                        ?>
+                        @if(isset($breaking_file->file_name))
+                        <div class="cm-col-lg-3 cm-col-3 sticky_portion">
+                            <div class="item">
+                            <a href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($breaking->site_url) ? $breaking->site_url : ''; ?>">
+                                <div class="post_thumb" style="background-image: url({{asset('/file').'/'.$ff }});">
+                                    <div class="post-holder">
+                                        <div class="post_title">
+                                            <h2>
+                                            @if($breaking->link != '')
+                                                <i class="fa fa-video-camera" aria-hidden="true" style="color: red;"></i>
+                                            @endif
+                                            </h2>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        </div>
+                        @endif
+                        @if(isset($breaking->sort_description))
+                        <div class="cm-col-lg-9 cm-col-9 sticky_portion">
+                        <a href="{{ asset('/') }}{{isset($cat->site_url) ? $cat->site_url : '' }}/<?php echo isset($breaking->site_url) ? $breaking->site_url : ''; ?>">
+                            <h5>{{ $breaking->name }}</h5>
+                            {{ $breaking->sort_description }}
+                        </a>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+                @endif
                     <div class="news_ticker_wrap clearfix">
                         <div class="ticker_head">
                             <span class="ticker_icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
@@ -93,7 +138,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
                                             @endforeach            
                                         </div>

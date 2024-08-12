@@ -12,7 +12,7 @@ class Blog extends Model
     protected $table = 'blogs';
 
     public function scopeJoinSequence($query){
-        $query->leftjoin('page_sequences', function($join) {
+        $query->rightjoin('page_sequences', function($join) {
             $join->on('page_sequences.blog_id', '=', 'blogs.id');
         });
     }

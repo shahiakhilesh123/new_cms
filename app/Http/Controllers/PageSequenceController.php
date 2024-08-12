@@ -13,7 +13,7 @@ class PageSequenceController extends Controller
     {
         $pages = Pages::where('id', '1')->first();
         // $sequences = Blog::select('blogs.id', 'blogs.name', 'blogs.sort_description', 'page_sequences.sequence')->whereRaw("find_in_set('".$pages->page_top_category."',categories_ids)")->where('header_sec', '1')->JoinSequence()->orderBy('sequence', 'ASC')->get();
-        $sequences = Blog::select('blogs.id', 'blogs.name', 'blogs.sort_description', 'page_sequences.sequence')->JoinSequence()->orderBy('sequence', 'ASC')->limit('9')->get();
+        $sequences = Blog::select('blogs.id', 'blogs.name', 'blogs.sort_description', 'page_sequences.sequence')->JoinSequence()->where('page_id', $pages->id)->orderBy('page_sequences.sequence', 'ASC')->limit('9')->get();
         return view('admin/sequence')->with('data', ['sequences' => $sequences, 'pages' => $pages]);
     }
     public function save(Request $request)
